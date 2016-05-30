@@ -1,0 +1,176 @@
+@CHARSET "UTF-8";
+
+/* Home page
+------------------------------------------ */
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #666;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #666;
+}
+
+.btn-default:hover {
+	text-decoration: underline;
+}
+
+body.com_content.item_464:after {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+	content: "";
+	background-image: url("/templates/geolive/images/home/home-background.png");
+	background-repeat:no-repeat;
+	background-color: #bdd99b;
+	opacity: .8;
+	background-size: cover;
+	box-shadow:inset 0 0 250px rgba(0,0,0,.5);
+}
+
+
+.item_464 {
+  height: 100%;
+  background-color: #fff;
+}
+.item_464 {
+  color: #606060;
+  text-align: center;
+  text-shadow: 3px 3px 24px #fff;
+}
+
+p.lead.wow.fadeInUp.animated {
+	font-weight: 400;
+}
+
+.item_464 .navbar-inverse .navbar-nav {
+	text-shadow: none;
+}
+
+.item_464 div.navbar.navbar-inverse.navbar-fixed-top {
+	display:none;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.inner.cover {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+/* Cover */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  font-weight: bold;
+}
+
+/* Affix and center */
+
+@media (min-width: 768px) {
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
+
+/* Learn page
+------------------------- */
+
+.item_474 .video h4 {
+	text-align: center;
+}
+
+.item_474 .img-responsive {
+	margin: 0 auto;
+}
+
+.item_474 .pbox-window {
+	padding:0;
+}
+
+.item_474 .video h3 {
+	text-align: center;
+}
+
+/* Contact page
+------------------------ */
+
+p.lead.contact-intro {
+	margin-top: 20px;
+}
+
+div#b2jcontainer_m124.b2jcontainer {
+	background: none;
+	padding: 0;
+	border: none;
+}
+
+.item_711 h2 {
+	text-align: center;
+}
+
+.bios {
+	margin-top: 20px;
+}
+
+.item_711 .lead {
+	font-size: 16px;
+}
+
+.bios h4 {
+	text-align: center;
+}
+
+/* Privacy Policy page */
+
+div.terms li {
+	margin-top: 15px;
+}
+
+div.terms ol {
+	padding-left: 20px;
+}
+.item_747 h2 {
+	text-align: center;
+}

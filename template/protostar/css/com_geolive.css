@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+
+/* Discover page
+------------------------- */
+
+.item_473 div.container.mapcontainer {
+	width: 100%;
+	padding:0;
+}
+
+.item_473 .maincontent {
+	margin-top: 80px;	
+}
+
+/* Discover blurb
+---------------------------- */
+
+.discover-blurb {
+	margin:60px 0;
+}
+
+.page-nav {
+	text-align: center;
+	font-size:1.6em;
+}
+
+.page-nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+}
+
+@media (min-width: 768px){
+	.page-nav li{
+		display: inline;
+		margin: 0 20px;
+	}	
+}
+.page-nav a {
+	color: 
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 60px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+@media (min-width: 768px) {
+  .featurette-heading {
+    font-size: 30px;
+  }		
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 20px;
+  }
+}
+
+.lead {
+	font-size: 17px;
+}
+
+.features {
+	display:inline-table;
+}
+
+/* Making it work
+-------------------------- */
+
+.making-it-work {
+	display: inline-table;
+}
+
+/* Contact form
+-------------------------- */
+
+div#b2jcontainer_m119.b2jcontainer {
+	border: none;
+	padding: 30px 0 0;
+	background: none;
+}

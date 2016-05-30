@@ -1,0 +1,36 @@
+<style>
+
+.commits-listing {
+    display: inline-block;
+    max-width:25%;
+    float: left;
+    margin-right: 7%;
+}
+
+
+.commits-listing .btn-group > .btn, .commits-listing a.btn, .commits-listing button.ellipsis-expander {
+    border: none;
+    background: none;
+}
+
+.commits-listing img.avatar {
+    display: none;
+}
+
+button.js-zeroclipboard.btn.btn-outline.zeroclipboard-button.tooltipped.tooltipped-s{
+	display:none;
+}
+
+pre.text-small {
+    border: none;
+}
+
+</style>
+
+<h3>Project Developement (mobile) Activity</h3><p>
+	The following is an overview of the changes made to the (public) mobile application. The mobile application consists of a number of Objective-c libraries/projects. Only libraries and components considered to be open-source are visible here. Only developers can access the private libraries which have not been made visible due to copyright and security concerns
+</p>
+<div style="width: 100%; display: inline-table;"><div class="github-commits">
+</div><div class="github-commits">
+</div><div class="github-commits">
+</div></div><div></div>

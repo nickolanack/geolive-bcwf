@@ -1,0 +1,207 @@
+/* remove border separating posts */
+.discussion .posts .post {
+	border-top: none;
+}
+
+/* background color of discussion window */
+.discussion, .infowindow_content .discussion {
+	background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* color of posted by */
+.discussion .user .AvatarModule.admin:before, .discussion .user .AvatarModule.member:before {
+	color: #000;
+}
+
+/* color of timestamp */
+.discussion .posts .post .date .TimeStamp {
+	color: #000;
+}
+
+.discussion .posts .post {
+	padding-top:10px
+}
+
+.discussion .post .user {
+    float: left;
+    display: block;
+    position: absolute;
+    padding-top:5px
+}
+
+
+.discussion .post .date {
+    float: left;
+    display: block;
+    position: absolute;
+    padding-top: 17px;
+}
+
+.discussion .posts .post {
+	padding-bottom: 25px;
+}
+
+.discussion .posts .post .text .content {
+	border: 1px solid #e1e1e1;;
+	padding: 2px 3px;
+	border-radius: 3px;
+	background-color: #e1e1e1;
+	color: #000;
+}
+
+/* arrow pointing to user who posted */
+.discussion .posts .post .text .content:before {
+	width: 0; 
+	height: 0; 
+	border-left: 3px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 6px solid #e1e1e1;
+	position:absolute;
+    content:"";
+    bottom:20px;
+	left:calc( 15% - 5px );
+}
+
+/* border around images in posts */
+.discussion img.resizedImage, span.resizedImage {
+	border: 1px solid #000;
+}
+
+/* settings specific to user b */
+
+.discussion .post.b .user {
+	right:0;
+	position: absolute;
+}
+
+.discussion .post.b .date {
+	float: right;
+	position: relative
+}
+
+.discussion .posts .post.b .text .content {
+	border: 1px solid #606060;
+	background-color: #606060;
+	color: white;
+}
+
+.discussion .posts .post.b .text .content:before {
+	border-left: 8px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 6px solid #606060;
+	left:calc(85% - 5px );
+}
+
+/* align the boxes on the approprite sides */
+
+.a .text, .b .text {
+    display: inline-block;
+    width: 90%;
+    margin-right: 10%;
+}
+
+.b .text {
+    margin-left: 10%;
+    margin-right: 0;
+}
+
+/* hide posted by when same user posting in row */
+.discussion .post.same-u .user {
+	display:none;
+}
+
+.discussion .post.same-u .date {
+	padding-top: 6px;
+}
+
+.discussion .posts .post.same-u {
+	padding-bottom: 12px;
+}
+
+.discussion .posts .post.same-u .text .content:before {
+	bottom: 7px;
+}
+
+/* discussion textbox */
+
+.discussion-textbox {
+	width: calc(100% - 60px);
+	margin-top: 4px;
+	position: relative;
+	z-index: 1;
+}
+
+.discussion .toolbar-icons .t-btn>img {
+	display:block
+}
+
+span.t-btn.upload-button {
+	padding: 0 2px;
+}
+
+/* discussion add media */
+
+.discussion-upload textarea {
+	display: none;
+}
+
+.discussion-upload .ToolbarBottom {
+	margin-top: 90px;
+}
+
+.discussion-upload .PopupTab .tabs {
+	width: 210px;
+	right: auto;
+	margin-top:15px;
+}
+
+/* backgrounds of icons */
+.discussion-upload .PopupTab span.noIcon {
+	height: 65px;
+	width: 65px;
+}
+
+.discussion-upload .PopupTab span.noIcon {
+	border:none;
+	background-size: 55px auto;
+}
+
+.discussion-upload .PopupTab span.noIcon.audio {
+	background-image:url("http://media.geolive.ca/upload-images/media-music.png");
+}
+
+.discussion-upload .PopupTab .document {
+	display: none;
+}
+
+.discussion-upload .PopupTab span.noIcon.image {
+	background-image:url("http://media.geolive.ca/upload-images/media-image.png");
+}
+
+.discussion-upload .PopupTab span.noIcon.video {
+	background-image:url("http://media.geolive.ca/upload-images/media-video.png");
+}
+
+.discussion-upload .PopupTab span.noIcon.audio:hover {
+	background-image: url("http://media.geolive.ca/upload-images/media-audio-black.png");
+
+}
+
+.discussion-upload .PopupTab span.noIcon.image:hover {
+	background-image:url("http://media.geolive.ca/upload-images/media-image-black.png");
+	
+}
+
+.discussion-upload .PopupTab span.noIcon.video:hover {
+	background-image: url("http://media.geolive.ca/upload-images/media-video-black.png");
+}
+
+.PopupTab img:hover, .PopupTab .noIcon:hover{
+	background-color: white;
+	box-shadow:0 0 0 transparent;
+	border-color:transparent;
+}
+
+
+
+

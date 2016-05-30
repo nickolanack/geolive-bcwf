@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+/* User registration page
+----------------------------------- */
+
+.tooltip-inner {
+	display: none;
+}
+
+.control-label .tooltip {
+	float: left;
+	background: transparent;
+	border: none;
+	padding: 0;
+	max-width: 0;
+	z-index: 13000;
+ 	display: none;
+ }
+ 
+label {
+    display : inline !important;
+}
+
+legend {
+	display: none;
+}
+
+label#jform_name-lbl {
+	font-size: 0px;
+}
+
+label#jform_name-lbl:after {
+    font-size: 14px;
+    content: "Name: *";
+}
+
+label#jform_spacer-lbl {
+	font-size: 0px;
+}

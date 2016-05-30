@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+.pushmenu>.pb-c {
+	background-color: white;
+	    height: initial;
+}
+#pushmenu {
+    margin: 0;
+}
+#aside {
+	margin: 0;
+	width: inherit;
+}
+
+#aside>.well {
+	margin: 0;
+	background-color: white;
+	box-shadow: none;
+	border:none;
+}
+
+.pushmenu #login-form {
+	width: 300px;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+.pushmenu input#modlgn-passwd, .pushmenu input#modlgn-username {
+	width: 175px;
+}
+
+
+button.btn.btn-primary, input.btn.btn-primary {
+    background-color: rgb(0,160,80);
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    padding: 10px 25px;
+}
+
+
+
+h3#pushmenu-message, .site-title {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 100;
+    color: teal;
+}
+
+h3#pushmenu-message{
+ 	font-size: 20px;
+	margin:0;
+	padding:10px;
+	text-align: center;
+	font-size:;
+}
