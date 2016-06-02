@@ -128,6 +128,10 @@ Behavior('graph');
 		padding: 0,
 		lineColor: 'black',
 		fillGradient: true,
+		fillGradientArray: [
+			'rgba(0, 0, 0, 0.7)',
+			'rgba(0, 0, 0, 0.7)'
+		],
 		highlightTemplate: UIGraph.UnitStepBarsHighlighter,
 		parseMeta: function(v, i) {
 			return v;
