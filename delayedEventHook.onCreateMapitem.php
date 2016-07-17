@@ -16,11 +16,13 @@ Core::LoadPlugin('Maps');
 $marker=MapController::LoadMapItem($eventArgs->id);
 
 Core::LoadPlugin('Attributes');
-$attributes=AttributesRecord::Get($marker->getId(), $marker->getType(), "rappAttributes");
+$attributes=AttributesRecord::Get($marker->getId(), $marker->getType(), AttributesTable::GetMetadata("rappAttributes"));
 
-mail($to, 'Submitted to RAPP', json_encode(array(
+mail($to, 'Submitted Report ('.$marker->getId().') to RAPP', '<pre>'.htmlspecialchars(json_encode(array(
+
 	'eventArgs'=>$eventArgs,
 	'marker'=>$marker->getMetadata(),
-	'attributes'=>$attributes
+	'attributes'=>$attributes,
 
-)), $headers);
+
+), JSON_PRETTY_PRINT)).'</pre>', $headers);
