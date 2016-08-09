@@ -18,11 +18,16 @@ $marker=MapController::LoadMapItem($eventArgs->id);
 Core::LoadPlugin('Attributes');
 $attributes=AttributesRecord::Get($marker->getId(), $marker->getType(), AttributesTable::GetMetadata("rappAttributes"));
 
-mail($to, 'Submitted Report ('.$marker->getId().') to RAPP', '<pre>'.htmlspecialchars(json_encode(array(
+$data=array(
 
 	'eventArgs'=>$eventArgs,
 	'marker'=>$marker->getMetadata(),
 	'attributes'=>$attributes,
 
 
-), JSON_PRETTY_PRINT)).'</pre>', $headers);
+);
+//TODO: submit to form.
+
+Core::Broadcast("bcwfapp", "notification", $data);
+
+mail($to, 'Submitted Report ('.$marker->getId().') to RAPP', '<pre>'.htmlspecialchars(json_encode($data, JSON_PRETTY_PRINT)).'</pre>', $headers);
