@@ -1,0 +1,4 @@
+#Redirect all image queries with url variable 'thumb' to be processed by image.php
+RewriteEngine on
+
+RewriteRule ^(.+)\.(png|jpg|jpeg|gif|bmp)$ image.php?file=$1.$2&thumb=%1

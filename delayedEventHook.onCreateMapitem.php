@@ -28,6 +28,7 @@ $data=array(
 );
 //TODO: submit to form.
 
+
 Core::Broadcast("bcwfapp", "notification", $data);
 
 mail($to, 'Submitted Report ('.$marker->getId().') to RAPP', '<pre>'.htmlspecialchars(json_encode($data, JSON_PRETTY_PRINT)).'</pre>', $headers);
