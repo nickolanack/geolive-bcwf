@@ -16,6 +16,8 @@ function formatVariables($variables, $event){
 				
 				file_put_contents($jsonFile,json_encode(array(
 					"file"=>$file,
+					"item"=>$variables['[MARKERID]'],
+					"type"=>"marker",
 					"event"=>"onViewImage"
 				), JSON_PRETTY_PRINT));
 

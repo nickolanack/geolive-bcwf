@@ -8,9 +8,9 @@ error_reporting(E_ALL);		//php 5 only
 
 $default=dirname(__FILE__).DS;
 
-$file=dirname(__FILE__).DS.urldecode($_GET['file']);
+$image=dirname(__FILE__).DS.urldecode($_GET['file']);
 
-$base=substr($file,0, strrpos($file, '.'));
+$base=substr($image,0, strrpos($image, '.'));
 $jsonFile=$base.'.json';
 
 
@@ -31,10 +31,10 @@ if(file_exists($jsonFile)){
 
 				include_once dirname(__DIR__).'/administrator/components/com_geolive/core.php';
 
-				$eventArgs=array(
-
-					'image'=>UrlFrom($file)
-				);
+				$eventArgs=array_merge(get_object_vars($json), array(
+					'image'=>UrlFrom($file),
+					'alias'=>UrlFrom($image),
+				));
 				
 				Core::Emit($json->event, $eventArgs);
 				//Core::Broadcast("bcwfapp", "notification", array("text"=>"An administrator has viewed your report"));

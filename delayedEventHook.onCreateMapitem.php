@@ -16,7 +16,15 @@ Core::LoadPlugin('Maps');
 $marker=MapController::LoadMapItem($eventArgs->id);
 
 Core::LoadPlugin('Attributes');
-$attributes=AttributesRecord::Get($marker->getId(), $marker->getType(), AttributesTable::GetMetadata("rappAttributes"));
+$tableMeta=AttributesTable::GetMetadata("rappAttributes");
+
+AttributesRecord::Set($marker->getId(), $marker->getType(), array(
+	'sent'=>true
+	),$tableMeta);
+
+$attributes=AttributesRecord::Get($marker->getId(), $marker->getType(), $tableMeta);
+
+
 
 $data=array(
 
@@ -32,3 +40,19 @@ $data=array(
 Core::Broadcast("bcwfapp", "notification", $data);
 
 mail($to, 'Submitted Report ('.$marker->getId().') to RAPP', '<pre>'.htmlspecialchars(json_encode($data, JSON_PRETTY_PRINT)).'</pre>', $headers);
+
+
+$mobile=Core::LoadPlugin('IOSApplication');
+$devices=$mobile->getUsersDeviceIds($marker->getUserId());
+
+
+Core::Emit("onNotifyDevices", array(
+	"devices"=>$devices,
+	"text"=>"Your report has been submitted to Report All Poachers and Polluters",
+	"trigger"=>"onCreateMapitem: (delay:180) ".$marker->getId()
+));
+
+
+foreach($devices as $device){
+	Core::Broadcast("bcwfapp.".$device, "notification", array("text"=>"Your report has been submitted to Report All Poachers and Polluters"));
+}

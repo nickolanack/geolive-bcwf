@@ -22,6 +22,16 @@ Core::Emit("onNotifyDevices", array(
 	"trigger"=>"onViewImage: ".$file
 ));
 
+
+
+Core::LoadPlugin('Attributes');
+$tableMeta=AttributesTable::GetMetadata("rappAttributes");
+
+AttributesRecord::Set($eventArgs->item, $eventArgs->type, array(
+	'viewed'=>true
+	),$tableMeta);
+
+
 foreach($devices as $device){
 	Core::Broadcast("bcwfapp.".$device, "notification", array("text"=>"An administrator has viewed your report"));
 }
