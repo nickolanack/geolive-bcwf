@@ -15,11 +15,14 @@ $uid = intval($p[0]);
 $mobile = Core::LoadPlugin('IOSApplication');
 $devices = $mobile->getUsersDeviceIds($uid);
 
-Core::Emit("onNotifyDevicesAndClients", array(
+$data = array(
     "devices" => $devices,
     "text" => "An administrator has viewed your report",
     "trigger" => "onViewImage: " . $file,
-));
+    'image'=>$file;
+);
+
+Core::Emit("onNotifyDevicesAndClients", $data);
 
 Core::LoadPlugin('Attributes');
 $tableMeta = AttributesTable::GetMetadata("rappAttributes");
@@ -29,7 +32,7 @@ AttributesRecord::Set($eventArgs->item, $eventArgs->type, array(
 ), $tableMeta);
 
 foreach ($devices as $device) {
-    Core::Broadcast("bcwfapp." . $device, "notification", array("text" => "An administrator has viewed your report"));
+    Core::Broadcast("bcwfapp." . $device, "notification", $data);
 }
 
-Core::Broadcast("user." . $uid, "notification", array("text" => "An administrator has viewed your report"));
+Core::Broadcast("user." . $uid, "notification", $data);
