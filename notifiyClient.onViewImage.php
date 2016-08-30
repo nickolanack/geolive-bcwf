@@ -19,7 +19,7 @@ $data = array(
     "devices" => $devices,
     "text" => "An administrator has viewed your report",
     "trigger" => "onViewImage: " . $file,
-    'image'=>$file;
+    'image' => $file,
 );
 
 Core::Emit("onNotifyDevicesAndClients", $data);
