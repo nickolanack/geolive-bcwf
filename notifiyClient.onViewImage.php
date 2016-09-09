@@ -1,26 +1,38 @@
 <?php
 
 $file = $eventArgs->image;
+$user = $eventArgs->user;
 
 //Core::Emit("onNotifyDevices", array("file"=>$file));
 
-$p = explode('user_files_', $file);
-if (count($p) != 2) {
-    return;
-}
-$p = explode('/', $p[1]);
-$uid = intval($p[0]);
+$uid = $user;
 //Core::Emit("onNotifyDevices", array("uid"=>$uid));
 
 $mobile = Core::LoadPlugin('IOSApplication');
 $devices = $mobile->getUsersDeviceIds($uid);
 
+Core::LoadPlugin('Maps');
+$marker = MapController::LoadMapItem($eventArgs->item);
+
+$images = Core::HTML()->parseImageUrls($marker->getDescription());
+$images = array_map(function ($i) {
+
+    if (strpos($i, 'http') !== 0) {
+        return Core::HTML()->website() . '/' . ltrim($i, '/');
+    }
+
+}, array_merge($images, Core::HTML()->parseVideoPosterUrls($marker->getDescription())));
+
 $data = array(
     "devices" => $devices,
     "text" => "An administrator has viewed your report",
     "trigger" => "onViewImage: " . $file,
-    'image' => $file,
+    'item' => $marker->getMetadata(),
 );
+
+if (count($images)) {
+    $data['image'] = $images[0];
+}
 
 Core::Emit("onNotifyDevicesAndClients", $data);
 
