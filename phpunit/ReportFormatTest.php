@@ -26,7 +26,7 @@ class ReportFormatTest extends PHPUnit_Framework_TestCase {
 	public function testFormatReport() {
 
 		$this->_includeCore();
-		Core::HTML()->setProtocol('https')->setDomain('bcwf.geolive.ca')->setRemoteAddress('108.180.73.231');
+		Core::HTML()->setProtocol('https')->setDomain('bcwf.geolive.ca')->setScriptPath('index.php')->setRemoteAddress('108.180.73.231');
 
 		$data = json_decode('{
 		    "eventArgs": {
@@ -89,13 +89,22 @@ class ReportFormatTest extends PHPUnit_Framework_TestCase {
 		    }
 		}');
 
-		$url = 'localhost';
+		$mapsPlugin=Core::LoadPlugin('Maps');
+		$marker=MapController::LoadMapItem($data->marker->id);
+		$attributes=get_object_vars($data->attributes);
+
+		/**
+		 * 
+		 */
+
+
+		$url = 'https://www.for.gov.bc.ca/pscripts/webmail/mofwebmail.asp';
 
 		$violation_details = '';
 
 		Core::LoadPlugin('GoogleMaps');
 
-		$coords = $data->marker->coordinates;
+		$coords = $marker->getCoordinates();
 		$response = GoogleMapsGeocode::FromCoordinates($coords[0], $coords[1]);
 		if ($response->status == 'OK') {
 			$location = $response->results[0]->formatted_address;
@@ -103,7 +112,16 @@ class ReportFormatTest extends PHPUnit_Framework_TestCase {
 		}
 
 		$violation_details .= 'Coordinates (lat, lng): ' . $coords[0] . ', ' . $coords[1] . "\n";
-		$violation_details .= GoogleMapsStaticMapTiles::UrlForMapitem($data->marker->id) . "\n";
+		//$violation_details .= GoogleMapsStaticMapTiles::UrlForMapitem($marker) . "\n";
+
+
+		$staticmaptile = Core::HTML()->website().'/'.Core::HTML()->Link($mapsPlugin->urlVarsToNamedView('mapitem.staticmap'), 
+        array(
+            'format' => 'raw',
+            'mapitem' => $marker->getId(),
+            'size'=>'500x500'
+        ));
+        $violation_details .=$staticmaptile . "\n";
 
 		$ip = Core::Client()->ipAddress();
 
@@ -150,7 +168,7 @@ class ReportFormatTest extends PHPUnit_Framework_TestCase {
 		$result = curl_exec($ch);
 		curl_close($ch);
 
-		print_r($result);
+		
 
 	}
 }
