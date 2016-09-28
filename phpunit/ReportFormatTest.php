@@ -125,6 +125,7 @@ class ReportFormatTest extends PHPUnit_Framework_TestCase {
 			'comp_phone' => 'n/a 3',
 			'comp_email' => 'n/a 4',
 			'violation_details' => urlencode($violation_details),
+			'violation_observed' => "yes",
 			'violator_description' => 'b',
 			'transport_involved' => 'c',
 			'witnesses' => 'd',
