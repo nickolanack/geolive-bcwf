@@ -182,7 +182,6 @@
         "parameters": {
             "moderator": [
                 "nickblackwell82@gmail.com",
-                "jessezeman@gmail.com",
                 ""
             ],
             "enableEmails": true,
@@ -313,8 +312,9 @@
             "onDragEndScript": "widget.MarkerTile.85.onDragEndScript.js",
             "formatTipScript": "",
             "widgetTitle": "",
-            "readAccess": "public",
-            "position": "RIGHT_CENTER"
+            "readAccess": "special",
+            "position": "RIGHT_CENTER",
+            "profileIcon": null
         }
     },
     "widget.86": {
@@ -1384,7 +1384,7 @@
         "parameters": {
             "position": "LEFT_CENTER",
             "style": "GeoliveLegend.css",
-            "useIconSet": true,
+            "useIconSet": false,
             "draggableIcons": false,
             "startMinimized": true,
             "showToggle": false,
@@ -1744,15 +1744,15 @@
                             []
                         ],
                         "_diagramState": {
-                            "x": 24,
-                            "y": 297
+                            "x": -68,
+                            "y": 135
                         },
                         "children": [
                             {
                                 "class": "Node",
                                 "_diagramState": {
-                                    "x": 216,
-                                    "y": 346
+                                    "x": 284,
+                                    "y": 344
                                 }
                             },
                             {
@@ -1762,15 +1762,15 @@
                                     []
                                 ],
                                 "_diagramState": {
-                                    "x": 297,
-                                    "y": 213
+                                    "x": 489,
+                                    "y": 135
                                 },
                                 "children": [
                                     {
                                         "class": "Node",
                                         "_diagramState": {
-                                            "x": 409,
-                                            "y": 163
+                                            "x": 671,
+                                            "y": 155
                                         }
                                     },
                                     {
@@ -1780,15 +1780,15 @@
                                             []
                                         ],
                                         "_diagramState": {
-                                            "x": 649,
-                                            "y": 205
+                                            "x": 904,
+                                            "y": 36
                                         },
                                         "children": [
                                             {
                                                 "class": "Node",
                                                 "_diagramState": {
-                                                    "x": 931,
-                                                    "y": 303
+                                                    "x": 1086,
+                                                    "y": 56
                                                 }
                                             }
                                         ],
@@ -1859,6 +1859,7 @@
                                                                 "maxChars": 0,
                                                                 "mandatory": false,
                                                                 "multiEntry": false,
+                                                                "autocomplete": true,
                                                                 "muliTemplate": "lines",
                                                                 "multiMessage": "",
                                                                 "formatter": "none",
@@ -1909,6 +1910,7 @@
                                                                 "maxChars": 0,
                                                                 "mandatory": false,
                                                                 "multiEntry": true,
+                                                                "autocomplete": true,
                                                                 "muliTemplate": "lines",
                                                                 "multiMessage": "",
                                                                 "formatter": "none",
@@ -1959,6 +1961,7 @@
                                                                 "maxChars": 0,
                                                                 "mandatory": false,
                                                                 "multiEntry": false,
+                                                                "autocomplete": true,
                                                                 "muliTemplate": "lines",
                                                                 "multiMessage": "",
                                                                 "formatter": "none",
@@ -1974,7 +1977,12 @@
                                                             "config": {
                                                                 "className": "WizardFooter",
                                                                 "reduceOpacity": false,
-                                                                "onCompleteScript": "widget.WizardBuilder.70.metadata.children.1.children.1.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js"
+                                                                "onCompleteScript": "widget.WizardBuilder.70.metadata.children.1.children.1.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js",
+                                                                "labelForCancel": "cancel",
+                                                                "labelForSubmit": "submit",
+                                                                "labelForNext": "next",
+                                                                "labelForPrevious": "previous",
+                                                                "showCancel": true
                                                             }
                                                         }
                                                     ]
@@ -2026,6 +2034,71 @@
                                                     }
                                                 },
                                                 {
+                                                    "type": "WizardIconizedScriptSelect",
+                                                    "config": {
+                                                        "icons": [
+                                                            "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_jpC_u5X_[ImAgE]_OD8.png",
+                                                            "components\/com_geolive\/users_files\/user_files_400\/Uploads\/iR5_[ImAgE]_pNd_[G]_J1o.png",
+                                                            "components\/com_geolive\/users_files\/user_files_400\/Uploads\/0HT_z83_[ImAgE]_sGf_[G].png",
+                                                            "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_KB9_EQd_Xmj_[G].png",
+                                                            "components\/com_geolive\/users_files\/user_files_400\/Uploads\/5dw_[ImAgE]_Df3_[G]_FKs.png",
+                                                            "components\/com_geolive\/users_files\/user_files_400\/Uploads\/at6_[ImAgE]_tWb_8Yw_[G].png",
+                                                            "components\/com_geolive\/users_files\/user_files_400\/Uploads\/1wj_4IY_2Pf_[ImAgE]_[G].png",
+                                                            "components\/com_geolive\/users_files\/user_files_400\/Uploads\/EbL_bZB_[ImAgE]_x9t_[G].png"
+                                                        ],
+                                                        "iconsetMetadata": {
+                                                            "onSelectScripts": {
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_[G]_ye0_jZc_WXv.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_hVp_WtL_VlO_[ImAgE].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/z1p_[G]_xtF_Y7J_[ImAgE].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_[G]_gB3_9Vv_ShV.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_WS8_[G]_ZVv_E7L.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_jpC_u5X_[ImAgE]_OD8.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/iR5_[ImAgE]_pNd_[G]_J1o.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/0HT_z83_[ImAgE]_sGf_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_KB9_EQd_Xmj_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/5dw_[ImAgE]_Df3_[G]_FKs.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/at6_[ImAgE]_tWb_8Yw_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/1wj_4IY_2Pf_[ImAgE]_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/EbL_bZB_[ImAgE]_x9t_[G].png": ""
+                                                            },
+                                                            "onSubmitScripts": {
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_[G]_ye0_jZc_WXv.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_hVp_WtL_VlO_[ImAgE].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/z1p_[G]_xtF_Y7J_[ImAgE].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_[G]_gB3_9Vv_ShV.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_WS8_[G]_ZVv_E7L.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_jpC_u5X_[ImAgE]_OD8.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/iR5_[ImAgE]_pNd_[G]_J1o.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/0HT_z83_[ImAgE]_sGf_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_KB9_EQd_Xmj_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/5dw_[ImAgE]_Df3_[G]_FKs.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/at6_[ImAgE]_tWb_8Yw_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/1wj_4IY_2Pf_[ImAgE]_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/EbL_bZB_[ImAgE]_x9t_[G].png": ""
+                                                            },
+                                                            "onRenderScripts": {
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_[G]_ye0_jZc_WXv.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_hVp_WtL_VlO_[ImAgE].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/z1p_[G]_xtF_Y7J_[ImAgE].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_[G]_gB3_9Vv_ShV.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_WS8_[G]_ZVv_E7L.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_jpC_u5X_[ImAgE]_OD8.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/iR5_[ImAgE]_pNd_[G]_J1o.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/0HT_z83_[ImAgE]_sGf_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[ImAgE]_KB9_EQd_Xmj_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/5dw_[ImAgE]_Df3_[G]_FKs.png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/at6_[ImAgE]_tWb_8Yw_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/1wj_4IY_2Pf_[ImAgE]_[G].png": "",
+                                                                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/EbL_bZB_[ImAgE]_x9t_[G].png": ""
+                                                            }
+                                                        },
+                                                        "initSelectedScript": "",
+                                                        "className": "",
+                                                        "requireSelection": true
+                                                    }
+                                                },
+                                                {
                                                     "type": "WizardDescriptionField",
                                                     "config": {
                                                         "label": "Details of Violation",
@@ -2040,7 +2113,8 @@
                                                         "maxChars": 0,
                                                         "showExpandInput": true,
                                                         "toolbarPosition": "bottom",
-                                                        "textFormatScript": ""
+                                                        "textFormatScript": "",
+                                                        "mediaIconTint": "rgb(100, 149, 237)"
                                                     }
                                                 },
                                                 {
@@ -2124,6 +2198,7 @@
                                                         "maxChars": 0,
                                                         "mandatory": false,
                                                         "multiEntry": false,
+                                                        "autocomplete": true,
                                                         "muliTemplate": "lines",
                                                         "multiMessage": "",
                                                         "formatter": "none",
@@ -2139,7 +2214,12 @@
                                                     "config": {
                                                         "className": "WizardFooter",
                                                         "reduceOpacity": false,
-                                                        "onCompleteScript": "widget.WizardBuilder.70.metadata.children.1.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js"
+                                                        "onCompleteScript": "widget.WizardBuilder.70.metadata.children.1.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js",
+                                                        "labelForCancel": "cancel",
+                                                        "labelForSubmit": "submit",
+                                                        "labelForNext": "next",
+                                                        "labelForPrevious": "previous",
+                                                        "showCancel": true
                                                     }
                                                 }
                                             ]
@@ -2231,6 +2311,7 @@
                                                 "maxChars": 0,
                                                 "mandatory": false,
                                                 "multiEntry": false,
+                                                "autocomplete": true,
                                                 "muliTemplate": "lines",
                                                 "multiMessage": "",
                                                 "formatter": "none",
@@ -2281,6 +2362,7 @@
                                                 "maxChars": 0,
                                                 "mandatory": false,
                                                 "multiEntry": false,
+                                                "autocomplete": true,
                                                 "muliTemplate": "lines",
                                                 "multiMessage": "",
                                                 "formatter": "none",
@@ -2331,6 +2413,7 @@
                                                 "maxChars": 0,
                                                 "mandatory": false,
                                                 "multiEntry": false,
+                                                "autocomplete": true,
                                                 "muliTemplate": "lines",
                                                 "multiMessage": "",
                                                 "formatter": "none",
@@ -2381,6 +2464,7 @@
                                                 "maxChars": 0,
                                                 "mandatory": false,
                                                 "multiEntry": false,
+                                                "autocomplete": true,
                                                 "muliTemplate": "lines",
                                                 "multiMessage": "",
                                                 "formatter": "none",
@@ -2396,7 +2480,12 @@
                                             "config": {
                                                 "className": "WizardFooter",
                                                 "reduceOpacity": false,
-                                                "onCompleteScript": "widget.WizardBuilder.70.metadata.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js"
+                                                "onCompleteScript": "widget.WizardBuilder.70.metadata.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js",
+                                                "labelForCancel": "cancel",
+                                                "labelForSubmit": "submit",
+                                                "labelForNext": "next",
+                                                "labelForPrevious": "previous",
+                                                "showCancel": true
                                             }
                                         }
                                     ]
