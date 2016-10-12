@@ -6,36 +6,29 @@ sleep(5);
 
 Core::Emit('onDelayedCreateMapitem', $eventArgs);
 
-$headers = 'MIME-Version: 1.0'.
-"\r\n";
-$headers. = 'Content-type: text/html; charset=iso-8859-1'.
-"\r\n";
-$headers. = 'From: '.
-'Geolive'.
-' <'.
-'admin@geolive.ca'.
-'>'.
-"\r\n";
+$headers = 'MIME-Version: 1.0'."\r\n";
+$headers = $headers.'Content-type: text/html; charset=iso-8859-1'."\r\n";
+$headers = $headers.'From: '.'Geolive'.' <'.'admin@geolive.ca'.'>'."\r\n";
 $to = array('nickblackwell82@gmail.com');
 $to = rtrim(implode(', ', $to), ',');
 
 
 $mapsPlugin = Core::LoadPlugin('Maps');
-$marker = MapController::LoadMapItem($eventArgs - > id);
+$marker = MapController::LoadMapItem($eventArgs -> id);
 
 Core::LoadPlugin('Attributes');
 $tableMeta = AttributesTable::GetMetadata("rappAttributes");
 
-AttributesRecord::Set($marker - > getId(), $marker - > getType(), array(
+AttributesRecord::Set($marker -> getId(), $marker -> getType(), array(
 	'sent' => true,
 ), $tableMeta);
 
-$attributes = AttributesRecord::Get($marker - > getId(), $marker - > getType(), $tableMeta);
+$attributes = AttributesRecord::Get($marker -> getId(), $marker -> getType(), $tableMeta);
 
 $data = array(
 
 	'eventArgs' => $eventArgs,
-	'marker' => $marker - > getMetadata(),
+	'marker' => $marker -> getMetadata(),
 	'attributes' => $attributes,
 
 );
@@ -43,17 +36,17 @@ $data = array(
 
 Core::Broadcast("bcwfapp", "notification", $data);
 
-mail($to, 'Submitted Report ('.$marker - > getId().
+mail($to, 'Submitted Report ('.$marker -> getId().
 	') to RAPP', '<pre>'.htmlspecialchars(json_encode($data, JSON_PRETTY_PRINT)).
 	'</pre>', $headers);
 
 $mobile = Core::LoadPlugin('IOSApplication');
-$devices = $mobile - > getUsersDeviceIds($marker - > getUserId());
+$devices = $mobile -> getUsersDeviceIds($marker -> getUserId());
 
 Core::Emit("onNotifyDevicesAndClients", array(
 	"devices" => $devices,
 	"text" => "Your report has been submitted to Report All Poachers and Polluters",
-	"trigger" => "onCreateMapitem: (delay:180) ".$marker - > getId(),
+	"trigger" => "onCreateMapitem: (delay:180) ".$marker -> getId(),
 ));
 
 
@@ -64,49 +57,49 @@ $violation_details = '';
 
 Core::LoadPlugin('GoogleMaps');
 
-$coords = $marker - > getCoordinates();
+$coords = $marker -> getCoordinates();
 $response = GoogleMapsGeocode::FromCoordinates($coords[0], $coords[1]);
-if ($response - > status == 'OK') {
-	$location = $response - > results[0] - > formatted_address;
-	$violation_details. = "  ".
+if ($response -> status == 'OK') {
+	$location = $response -> results[0] -> formatted_address;
+	$violation_details= $violation_details."  ".
 	'Location: '.$location.
 	"\n";
 }
 
 
-$violation_details. = "  ".
+$violation_details = $violation_details."  ".
 'Coordinates (lat, lng): '.$coords[0].
 ', '.$coords[1].
 "\n";
 //$violation_details .= GoogleMapsStaticMapTiles::UrlForMapitem($marker) . "\n";
 
 
-$staticmaptile = Core::HTML() - > website().
-'/'.Core::HTML() - > Link($mapsPlugin - > urlVarsToNamedView('mapitem.staticmap'),
+$staticmaptile = Core::HTML() -> website().
+'/'.Core::HTML() -> Link($mapsPlugin -> urlVarsToNamedView('mapitem.staticmap'),
 	array(
 		'format' => 'raw',
-		'mapitem' => $marker - > getId(),
+		'mapitem' => $marker -> getId(),
 		'size' => '500x500'
 	));
-$violation_details. = "  ".$staticmaptile.
+$violation_details = $violation_details."  ".$staticmaptile.
 "\n\n";
 
-$ip = Core::Client() - > ipAddress();
+$ip = Core::Client() -> ipAddress();
 
 
-$response = Core::LoadPlugin('Geolocate') - > geocodeIp($ip);
+$response = Core::LoadPlugin('Geolocate') -> geocodeIp($ip);
 
 
-$geocode = trim(trim($response - > region_name.
-		' '.$response - > city).
-	' '.$response - > zip_code);
+$geocode = trim(trim($response -> region_name.
+		' '.$response -> city).
+	' '.$response -> zip_code);
 //$this->fail(print_r($response, true));
 
 $comments = '';
-$comments. = "  ".
+$comments = $comments."  ".
 'This report was submitted using the BCWF RAPP mobile app'.
 "\n";
-$comments. = "  ".
+$comments = $comments."  ".
 'Senders IP Address is: '.$ip.
 ' ('.$geocode.
 ')'.
@@ -114,7 +107,7 @@ $comments. = "  ".
 
 $fields = array(
 	'template' => 'hli\cos\violation-report.txt',
-	'subject' => urlencode('BCWF - RAPP Violation Report'),
+	'subject' => urlencode('BCWF - RAPP Violation Report '.$marker->getId()),
 	'redirect-url' => '/hli/cos/rapp-thank-you.html',
 	'origin' => '',
 	'comp_name' => 'n/a 1',
@@ -133,7 +126,7 @@ $fields = array(
 
 
 Core::Emit("onSubmitRAPPReportForItem", array(
-	"item" => $marker - > getId(),
+	"item" => $marker -> getId(),
 	"post" => $fields,
 ));
 
@@ -141,7 +134,7 @@ Core::Emit("onSubmitRAPPReportForItem", array(
 
 $fields_string = '';
 foreach($fields as $key => $value) {
-	$fields_string. = $key.
+	$fields_string =$fields_string. $key.
 	'='.$value.
 	'&';
 }
@@ -156,7 +149,7 @@ $result = curl_exec($ch);
 curl_close($ch);
 
 Core::Emit("onSubmitedRAPPReportForItem", array(
-	"item" => $marker - > getId(),
+	"item" => $marker -> getId(),
 	"response" => $result
 ));
 
@@ -166,4 +159,4 @@ foreach($devices as $device) {
 	Core::Broadcast("bcwfapp.".$device, "notification", array("text" => "Your report has been submitted to Report All Poachers and Polluters"));
 }
 
-Core::Broadcast("user.".$marker - > getUserId(), "notification", array("text" => "Your report has been submitted to Report All Poachers and Polluters"));
+Core::Broadcast("user.".$marker -> getUserId(), "notification", array("text" => "Your report has been submitted to Report All Poachers and Polluters"));
