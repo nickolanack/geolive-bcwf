@@ -1,0 +1,2440 @@
+{
+    "plugin.35": {
+        "name": "Attributes",
+        "instance": "Attributes",
+        "parameters": {},
+        "attributes": "plugin.Attributes.35.attributes.json"
+    },
+    "plugin.24": {
+        "name": "Upgrade",
+        "instance": "Upgrade",
+        "parameters": {
+            "releaseServer": "http:\/\/release.geolive.ca",
+            "releasePackage": "master",
+            "autoUpdate": false
+        }
+    },
+    "plugin.6": {
+        "name": "System Parameters",
+        "instance": "SystemParameters",
+        "parameters": {
+            "JSFileObfuscationEnabled": false,
+            "JSInlineObfuscationEnabled": false,
+            "CSSFileObfuscationEnabled": false,
+            "CSSInlineObfuscationEnabled": false,
+            "PHPDebugEnabled": true,
+            "JSDebugEnabled": true,
+            "CachingEnabled": true,
+            "PrettyPrintJson": true,
+            "JSCacheObfuscationEnabled": false,
+            "dev": "1",
+            "phase": "alpha",
+            "ExternalizeWidgetScripts": true
+        }
+    },
+    "plugin.4": {
+        "name": "Version Manager",
+        "instance": "VersionManager",
+        "parameters": {}
+    },
+    "plugin.5": {
+        "name": "Activity Monitor",
+        "instance": "ActivityMonitor",
+        "parameters": {}
+    },
+    "plugin.7": {
+        "name": "Data Types",
+        "instance": "Data",
+        "parameters": {}
+    },
+    "plugin.41": {
+        "name": "Timeline",
+        "instance": "Timeline",
+        "parameters": {}
+    },
+    "plugin.9": {
+        "name": "Filesystem",
+        "instance": "Filesystem",
+        "parameters": {
+            "uploadViewInlineCss": ".helloworld.{\r\n\r\n}",
+            "dropbox-app-key": "67b39ycqbewdv7s",
+            "showDropboxImagePicker": true,
+            "uploadViewPageScript": ""
+        }
+    },
+    "plugin.10": {
+        "name": "Maps",
+        "instance": "Maps",
+        "parameters": {
+            "enableLayerSyncronization": true,
+            "onlyShowMarkersInIconset": false,
+            "tileCachePath": "\/srv\/www\/vhosts\/production\/bcwf.s54.ok.ubc.ca\/http\/tiles"
+        }
+    },
+    "plugin.11": {
+        "name": "Users",
+        "instance": "Users",
+        "parameters": {}
+    },
+    "plugin.17": {
+        "name": "External Content",
+        "instance": "ExternalContent",
+        "parameters": {
+            "youtube-api-key": "AIzaSyBIIV_ZRWzPDlsKh5hl6rMhi5n01mg85DQ"
+        }
+    },
+    "plugin.36": {
+        "name": "Mobile Device Interface",
+        "instance": "IOSApplication",
+        "parameters": {
+            "registrationType": "create",
+            "applicationSettings": {
+                "applicationName": "Map Collect",
+                "visibleLayers": [
+                    "user"
+                ],
+                "form": {
+                    "layer": 11,
+                    "media": [
+                        "image",
+                        "video"
+                    ],
+                    "icon": "https:\/\/bcwf.geolive.ca\/components\/com_geolive\/users_files\/user_files_400\/Uploads\/dlN_[ImAgE]_E36_2F0_[G].png",
+                    "attributes": []
+                }
+            }
+        }
+    },
+    "plugin.34": {
+        "name": "Pusher Message Server",
+        "instance": "PusherMessages",
+        "parameters": "_PusherMessages.json"
+    },
+    "plugin.21": {
+        "name": "Google Maps",
+        "instance": "GoogleMaps",
+        "parameters": {}
+    },
+    "plugin.22": {
+        "name": "Integration Testing",
+        "instance": "UnitTest",
+        "parameters": {}
+    },
+    "plugin.23": {
+        "name": "User Interface",
+        "instance": "UserInterface",
+        "parameters": {}
+    },
+    "plugin.38": {
+        "name": "Auto Attributes",
+        "instance": "AutoAttributes",
+        "parameters": {
+            "storeUpdateDate": true,
+            "attributeUpdateDateField": [
+                {
+                    "visibility": "public",
+                    "tableId": "3",
+                    "tableName": "wildlifeAttributes",
+                    "tableSuffix": "_4304",
+                    "title": "lastUpdate",
+                    "label": "Last Update",
+                    "description": "Items last update date",
+                    "fieldType": "text",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                }
+            ]
+        }
+    },
+    "plugin.39": {
+        "name": "Language",
+        "instance": "Language",
+        "parameters": {}
+    },
+    "plugin.40": {
+        "name": "Slack Monitor",
+        "instance": "SlackMonitor",
+        "parameters": "_SlackMonitor.json"
+    },
+    "plugin.42": {
+        "name": "Email Moderate",
+        "instance": "EmailModerate",
+        "parameters": {
+            "moderator": [
+                "nickblackwell82@gmail.com",
+                "jessezeman@gmail.com",
+                ""
+            ],
+            "enableEmails": true,
+            "fromEmailName": "BCWF Map Notifications",
+            "fromEmail": "admin@geolive.ca",
+            "siteUrl": "https:\/\/bcwf.geolive.ca",
+            "siteName": "BC Wildlife Federation Mapping",
+            "formatEmailScript": "plugin.EmailModerate.42.formatEmailScript.js",
+            "formatVariablesScript": "plugin.EmailModerate.42.formatVariablesScript.js"
+        }
+    },
+    "plugin.43": {
+        "name": "Custom Events",
+        "instance": "CustomEvents",
+        "parameters": {},
+        "attributes": "plugin.CustomEvents.43.attributes.json"
+    },
+    "plugin.44": {
+        "name": "Geolocation",
+        "instance": "Geolocate",
+        "parameters": {}
+    },
+    "plugin.45": {
+        "name": "Deploy",
+        "instance": "Deploy",
+        "parameters": "_Deploy.json"
+    },
+    "widget.1": {
+        "name": "Google Controls",
+        "instance": "GoogleControl",
+        "parameters": {
+            "showStreetControl": 1,
+            "streetControlPosition": "LEFT_TOP",
+            "showPanControl": 1,
+            "panControlPosition": "LEFT_TOP",
+            "showZoomControl": 1,
+            "zoomControl": "SMALL",
+            "zoomControlPosition": "LEFT_TOP",
+            "showMapTypeControl": 1,
+            "mapType": "HORIZONTAL_BAR",
+            "mapTypePosition": "TOP_RIGHT",
+            "showMapScaleControl": 1,
+            "mapScaleType": "DEFAULT",
+            "mapScalePosition": "BOTTOM_RIGHT",
+            "showMapOverviewControl": 0,
+            "mapOverviewControlOpened": 0,
+            "widgetTitle": "add a label or comment for this widget",
+            "readAccess": "public"
+        }
+    },
+    "widget.2": {
+        "name": "Tile Buttons",
+        "instance": "DiscussionMenu",
+        "parameters": {
+            "sections": [
+                "home",
+                "iconset",
+                "",
+                "fullscreen"
+            ],
+            "discussionTag": false,
+            "iconSetReferenceName": "",
+            "markerSearch": true,
+            "tileIcon": [],
+            "position": "RIGHT_CENTER",
+            "offsetX": 100,
+            "offsetY": 100,
+            "tilePadding": 0,
+            "direction": "auto",
+            "markerSize": 24,
+            "tileSize": 50,
+            "showToolTips": true,
+            "fullscreenTip": "",
+            "homeTip": "",
+            "markerTip": "",
+            "loginTip": "",
+            "logoutTip": "",
+            "profileTip": "",
+            "layerMap": [],
+            "tipMap": [],
+            "widgetTitle": "Controls",
+            "readAccess": "public",
+            "groupIcon": [],
+            "markerIconset": [],
+            "filterLayerMappedIcons": true,
+            "iconsetMetadata": [],
+            "controlColor": "rgb(255, 255, 255)",
+            "guestLoginDrag": true,
+            "onDragEndScript": "widget.DiscussionMenu.2.onDragEndScript.js",
+            "subControlColor": "rgb(0, 136, 204)",
+            "useTipIconsetLayerTitle": false,
+            "formatTipScript": ""
+        }
+    },
+    "widget.85": {
+        "name": "Draggable Marker Tile",
+        "instance": "MarkerTile",
+        "parameters": {
+            "customScript": "",
+            "controlColor": "rgb(48,84,107)",
+            "markerIconset": [
+                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/dlN_[ImAgE]_E36_2F0_[G].png"
+            ],
+            "markerSize": 32,
+            "hoverTip": "Report a Natural Resource Violation",
+            "className": "resource-tile",
+            "wizardName": "ResourceViolation",
+            "guestLoginDrag": true,
+            "onDragEndScript": "widget.MarkerTile.85.onDragEndScript.js",
+            "formatTipScript": "",
+            "widgetTitle": "",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER"
+        }
+    },
+    "widget.86": {
+        "name": "Marker Wizard",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "metadata": {
+                "class": "DescisionNode",
+                "_diagramState": {
+                    "x": -260,
+                    "y": 238
+                },
+                "children": [
+                    {
+                        "class": "Node",
+                        "_diagramState": {
+                            "x": -249,
+                            "y": 300
+                        }
+                    },
+                    {
+                        "title": "New Empty Step",
+                        "class": "AttributesTableNode",
+                        "fields": [
+                            []
+                        ],
+                        "_diagramState": {
+                            "x": -6,
+                            "y": 252
+                        },
+                        "children": [
+                            {
+                                "class": "Node",
+                                "_diagramState": {
+                                    "x": 56,
+                                    "y": 152
+                                }
+                            },
+                            {
+                                "title": "New Empty Step",
+                                "class": "AttributesTableNode",
+                                "fields": [
+                                    []
+                                ],
+                                "_diagramState": {
+                                    "x": 309,
+                                    "y": 211
+                                },
+                                "children": [
+                                    {
+                                        "class": "Node",
+                                        "_diagramState": {
+                                            "x": 591,
+                                            "y": 337
+                                        }
+                                    },
+                                    {
+                                        "title": "New Empty Step",
+                                        "class": "AttributesTableNode",
+                                        "fields": [
+                                            []
+                                        ],
+                                        "_diagramState": {
+                                            "x": 717,
+                                            "y": 157
+                                        },
+                                        "children": [
+                                            {
+                                                "class": "Node",
+                                                "_diagramState": {
+                                                    "x": 789,
+                                                    "y": 67
+                                                }
+                                            }
+                                        ],
+                                        "builderMetadata": {
+                                            "positions": {
+                                                "title": {
+                                                    "modules": [
+                                                        {
+                                                            "type": "WizardSteps",
+                                                            "config": {
+                                                                "iconValue": [],
+                                                                "className": "",
+                                                                "manualValue": "1",
+                                                                "width": 749,
+                                                                "height": 425,
+                                                                "labelMethod": "auto",
+                                                                "elasticity": false,
+                                                                "minHeight": 200,
+                                                                "minWidth": 400,
+                                                                "showSteps": true
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "content": {
+                                                    "modules": [
+                                                        {
+                                                            "type": "WizardTitleField",
+                                                            "config": {
+                                                                "label": "Nature of the violation",
+                                                                "message": "",
+                                                                "className": "",
+                                                                "maxChars": 0,
+                                                                "textFormatScript": ""
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                                            "config": {
+                                                                "attributeFields": [
+                                                                    {
+                                                                        "visibility": "public",
+                                                                        "tableId": "4",
+                                                                        "tableName": "rappAttributes",
+                                                                        "tableSuffix": "_9408",
+                                                                        "title": "violationAffects",
+                                                                        "label": "Violation Affects",
+                                                                        "description": "",
+                                                                        "fieldType": "text",
+                                                                        "color": "rgb(undefined, undefined, undefined)",
+                                                                        "searchability": "public",
+                                                                        "editability": "registered",
+                                                                        "fieldTextOptions": {
+                                                                            "textType": "input",
+                                                                            "inputOptions": {
+                                                                                "buildAutocomplete": false,
+                                                                                "requireModeration": false,
+                                                                                "limitMaxChars": 0,
+                                                                                "limitMaxWords": 0,
+                                                                                "allowHtml": false,
+                                                                                "allowMedia": true,
+                                                                                "allowLinks": true
+                                                                            },
+                                                                            "listOptions": {
+                                                                                "takeSugesstions": true,
+                                                                                "buildTree": false,
+                                                                                "iconize": false,
+                                                                                "colorize": false
+                                                                            }
+                                                                        },
+                                                                        "allowMultiple": false
+                                                                    }
+                                                                ],
+                                                                "className": "",
+                                                                "label": "Describe how the violation affects you and any steps you have taken in this matter",
+                                                                "message": "",
+                                                                "lines": 2,
+                                                                "maxChars": 0,
+                                                                "mandatory": false,
+                                                                "multiEntry": false,
+                                                                "muliTemplate": "lines",
+                                                                "multiMessage": "",
+                                                                "formatter": "none",
+                                                                "iconTint": "rgb(100, 149, 237)"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                                            "config": {
+                                                                "attributeFields": [
+                                                                    {
+                                                                        "visibility": "public",
+                                                                        "tableId": "4",
+                                                                        "tableName": "rappAttributes",
+                                                                        "tableSuffix": "_9408",
+                                                                        "title": "agenciesContacted",
+                                                                        "label": "Agencies Contacted",
+                                                                        "description": "",
+                                                                        "fieldType": "text",
+                                                                        "color": "rgb(undefined, undefined, undefined)",
+                                                                        "searchability": "public",
+                                                                        "editability": "registered",
+                                                                        "fieldTextOptions": {
+                                                                            "textType": "input",
+                                                                            "inputOptions": {
+                                                                                "buildAutocomplete": false,
+                                                                                "requireModeration": false,
+                                                                                "limitMaxChars": 0,
+                                                                                "limitMaxWords": 0,
+                                                                                "allowHtml": false,
+                                                                                "allowMedia": true,
+                                                                                "allowLinks": true
+                                                                            },
+                                                                            "listOptions": {
+                                                                                "takeSugesstions": true,
+                                                                                "buildTree": false,
+                                                                                "iconize": false,
+                                                                                "colorize": false
+                                                                            }
+                                                                        },
+                                                                        "allowMultiple": false
+                                                                    }
+                                                                ],
+                                                                "className": "",
+                                                                "label": "Which other government agencies have you notified (if any)?",
+                                                                "message": "",
+                                                                "lines": 2,
+                                                                "maxChars": 0,
+                                                                "mandatory": false,
+                                                                "multiEntry": false,
+                                                                "muliTemplate": "lines",
+                                                                "multiMessage": "",
+                                                                "formatter": "none",
+                                                                "iconTint": "rgb(100, 149, 237)"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                                            "config": {
+                                                                "attributeFields": [
+                                                                    {
+                                                                        "visibility": "public",
+                                                                        "tableId": "4",
+                                                                        "tableName": "rappAttributes",
+                                                                        "tableSuffix": "_9408",
+                                                                        "title": "urgencyReason",
+                                                                        "label": "Urgency Reason",
+                                                                        "description": "",
+                                                                        "fieldType": "text",
+                                                                        "color": "rgb(NaN, NaN, NaN)",
+                                                                        "searchability": "public",
+                                                                        "editability": "registered",
+                                                                        "fieldTextOptions": {
+                                                                            "textType": "input",
+                                                                            "inputOptions": {
+                                                                                "buildAutocomplete": false,
+                                                                                "requireModeration": false,
+                                                                                "limitMaxChars": 0,
+                                                                                "limitMaxWords": 0,
+                                                                                "allowHtml": false,
+                                                                                "allowMedia": true,
+                                                                                "allowLinks": true
+                                                                            },
+                                                                            "listOptions": {
+                                                                                "takeSugesstions": true,
+                                                                                "buildTree": false,
+                                                                                "iconize": false,
+                                                                                "colorize": false
+                                                                            }
+                                                                        },
+                                                                        "allowMultiple": false
+                                                                    }
+                                                                ],
+                                                                "className": "",
+                                                                "label": "If you consider this matter to be urgent, please explain why",
+                                                                "message": "",
+                                                                "lines": 2,
+                                                                "maxChars": 0,
+                                                                "mandatory": false,
+                                                                "multiEntry": false,
+                                                                "muliTemplate": "lines",
+                                                                "multiMessage": "",
+                                                                "formatter": "none",
+                                                                "iconTint": "rgb(100, 149, 237)"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                                            "config": {
+                                                                "attributeFields": [
+                                                                    {
+                                                                        "visibility": "public",
+                                                                        "tableId": "4",
+                                                                        "tableName": "rappAttributes",
+                                                                        "tableSuffix": "_9408",
+                                                                        "title": "hazards",
+                                                                        "label": "Hazards",
+                                                                        "description": "",
+                                                                        "fieldType": "text",
+                                                                        "color": "rgb(undefined, undefined, undefined)",
+                                                                        "searchability": "public",
+                                                                        "editability": "registered",
+                                                                        "fieldTextOptions": {
+                                                                            "textType": "input",
+                                                                            "inputOptions": {
+                                                                                "buildAutocomplete": false,
+                                                                                "requireModeration": false,
+                                                                                "limitMaxChars": 0,
+                                                                                "limitMaxWords": 0,
+                                                                                "allowHtml": false,
+                                                                                "allowMedia": true,
+                                                                                "allowLinks": true
+                                                                            },
+                                                                            "listOptions": {
+                                                                                "takeSugesstions": true,
+                                                                                "buildTree": false,
+                                                                                "iconize": false,
+                                                                                "colorize": false
+                                                                            }
+                                                                        },
+                                                                        "allowMultiple": false
+                                                                    }
+                                                                ],
+                                                                "className": "",
+                                                                "label": "Are you aware of any hazards onsite?",
+                                                                "message": "excavations, unsafe structures, chemical storage, firearms, etc.",
+                                                                "lines": 2,
+                                                                "maxChars": 0,
+                                                                "mandatory": false,
+                                                                "multiEntry": false,
+                                                                "muliTemplate": "lines",
+                                                                "multiMessage": "",
+                                                                "formatter": "none",
+                                                                "iconTint": "rgb(100, 149, 237)"
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "footer": {
+                                                    "modules": [
+                                                        {
+                                                            "type": "WizardButtons",
+                                                            "config": {
+                                                                "className": "WizardFooter",
+                                                                "reduceOpacity": false,
+                                                                "onCompleteScript": "widget.WizardBuilder.86.metadata.children.1.children.1.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js"
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "menu": {
+                                                    "modules": []
+                                                }
+                                            },
+                                            "positionList": [
+                                                "title",
+                                                "content",
+                                                "footer",
+                                                "menu"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "builderMetadata": {
+                                    "positions": {
+                                        "title": {
+                                            "modules": [
+                                                {
+                                                    "type": "WizardSteps",
+                                                    "config": {
+                                                        "iconValue": [],
+                                                        "className": "",
+                                                        "manualValue": "1",
+                                                        "width": 752,
+                                                        "height": 536,
+                                                        "labelMethod": "auto",
+                                                        "elasticity": false,
+                                                        "minHeight": 200,
+                                                        "minWidth": 400,
+                                                        "showSteps": true
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "content": {
+                                            "modules": [
+                                                {
+                                                    "type": "WizardDescriptionField",
+                                                    "config": {
+                                                        "label": "Add a photo or Video",
+                                                        "message": "add a description",
+                                                        "lines": 3,
+                                                        "mandatory": false,
+                                                        "showAudios": true,
+                                                        "showImages": true,
+                                                        "showDocuments": true,
+                                                        "showVideos": true,
+                                                        "className": "hide-textbox",
+                                                        "maxChars": 0,
+                                                        "showExpandInput": true,
+                                                        "toolbarPosition": "bottom",
+                                                        "textFormatScript": ""
+                                                    }
+                                                },
+                                                {
+                                                    "type": "plugin.Attributes.WizardTextAttribute",
+                                                    "config": {
+                                                        "attributeFields": [
+                                                            {
+                                                                "visibility": "public",
+                                                                "tableId": "4",
+                                                                "tableName": "rappAttributes",
+                                                                "tableSuffix": "_9408",
+                                                                "title": "suspectContact",
+                                                                "label": "Suspect Contact Details",
+                                                                "description": "",
+                                                                "fieldType": "text",
+                                                                "color": "rgb(NaN, NaN, NaN)",
+                                                                "searchability": "public",
+                                                                "editability": "registered",
+                                                                "fieldTextOptions": {
+                                                                    "textType": "input",
+                                                                    "inputOptions": {
+                                                                        "buildAutocomplete": false,
+                                                                        "requireModeration": false,
+                                                                        "limitMaxChars": 0,
+                                                                        "limitMaxWords": 0,
+                                                                        "allowHtml": false,
+                                                                        "allowMedia": true,
+                                                                        "allowLinks": true
+                                                                    },
+                                                                    "listOptions": {
+                                                                        "takeSugesstions": true,
+                                                                        "buildTree": false,
+                                                                        "iconize": false,
+                                                                        "colorize": false
+                                                                    }
+                                                                },
+                                                                "allowMultiple": false
+                                                            }
+                                                        ],
+                                                        "className": "",
+                                                        "label": "Name, address and phone number of party\/parties alleged to be responsible:",
+                                                        "message": "",
+                                                        "lines": 2,
+                                                        "maxChars": 0,
+                                                        "mandatory": false,
+                                                        "multiEntry": false,
+                                                        "muliTemplate": "lines",
+                                                        "multiMessage": "",
+                                                        "formatter": "none",
+                                                        "iconTint": "rgb(100, 149, 237)"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "plugin.Attributes.WizardTextAttribute",
+                                                    "config": {
+                                                        "attributeFields": [
+                                                            {
+                                                                "visibility": "public",
+                                                                "tableId": "4",
+                                                                "tableName": "rappAttributes",
+                                                                "tableSuffix": "_9408",
+                                                                "title": "suspectDescription",
+                                                                "label": "Suspect Description",
+                                                                "description": "",
+                                                                "fieldType": "text",
+                                                                "color": "rgb(NaN, NaN, NaN)",
+                                                                "searchability": "public",
+                                                                "editability": "registered",
+                                                                "fieldTextOptions": {
+                                                                    "textType": "input",
+                                                                    "inputOptions": {
+                                                                        "buildAutocomplete": false,
+                                                                        "requireModeration": false,
+                                                                        "limitMaxChars": 0,
+                                                                        "limitMaxWords": 0,
+                                                                        "allowHtml": false,
+                                                                        "allowMedia": true,
+                                                                        "allowLinks": true
+                                                                    },
+                                                                    "listOptions": {
+                                                                        "takeSugesstions": true,
+                                                                        "buildTree": false,
+                                                                        "iconize": false,
+                                                                        "colorize": false
+                                                                    }
+                                                                },
+                                                                "allowMultiple": false
+                                                            }
+                                                        ],
+                                                        "className": "",
+                                                        "label": "Description of alleged party\/parties",
+                                                        "message": "sex, race, weight, height, eyes, hair, eyeglasses, build, complexion, features, clothing, smoker\/non-smoker, etc",
+                                                        "lines": 2,
+                                                        "maxChars": 0,
+                                                        "mandatory": false,
+                                                        "multiEntry": false,
+                                                        "muliTemplate": "lines",
+                                                        "multiMessage": "",
+                                                        "formatter": "none",
+                                                        "iconTint": "rgb(100, 149, 237)"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "plugin.Attributes.WizardTextAttribute",
+                                                    "config": {
+                                                        "attributeFields": [
+                                                            {
+                                                                "visibility": "public",
+                                                                "tableId": "4",
+                                                                "tableName": "rappAttributes",
+                                                                "tableSuffix": "_9408",
+                                                                "title": "transport",
+                                                                "label": "Transportation",
+                                                                "description": "",
+                                                                "fieldType": "text",
+                                                                "color": "rgb(NaN, NaN, NaN)",
+                                                                "searchability": "public",
+                                                                "editability": "registered",
+                                                                "fieldTextOptions": {
+                                                                    "textType": "input",
+                                                                    "inputOptions": {
+                                                                        "buildAutocomplete": false,
+                                                                        "requireModeration": false,
+                                                                        "limitMaxChars": 0,
+                                                                        "limitMaxWords": 0,
+                                                                        "allowHtml": false,
+                                                                        "allowMedia": true,
+                                                                        "allowLinks": true
+                                                                    },
+                                                                    "listOptions": {
+                                                                        "takeSugesstions": true,
+                                                                        "buildTree": false,
+                                                                        "iconize": false,
+                                                                        "colorize": false
+                                                                    }
+                                                                },
+                                                                "allowMultiple": false
+                                                            }
+                                                        ],
+                                                        "className": "",
+                                                        "label": "Vehicles associated with this violation",
+                                                        "message": "make, model, colour, year, licence plate number",
+                                                        "lines": 2,
+                                                        "maxChars": 0,
+                                                        "mandatory": false,
+                                                        "multiEntry": false,
+                                                        "muliTemplate": "lines",
+                                                        "multiMessage": "",
+                                                        "formatter": "none",
+                                                        "iconTint": "rgb(100, 149, 237)"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "plugin.Attributes.WizardTextAttribute",
+                                                    "config": {
+                                                        "attributeFields": [
+                                                            {
+                                                                "visibility": "public",
+                                                                "tableId": "4",
+                                                                "tableName": "rappAttributes",
+                                                                "tableSuffix": "_9408",
+                                                                "title": "dateStart",
+                                                                "label": "Date Start",
+                                                                "description": "",
+                                                                "fieldType": "text",
+                                                                "color": "rgb(NaN, NaN, NaN)",
+                                                                "searchability": "public",
+                                                                "editability": "registered",
+                                                                "fieldTextOptions": {
+                                                                    "textType": "input",
+                                                                    "inputOptions": {
+                                                                        "buildAutocomplete": false,
+                                                                        "requireModeration": false,
+                                                                        "limitMaxChars": 0,
+                                                                        "limitMaxWords": 0,
+                                                                        "allowHtml": false,
+                                                                        "allowMedia": true,
+                                                                        "allowLinks": true
+                                                                    },
+                                                                    "listOptions": {
+                                                                        "takeSugesstions": true,
+                                                                        "buildTree": false,
+                                                                        "iconize": false,
+                                                                        "colorize": false
+                                                                    }
+                                                                },
+                                                                "allowMultiple": false
+                                                            }
+                                                        ],
+                                                        "className": "",
+                                                        "label": "Date and time of violation",
+                                                        "message": "",
+                                                        "lines": 1,
+                                                        "maxChars": 0,
+                                                        "mandatory": false,
+                                                        "multiEntry": false,
+                                                        "muliTemplate": "lines",
+                                                        "multiMessage": "",
+                                                        "formatter": "date",
+                                                        "iconTint": "rgb(100, 149, 237)"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "plugin.Attributes.WizardTextAttribute",
+                                                    "config": {
+                                                        "attributeFields": [
+                                                            {
+                                                                "visibility": "public",
+                                                                "tableId": "4",
+                                                                "tableName": "rappAttributes",
+                                                                "tableSuffix": "_9408",
+                                                                "title": "dateEnd",
+                                                                "label": "Date End",
+                                                                "description": "",
+                                                                "fieldType": "text",
+                                                                "color": "rgb(undefined, undefined, undefined)",
+                                                                "searchability": "public",
+                                                                "editability": "registered",
+                                                                "fieldTextOptions": {
+                                                                    "textType": "input",
+                                                                    "inputOptions": {
+                                                                        "buildAutocomplete": false,
+                                                                        "requireModeration": false,
+                                                                        "limitMaxChars": 0,
+                                                                        "limitMaxWords": 0,
+                                                                        "allowHtml": false,
+                                                                        "allowMedia": true,
+                                                                        "allowLinks": true
+                                                                    },
+                                                                    "listOptions": {
+                                                                        "takeSugesstions": true,
+                                                                        "buildTree": false,
+                                                                        "iconize": false,
+                                                                        "colorize": false
+                                                                    }
+                                                                },
+                                                                "allowMultiple": false
+                                                            }
+                                                        ],
+                                                        "className": "",
+                                                        "label": "End Date and time",
+                                                        "message": "",
+                                                        "lines": 1,
+                                                        "maxChars": 0,
+                                                        "mandatory": false,
+                                                        "multiEntry": false,
+                                                        "muliTemplate": "lines",
+                                                        "multiMessage": "",
+                                                        "formatter": "date",
+                                                        "iconTint": "rgb(100, 149, 237)"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "plugin.Attributes.WizardBooleanAttribute",
+                                                    "config": {
+                                                        "attributeFields": [
+                                                            {
+                                                                "visibility": "public",
+                                                                "tableId": "4",
+                                                                "tableName": "rappAttributes",
+                                                                "tableSuffix": "_9408",
+                                                                "title": "inProgress",
+                                                                "label": "In Progress",
+                                                                "description": "",
+                                                                "fieldType": "boolean",
+                                                                "color": "rgb(undefined, undefined, undefined)",
+                                                                "searchability": "public",
+                                                                "editability": "registered",
+                                                                "fieldBooleanOptions": {
+                                                                    "trueIcon": false,
+                                                                    "falseIcon": false,
+                                                                    "hideFalse": true,
+                                                                    "trueLabel": "",
+                                                                    "falseLabel": "",
+                                                                    "useFieldIcon": false
+                                                                },
+                                                                "allowMultiple": false
+                                                            }
+                                                        ],
+                                                        "presentationImagesTrueImage": [],
+                                                        "presentationImagesFalseImage": [],
+                                                        "className": "",
+                                                        "label": "Is the violation in progress?",
+                                                        "showLabel": false,
+                                                        "presentationStyle": "radio",
+                                                        "presentationRadioTrueLabel": "Yes",
+                                                        "presentationRadioFalseLabel": "No"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "footer": {
+                                            "modules": [
+                                                {
+                                                    "type": "WizardButtons",
+                                                    "config": {
+                                                        "className": "WizardFooter",
+                                                        "reduceOpacity": false,
+                                                        "onCompleteScript": "widget.WizardBuilder.86.metadata.children.1.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "menu": {
+                                            "modules": []
+                                        }
+                                    },
+                                    "positionList": [
+                                        "title",
+                                        "content",
+                                        "footer",
+                                        "menu"
+                                    ]
+                                }
+                            }
+                        ],
+                        "builderMetadata": {
+                            "positions": {
+                                "title": {
+                                    "modules": [
+                                        {
+                                            "type": "WizardSteps",
+                                            "config": {
+                                                "iconValue": [],
+                                                "className": "",
+                                                "manualValue": "1",
+                                                "width": 754,
+                                                "height": 575,
+                                                "labelMethod": "auto",
+                                                "elasticity": false,
+                                                "minHeight": 200,
+                                                "minWidth": 400,
+                                                "showSteps": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                "content": {
+                                    "modules": [
+                                        {
+                                            "type": "WizardStepTitle",
+                                            "config": {
+                                                "className": "",
+                                                "text": "<span style=\"text-align:left\"><h3>Privacy<\/h3>\n<p>The information that you provide will be subject to the Freedom of Information and Protection of Privacy Act (FOIPP). We will keep your information confidential to the maximum extent possible. Please direct any inquiries about FOIPP to the Information Policy and Privacy Branch at 1 800 663-7867.\n<\/p><p>The information in your Report of Natural Resource Violation will be reviewed and you may be contacted for further details. Where warranted, the matter will be investigated and appropriate action will be taken. If the Ministry of Forests, Lands and Natural Resource Operations does not have jurisdiction over the matter, your Report of Natural Resource Violation will be forwarded to the appropriate agency. If there are no reasonable grounds to believe a contravention has occurred or if the matter is not considered to be significant, is not a threat to public safety or is not having a detrimental impact on the environment or on others, an investigation may not be initiated.\nIf you have any questions, please contact the nearest FrontCounter BC Contact Centre. <\/p><\/span>"
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    {
+                                                        "visibility": "public",
+                                                        "tableId": "4",
+                                                        "tableName": "rappAttributes",
+                                                        "tableSuffix": "_9408",
+                                                        "title": "name",
+                                                        "label": "Name",
+                                                        "description": "",
+                                                        "fieldType": "text",
+                                                        "color": "rgb(NaN, NaN, NaN)",
+                                                        "searchability": "public",
+                                                        "editability": "registered",
+                                                        "fieldTextOptions": {
+                                                            "textType": "input",
+                                                            "inputOptions": {
+                                                                "buildAutocomplete": false,
+                                                                "requireModeration": false,
+                                                                "limitMaxChars": 0,
+                                                                "limitMaxWords": 0,
+                                                                "allowHtml": false,
+                                                                "allowMedia": true,
+                                                                "allowLinks": true
+                                                            },
+                                                            "listOptions": {
+                                                                "takeSugesstions": true,
+                                                                "buildTree": false,
+                                                                "iconize": false,
+                                                                "colorize": false
+                                                            }
+                                                        },
+                                                        "allowMultiple": false
+                                                    }
+                                                ],
+                                                "className": "",
+                                                "label": "Your Name",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": true,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)"
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    {
+                                                        "visibility": "public",
+                                                        "tableId": "4",
+                                                        "tableName": "rappAttributes",
+                                                        "tableSuffix": "_9408",
+                                                        "title": "address",
+                                                        "label": "Address",
+                                                        "description": "",
+                                                        "fieldType": "text",
+                                                        "color": "rgb(NaN, NaN, NaN)",
+                                                        "searchability": "public",
+                                                        "editability": "registered",
+                                                        "fieldTextOptions": {
+                                                            "textType": "input",
+                                                            "inputOptions": {
+                                                                "buildAutocomplete": false,
+                                                                "requireModeration": false,
+                                                                "limitMaxChars": 0,
+                                                                "limitMaxWords": 0,
+                                                                "allowHtml": false,
+                                                                "allowMedia": true,
+                                                                "allowLinks": true
+                                                            },
+                                                            "listOptions": {
+                                                                "takeSugesstions": true,
+                                                                "buildTree": false,
+                                                                "iconize": false,
+                                                                "colorize": false
+                                                            }
+                                                        },
+                                                        "allowMultiple": false
+                                                    }
+                                                ],
+                                                "className": "",
+                                                "label": "Your Address",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": true,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)"
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    {
+                                                        "visibility": "public",
+                                                        "tableId": "4",
+                                                        "tableName": "rappAttributes",
+                                                        "tableSuffix": "_9408",
+                                                        "title": "phone",
+                                                        "label": "Phone",
+                                                        "description": "",
+                                                        "fieldType": "text",
+                                                        "color": "rgb(NaN, NaN, NaN)",
+                                                        "searchability": "public",
+                                                        "editability": "registered",
+                                                        "fieldTextOptions": {
+                                                            "textType": "input",
+                                                            "inputOptions": {
+                                                                "buildAutocomplete": false,
+                                                                "requireModeration": false,
+                                                                "limitMaxChars": 0,
+                                                                "limitMaxWords": 0,
+                                                                "allowHtml": false,
+                                                                "allowMedia": true,
+                                                                "allowLinks": true
+                                                            },
+                                                            "listOptions": {
+                                                                "takeSugesstions": true,
+                                                                "buildTree": false,
+                                                                "iconize": false,
+                                                                "colorize": false
+                                                            }
+                                                        },
+                                                        "allowMultiple": false
+                                                    }
+                                                ],
+                                                "className": "",
+                                                "label": "Your Phone Number",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": true,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)"
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    {
+                                                        "visibility": "public",
+                                                        "tableId": "4",
+                                                        "tableName": "rappAttributes",
+                                                        "tableSuffix": "_9408",
+                                                        "title": "email",
+                                                        "label": "Email",
+                                                        "description": "",
+                                                        "fieldType": "text",
+                                                        "color": "rgb(NaN, NaN, NaN)",
+                                                        "searchability": "public",
+                                                        "editability": "registered",
+                                                        "fieldTextOptions": {
+                                                            "textType": "input",
+                                                            "inputOptions": {
+                                                                "buildAutocomplete": false,
+                                                                "requireModeration": false,
+                                                                "limitMaxChars": 0,
+                                                                "limitMaxWords": 0,
+                                                                "allowHtml": false,
+                                                                "allowMedia": true,
+                                                                "allowLinks": true
+                                                            },
+                                                            "listOptions": {
+                                                                "takeSugesstions": true,
+                                                                "buildTree": false,
+                                                                "iconize": false,
+                                                                "colorize": false
+                                                            }
+                                                        },
+                                                        "allowMultiple": false
+                                                    }
+                                                ],
+                                                "className": "",
+                                                "label": "Your Email Address",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": true,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)"
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardBooleanAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    {
+                                                        "visibility": "public",
+                                                        "tableId": "4",
+                                                        "tableName": "rappAttributes",
+                                                        "tableSuffix": "_9408",
+                                                        "title": "requestAnonymous",
+                                                        "label": "Request Anonymous",
+                                                        "description": "",
+                                                        "fieldType": "boolean",
+                                                        "color": "rgb(undefined, undefined, undefined)",
+                                                        "searchability": "public",
+                                                        "editability": "registered",
+                                                        "fieldBooleanOptions": {
+                                                            "trueIcon": false,
+                                                            "falseIcon": false,
+                                                            "hideFalse": true,
+                                                            "trueLabel": "",
+                                                            "falseLabel": "",
+                                                            "useFieldIcon": false
+                                                        },
+                                                        "allowMultiple": false
+                                                    }
+                                                ],
+                                                "presentationImagesTrueImage": [],
+                                                "presentationImagesFalseImage": [],
+                                                "className": "",
+                                                "label": "I wish to remain anonymous",
+                                                "showLabel": false,
+                                                "presentationStyle": "checkbox",
+                                                "presentationRadioTrueLabel": "Yes",
+                                                "presentationRadioFalseLabel": "No"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "footer": {
+                                    "modules": [
+                                        {
+                                            "type": "WizardButtons",
+                                            "config": {
+                                                "className": "WizardFooter",
+                                                "reduceOpacity": false,
+                                                "onCompleteScript": "widget.WizardBuilder.86.metadata.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "menu": {
+                                    "modules": []
+                                }
+                            },
+                            "positionList": [
+                                "title",
+                                "content",
+                                "footer",
+                                "menu"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "templateName": "ResourceViolation",
+            "widgetTitle": "ResourceViolation",
+            "readAccess": "public"
+        }
+    },
+    "widget.67": {
+        "name": "Custom CSS",
+        "instance": "CSS",
+        "parameters": {
+            "customCSS": "widget.CSS.67.customCSS.css",
+            "widgetTitle": "Tile Buttons, Wizard Etc",
+            "readAccess": "public"
+        }
+    },
+    "widget.68": {
+        "name": "Timeline",
+        "instance": "Timeline",
+        "parameters": {
+            "position": "BOTTOM_CENTER",
+            "className": "",
+            "barColor": "#f3f3f3",
+            "spanColor": "rgb(0, 160, 80)",
+            "minSpanColor": "#EEEEEE",
+            "knobColor": "#EEEEEE",
+            "showTip": false,
+            "roundDownMonth": false,
+            "tipTitle": "Project Date Filter",
+            "tipDescription": "Drag the timeline control points or drag the center bar to filter the map to show project within the selected time frame",
+            "lockMinDate": "-60",
+            "lockMaxDate": "+1",
+            "attributeSelection": [
+                {
+                    "visibility": "public",
+                    "tableId": "3",
+                    "tableName": "wildlifeAttributes",
+                    "tableSuffix": "_4304",
+                    "title": "lastUpdate",
+                    "label": "Last Update",
+                    "description": "Items last update date",
+                    "fieldType": "text",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                }
+            ],
+            "onRenderScript": "widget.Timeline.68.onRenderScript.js",
+            "sendNotifications": true,
+            "widgetTitle": "",
+            "readAccess": "public",
+            "useTileButton": true,
+            "hideTimelineAtStart": true,
+            "tileIcon": [],
+            "tilePosition": "RIGHT_CENTER"
+        }
+    },
+    "widget.72": {
+        "name": "Legend",
+        "instance": "Legend",
+        "parameters": {
+            "position": "LEFT_CENTER",
+            "style": "GeoliveLegend.css",
+            "useIconSet": true,
+            "draggableIcons": false,
+            "startMinimized": true,
+            "showToggle": false,
+            "guestLoginDrag": true,
+            "legendParams": [],
+            "editableLayerScript": "widget.Legend.72.editableLayerScript.js",
+            "formatLayerScript": "",
+            "formatLayerPopoverScript": "",
+            "formatLegendScript": "",
+            "onDragEndScript": "widget.Legend.72.onDragEndScript.js",
+            "iconSize": 31,
+            "defaultIcon": "DEFAULT",
+            "showEditLayerButtons": true,
+            "widgetTitle": "",
+            "readAccess": "public"
+        }
+    },
+    "widget.73": {
+        "name": "Custom CSS",
+        "instance": "CSS",
+        "parameters": {
+            "customCSS": "widget.CSS.73.customCSS.css",
+            "widgetTitle": "Legend",
+            "readAccess": "public"
+        }
+    },
+    "widget.76": {
+        "name": "Icon Set",
+        "instance": "IconSet",
+        "parameters": {
+            "markerIconset": [
+                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/dlN_[ImAgE]_E36_2F0_[G].png"
+            ],
+            "layerMap": [],
+            "tipMap": [],
+            "filterLayerMappedIcons": true,
+            "iconsetMetadata": {
+                "layerMap": {
+                    "components\/com_geolive\/users_files\/user_files_400\/Uploads\/dlN_[ImAgE]_E36_2F0_[G].png": 11
+                },
+                "renderSettings": []
+            },
+            "widgetTitle": "",
+            "readAccess": "public",
+            "_raw_layerMap": null,
+            "_raw_tipMap": null
+        }
+    },
+    "widget.75": {
+        "name": "Draggable Marker Tile",
+        "instance": "MarkerTile",
+        "parameters": {
+            "customScript": "",
+            "controlColor": "rgb(48,84,107)",
+            "markerIconset": [
+                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/dlN_[ImAgE]_E36_2F0_[G].png"
+            ],
+            "markerSize": 32,
+            "hoverTip": "Place a violation report marker",
+            "className": "rapp-tile",
+            "guestLoginDrag": true,
+            "onDragEndScript": "widget.MarkerTile.75.onDragEndScript.js",
+            "formatTipScript": "",
+            "widgetTitle": "",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER",
+            "wizardName": "ReportViolation"
+        }
+    },
+    "widget.77": {
+        "name": "Info-Window",
+        "instance": "InfoWindowBuilder",
+        "parameters": {
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": [
+                            {
+                                "type": "DefaultTitle",
+                                "config": {
+                                    "className": "",
+                                    "maxChars": 0
+                                }
+                            }
+                        ]
+                    },
+                    "content": {
+                        "modules": [
+                            {
+                                "type": "DefaultDescription",
+                                "config": {
+                                    "className": "",
+                                    "imageWidth": 300,
+                                    "imageHeight": 240,
+                                    "multiImageWidth": 100,
+                                    "multiImageHeight": 75,
+                                    "portraitImageWidth": 75,
+                                    "portraitImageHeight": 100,
+                                    "autoArrange": true,
+                                    "oneLine": true,
+                                    "maxChars": 0,
+                                    "maxWidth": 0,
+                                    "showAudios": true,
+                                    "showVideos": true,
+                                    "showImages": true,
+                                    "showDocuments": true,
+                                    "showLinks": true,
+                                    "showExternalContent": true,
+                                    "embedPortrait": true,
+                                    "preferLocalContent": true,
+                                    "portraitClip": true
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": [
+                            {
+                                "type": "DefaultEdit",
+                                "config": {
+                                    "className": "",
+                                    "dragConfirmMessage": "save new position",
+                                    "dragConfirm": false,
+                                    "geocodeMove": true,
+                                    "templateName": "ReportViolation"
+                                }
+                            }
+                        ]
+                    },
+                    "menu": {
+                        "modules": [
+                            {
+                                "type": "ReadAccessSelect",
+                                "config": {
+                                    "className": "",
+                                    "listTitle": "Set Access",
+                                    "onSetAccessScript": "",
+                                    "mergeRestrictions": true
+                                }
+                            }
+                        ]
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ]
+            },
+            "templateName": "default",
+            "widgetTitle": "Rapp Placemark",
+            "readAccess": "public"
+        }
+    },
+    "widget.78": {
+        "name": "Map Layers Widget",
+        "instance": "Layers",
+        "parameters": {}
+    },
+    "widget.79": {
+        "name": "Search Engine Optimization Helper",
+        "instance": "SearchEngineOptimizationHelper",
+        "parameters": {}
+    },
+    "widget.80": {
+        "name": "No Javascript Helper",
+        "instance": "NoJavascriptHelper",
+        "parameters": {}
+    },
+    "widget.81": {
+        "name": "Login Behavior",
+        "instance": "LoginWizard",
+        "parameters": {}
+    },
+    "widget.82": {
+        "name": "Session Behavior",
+        "instance": "Session",
+        "parameters": {}
+    },
+    "widget.83": {
+        "name": "Google Controls",
+        "instance": "GoogleControl",
+        "parameters": {}
+    },
+    "widget.84": {
+        "name": "Tile Buttons",
+        "instance": "DiscussionMenu",
+        "parameters": {}
+    },
+    "widget.87": {
+        "name": "Custom CSS",
+        "instance": "CSS",
+        "parameters": {
+            "customCSS": "widget.CSS.87.customCSS.css",
+            "widgetTitle": "Infowindow",
+            "readAccess": "public"
+        }
+    },
+    "widget.88": {
+        "name": "Custom Behavior Script",
+        "instance": "CustomBehaviorScript",
+        "parameters": {
+            "customScript": "widget.CustomBehaviorScript.88.customScript.js",
+            "widgetTitle": "cluster style",
+            "readAccess": "public"
+        }
+    },
+    "widget.5": {
+        "name": "Attr Search Bar",
+        "instance": "AttributesSearch",
+        "parameters": {
+            "position": "TOP_CENTER",
+            "barWidth": 660,
+            "locationSearch": true,
+            "showFilterBuilder": true,
+            "hoverTheme": false,
+            "themeLabel": "Keywords",
+            "showCloud": true,
+            "cloudTable": "projectAttributes",
+            "cloudField": "keywords",
+            "mapitemSearchLabel": "Placemarks",
+            "locationSearchLabel": "Locations",
+            "showDemoTags": false,
+            "demoTagsMinimum": 10,
+            "cloudResults": 30,
+            "widgetTitle": "add a label or comment for this widget",
+            "readAccess": "public",
+            "searchColor": "rgb(0, 160, 80)",
+            "clearColor": "rgb(182, 0, 182)",
+            "searchTintColor": "rgb(255, 255, 255)",
+            "clearTintColor": "rgb(247, 247, 247)",
+            "placeholderText": "",
+            "searchUsers": false
+        }
+    },
+    "widget.43": {
+        "name": "Cluster Behavior",
+        "instance": "ClusterBehaviors",
+        "parameters": {
+            "spreadClusters": false,
+            "spreadClustersWithAnimation": true,
+            "widgetTitle": "",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER"
+        }
+    },
+    "widget.20": {
+        "name": "Uncluster Button",
+        "instance": "LayerClusterToggleTile",
+        "parameters": {
+            "widgetTitle": "add a label or comment for this widget",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER",
+            "controlColor": "rgb(255, 255, 255)",
+            "tileIcon": [],
+            "unclusterTip": "Ungroup icons",
+            "clusterTip": "Group icons"
+        }
+    },
+    "widget.24": {
+        "name": "Attribute Search Drop",
+        "instance": "AttributesSearchDropMarker",
+        "parameters": {
+            "widgetTitle": "add a label or comment for this widget",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER",
+            "showAllIcons": true,
+            "guestLoginDrop": true,
+            "onDropScript": "widget.AttributesSearchDropMarker.24.onDropScript.js"
+        }
+    },
+    "widget.28": {
+        "name": "Url Variables Parser",
+        "instance": "UrlVariablesBehavior",
+        "parameters": {
+            "widgetTitle": "",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER",
+            "maxZoom": true,
+            "onFeatureDoesNotExist": "alert(\"mapitem does not exist or you do not have access.\");",
+            "onUserDoesNotHaveAccessToFeature": "window.openLoginWindow();"
+        }
+    },
+    "widget.90": {
+        "name": "Custom Behavior Script",
+        "instance": "CustomBehaviorScript",
+        "parameters": {
+            "customScript": "widget.CustomBehaviorScript.90.customScript.js",
+            "widgetTitle": "notifications",
+            "readAccess": "public"
+        }
+    },
+    "widget.55": {
+        "name": "Custom Tile Control Script",
+        "instance": "CustomTileControlScript",
+        "parameters": {
+            "customScript": "widget.CustomTileControlScript.55.customScript.js",
+            "tileIcon": [
+                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_[ImAgE]_gtw_Ch3_6gE.png"
+            ],
+            "hoverTip": "Show data as a heatmap",
+            "widgetTitle": "heat map tile",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER"
+        }
+    },
+    "widget.56": {
+        "name": "Flexible Height Widget",
+        "instance": "FlexibleHeight",
+        "parameters": {
+            "customScript": "",
+            "widgetTitle": "",
+            "readAccess": "public"
+        }
+    },
+    "widget.58": {
+        "name": "Custom Behavior Script",
+        "instance": "CustomBehaviorScript",
+        "parameters": {
+            "customScript": "widget.CustomBehaviorScript.58.customScript.js",
+            "widgetTitle": "Cluster Style",
+            "readAccess": "public"
+        }
+    },
+    "widget.69": {
+        "name": "Custom CSS",
+        "instance": "CSS",
+        "parameters": {
+            "customCSS": "widget.CSS.69.customCSS.css",
+            "widgetTitle": "Timeline",
+            "readAccess": "public"
+        }
+    },
+    "widget.70": {
+        "name": "Marker Wizard",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "metadata": {
+                "class": "DescisionNode",
+                "_diagramState": {
+                    "x": -268,
+                    "y": 346
+                },
+                "children": [
+                    {
+                        "class": "Node",
+                        "_diagramState": {
+                            "x": -257,
+                            "y": 408
+                        }
+                    },
+                    {
+                        "title": "Default Wizard Step One",
+                        "class": "AttributesTableNode",
+                        "fields": [
+                            []
+                        ],
+                        "_diagramState": {
+                            "x": 24,
+                            "y": 297
+                        },
+                        "children": [
+                            {
+                                "class": "Node",
+                                "_diagramState": {
+                                    "x": 216,
+                                    "y": 346
+                                }
+                            },
+                            {
+                                "title": "New Empty Step",
+                                "class": "AttributesTableNode",
+                                "fields": [
+                                    []
+                                ],
+                                "_diagramState": {
+                                    "x": 297,
+                                    "y": 213
+                                },
+                                "children": [
+                                    {
+                                        "class": "Node",
+                                        "_diagramState": {
+                                            "x": 409,
+                                            "y": 163
+                                        }
+                                    },
+                                    {
+                                        "title": "New Empty Step",
+                                        "class": "AttributesTableNode",
+                                        "fields": [
+                                            []
+                                        ],
+                                        "_diagramState": {
+                                            "x": 649,
+                                            "y": 205
+                                        },
+                                        "children": [
+                                            {
+                                                "class": "Node",
+                                                "_diagramState": {
+                                                    "x": 931,
+                                                    "y": 303
+                                                }
+                                            }
+                                        ],
+                                        "builderMetadata": {
+                                            "positions": {
+                                                "title": {
+                                                    "modules": [
+                                                        {
+                                                            "type": "WizardSteps",
+                                                            "config": {
+                                                                "iconValue": [],
+                                                                "className": "",
+                                                                "manualValue": "1",
+                                                                "width": 751,
+                                                                "height": 321,
+                                                                "labelMethod": "auto",
+                                                                "elasticity": false,
+                                                                "minHeight": 200,
+                                                                "minWidth": 425,
+                                                                "showSteps": true
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "content": {
+                                                    "modules": [
+                                                        {
+                                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                                            "config": {
+                                                                "attributeFields": [
+                                                                    {
+                                                                        "visibility": "public",
+                                                                        "tableId": "4",
+                                                                        "tableName": "rappAttributes",
+                                                                        "tableSuffix": "_9408",
+                                                                        "title": "transport",
+                                                                        "label": "Transportation",
+                                                                        "description": "",
+                                                                        "fieldType": "text",
+                                                                        "color": "rgb(NaN, NaN, NaN)",
+                                                                        "searchability": "public",
+                                                                        "editability": "registered",
+                                                                        "fieldTextOptions": {
+                                                                            "textType": "input",
+                                                                            "inputOptions": {
+                                                                                "buildAutocomplete": false,
+                                                                                "requireModeration": false,
+                                                                                "limitMaxChars": 0,
+                                                                                "limitMaxWords": 0,
+                                                                                "allowHtml": false,
+                                                                                "allowMedia": true,
+                                                                                "allowLinks": true
+                                                                            },
+                                                                            "listOptions": {
+                                                                                "takeSugesstions": true,
+                                                                                "buildTree": false,
+                                                                                "iconize": false,
+                                                                                "colorize": false
+                                                                            }
+                                                                        },
+                                                                        "allowMultiple": false
+                                                                    }
+                                                                ],
+                                                                "className": "",
+                                                                "label": "Transportation Used",
+                                                                "message": "",
+                                                                "lines": 3,
+                                                                "maxChars": 0,
+                                                                "mandatory": false,
+                                                                "multiEntry": false,
+                                                                "muliTemplate": "lines",
+                                                                "multiMessage": "",
+                                                                "formatter": "none",
+                                                                "iconTint": "rgb(100, 149, 237)"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                                            "config": {
+                                                                "attributeFields": [
+                                                                    {
+                                                                        "visibility": "public",
+                                                                        "tableId": "4",
+                                                                        "tableName": "rappAttributes",
+                                                                        "tableSuffix": "_9408",
+                                                                        "title": "otherWitnesses",
+                                                                        "label": "Other Witnesses",
+                                                                        "description": "",
+                                                                        "fieldType": "text",
+                                                                        "color": "rgb(NaN, NaN, NaN)",
+                                                                        "searchability": "public",
+                                                                        "editability": "registered",
+                                                                        "fieldTextOptions": {
+                                                                            "textType": "input",
+                                                                            "inputOptions": {
+                                                                                "buildAutocomplete": false,
+                                                                                "requireModeration": false,
+                                                                                "limitMaxChars": 0,
+                                                                                "limitMaxWords": 0,
+                                                                                "allowHtml": false,
+                                                                                "allowMedia": true,
+                                                                                "allowLinks": true
+                                                                            },
+                                                                            "listOptions": {
+                                                                                "takeSugesstions": true,
+                                                                                "buildTree": false,
+                                                                                "iconize": false,
+                                                                                "colorize": false
+                                                                            }
+                                                                        },
+                                                                        "allowMultiple": true
+                                                                    }
+                                                                ],
+                                                                "className": "",
+                                                                "label": "Other Witnesses",
+                                                                "message": "name, address, and phone for each",
+                                                                "lines": 1,
+                                                                "maxChars": 0,
+                                                                "mandatory": false,
+                                                                "multiEntry": true,
+                                                                "muliTemplate": "lines",
+                                                                "multiMessage": "",
+                                                                "formatter": "none",
+                                                                "iconTint": "rgb(100, 149, 237)"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                                            "config": {
+                                                                "attributeFields": [
+                                                                    {
+                                                                        "visibility": "public",
+                                                                        "tableId": "4",
+                                                                        "tableName": "rappAttributes",
+                                                                        "tableSuffix": "_9408",
+                                                                        "title": "comments",
+                                                                        "label": "Comments",
+                                                                        "description": "",
+                                                                        "fieldType": "text",
+                                                                        "color": "rgb(undefined, undefined, undefined)",
+                                                                        "searchability": "public",
+                                                                        "editability": "registered",
+                                                                        "fieldTextOptions": {
+                                                                            "textType": "input",
+                                                                            "inputOptions": {
+                                                                                "buildAutocomplete": false,
+                                                                                "requireModeration": false,
+                                                                                "limitMaxChars": 0,
+                                                                                "limitMaxWords": 0,
+                                                                                "allowHtml": false,
+                                                                                "allowMedia": true,
+                                                                                "allowLinks": true
+                                                                            },
+                                                                            "listOptions": {
+                                                                                "takeSugesstions": true,
+                                                                                "buildTree": false,
+                                                                                "iconize": false,
+                                                                                "colorize": false
+                                                                            }
+                                                                        },
+                                                                        "allowMultiple": false
+                                                                    }
+                                                                ],
+                                                                "className": "",
+                                                                "label": "Additional Comments",
+                                                                "message": "",
+                                                                "lines": 3,
+                                                                "maxChars": 0,
+                                                                "mandatory": false,
+                                                                "multiEntry": false,
+                                                                "muliTemplate": "lines",
+                                                                "multiMessage": "",
+                                                                "formatter": "none",
+                                                                "iconTint": "rgb(100, 149, 237)"
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "footer": {
+                                                    "modules": [
+                                                        {
+                                                            "type": "WizardButtons",
+                                                            "config": {
+                                                                "className": "WizardFooter",
+                                                                "reduceOpacity": false,
+                                                                "onCompleteScript": "widget.WizardBuilder.70.metadata.children.1.children.1.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js"
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "menu": {
+                                                    "modules": []
+                                                }
+                                            },
+                                            "positionList": [
+                                                "title",
+                                                "content",
+                                                "footer",
+                                                "menu"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "builderMetadata": {
+                                    "positions": {
+                                        "title": {
+                                            "modules": [
+                                                {
+                                                    "type": "WizardSteps",
+                                                    "config": {
+                                                        "iconValue": [],
+                                                        "className": "",
+                                                        "manualValue": "1",
+                                                        "width": 751,
+                                                        "height": 442,
+                                                        "labelMethod": "auto",
+                                                        "elasticity": false,
+                                                        "minHeight": 200,
+                                                        "minWidth": 400,
+                                                        "showSteps": true
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "content": {
+                                            "modules": [
+                                                {
+                                                    "type": "WizardTitleField",
+                                                    "config": {
+                                                        "label": "Violation Type",
+                                                        "message": "what was the nature of the violation",
+                                                        "className": "",
+                                                        "maxChars": 0,
+                                                        "textFormatScript": ""
+                                                    }
+                                                },
+                                                {
+                                                    "type": "WizardDescriptionField",
+                                                    "config": {
+                                                        "label": "Details of Violation",
+                                                        "message": "location, date and time, type of violation, violator's actions\/comments, type of fishing\/hunting gear or other equipment",
+                                                        "lines": 5,
+                                                        "mandatory": false,
+                                                        "showAudios": true,
+                                                        "showImages": true,
+                                                        "showDocuments": true,
+                                                        "showVideos": true,
+                                                        "className": "",
+                                                        "maxChars": 0,
+                                                        "showExpandInput": true,
+                                                        "toolbarPosition": "bottom",
+                                                        "textFormatScript": ""
+                                                    }
+                                                },
+                                                {
+                                                    "type": "plugin.Attributes.WizardBooleanAttribute",
+                                                    "config": {
+                                                        "attributeFields": [
+                                                            {
+                                                                "visibility": "public",
+                                                                "tableId": "4",
+                                                                "tableName": "rappAttributes",
+                                                                "tableSuffix": "_9408",
+                                                                "title": "witnessed",
+                                                                "label": "Witnessed",
+                                                                "description": "",
+                                                                "fieldType": "boolean",
+                                                                "color": "rgb(NaN, NaN, NaN)",
+                                                                "searchability": "public",
+                                                                "editability": "registered",
+                                                                "fieldBooleanOptions": {
+                                                                    "trueIcon": false,
+                                                                    "falseIcon": false,
+                                                                    "hideFalse": true,
+                                                                    "trueLabel": "",
+                                                                    "falseLabel": "",
+                                                                    "useFieldIcon": false
+                                                                },
+                                                                "allowMultiple": false
+                                                            }
+                                                        ],
+                                                        "presentationImagesTrueImage": [],
+                                                        "presentationImagesFalseImage": [],
+                                                        "className": "",
+                                                        "label": "Did you observe the incident",
+                                                        "showLabel": false,
+                                                        "presentationStyle": "radio",
+                                                        "presentationRadioTrueLabel": "Yes",
+                                                        "presentationRadioFalseLabel": "No"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "plugin.Attributes.WizardTextAttribute",
+                                                    "config": {
+                                                        "attributeFields": [
+                                                            {
+                                                                "visibility": "public",
+                                                                "tableId": "4",
+                                                                "tableName": "rappAttributes",
+                                                                "tableSuffix": "_9408",
+                                                                "title": "suspectDescription",
+                                                                "label": "Suspect Description",
+                                                                "description": "",
+                                                                "fieldType": "text",
+                                                                "color": "rgb(NaN, NaN, NaN)",
+                                                                "searchability": "public",
+                                                                "editability": "registered",
+                                                                "fieldTextOptions": {
+                                                                    "textType": "input",
+                                                                    "inputOptions": {
+                                                                        "buildAutocomplete": false,
+                                                                        "requireModeration": false,
+                                                                        "limitMaxChars": 0,
+                                                                        "limitMaxWords": 0,
+                                                                        "allowHtml": false,
+                                                                        "allowMedia": true,
+                                                                        "allowLinks": true
+                                                                    },
+                                                                    "listOptions": {
+                                                                        "takeSugesstions": true,
+                                                                        "buildTree": false,
+                                                                        "iconize": false,
+                                                                        "colorize": false
+                                                                    }
+                                                                },
+                                                                "allowMultiple": false
+                                                            }
+                                                        ],
+                                                        "className": "",
+                                                        "label": "Description of Suspect",
+                                                        "message": "",
+                                                        "lines": 3,
+                                                        "maxChars": 0,
+                                                        "mandatory": false,
+                                                        "multiEntry": false,
+                                                        "muliTemplate": "lines",
+                                                        "multiMessage": "",
+                                                        "formatter": "none",
+                                                        "iconTint": "rgb(100, 149, 237)"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "footer": {
+                                            "modules": [
+                                                {
+                                                    "type": "WizardButtons",
+                                                    "config": {
+                                                        "className": "WizardFooter",
+                                                        "reduceOpacity": false,
+                                                        "onCompleteScript": "widget.WizardBuilder.70.metadata.children.1.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "menu": {
+                                            "modules": []
+                                        }
+                                    },
+                                    "positionList": [
+                                        "title",
+                                        "content",
+                                        "footer",
+                                        "menu"
+                                    ]
+                                }
+                            }
+                        ],
+                        "builderMetadata": {
+                            "positions": {
+                                "title": {
+                                    "modules": [
+                                        {
+                                            "type": "WizardSteps",
+                                            "config": {
+                                                "iconValue": [],
+                                                "className": "",
+                                                "manualValue": "1",
+                                                "width": 751,
+                                                "height": 520,
+                                                "labelMethod": "auto",
+                                                "elasticity": true,
+                                                "minHeight": 284,
+                                                "minWidth": 400,
+                                                "showSteps": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                "content": {
+                                    "modules": [
+                                        {
+                                            "type": "WizardStepTitle",
+                                            "config": {
+                                                "className": "",
+                                                "text": "<span style=\"text-align:left\"><h3>Personal Information<\/h3>\n<p>You do not have to provide your name or personal information, however, it is often helpful to an investigation if a conservation officer can follow-up on your report in order to obtain additional information. Any personal information provided will be collected, used, stored and disclosed only in accordance with the provisions of the Freedom of Information and Protection of Privacy Act.\n<\/p><p>\nIf the information you provide leads to a conviction, you may be eligible for a cash reward of up to $2,000 through the BC Wildlife Federation (BCWF) rewards program.<\/p><\/span>"
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    {
+                                                        "visibility": "public",
+                                                        "tableId": "4",
+                                                        "tableName": "rappAttributes",
+                                                        "tableSuffix": "_9408",
+                                                        "title": "name",
+                                                        "label": "Name",
+                                                        "description": "",
+                                                        "fieldType": "text",
+                                                        "color": "rgb(NaN, NaN, NaN)",
+                                                        "searchability": "public",
+                                                        "editability": "registered",
+                                                        "fieldTextOptions": {
+                                                            "textType": "input",
+                                                            "inputOptions": {
+                                                                "buildAutocomplete": false,
+                                                                "requireModeration": false,
+                                                                "limitMaxChars": 0,
+                                                                "limitMaxWords": 0,
+                                                                "allowHtml": false,
+                                                                "allowMedia": true,
+                                                                "allowLinks": true
+                                                            },
+                                                            "listOptions": {
+                                                                "takeSugesstions": true,
+                                                                "buildTree": false,
+                                                                "iconize": false,
+                                                                "colorize": false
+                                                            }
+                                                        },
+                                                        "allowMultiple": false
+                                                    }
+                                                ],
+                                                "className": "",
+                                                "label": "Your Name",
+                                                "message": "please enter your name or n\/a",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)"
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    {
+                                                        "visibility": "public",
+                                                        "tableId": "4",
+                                                        "tableName": "rappAttributes",
+                                                        "tableSuffix": "_9408",
+                                                        "title": "address",
+                                                        "label": "Address",
+                                                        "description": "",
+                                                        "fieldType": "text",
+                                                        "color": "rgb(NaN, NaN, NaN)",
+                                                        "searchability": "public",
+                                                        "editability": "registered",
+                                                        "fieldTextOptions": {
+                                                            "textType": "input",
+                                                            "inputOptions": {
+                                                                "buildAutocomplete": false,
+                                                                "requireModeration": false,
+                                                                "limitMaxChars": 0,
+                                                                "limitMaxWords": 0,
+                                                                "allowHtml": false,
+                                                                "allowMedia": true,
+                                                                "allowLinks": true
+                                                            },
+                                                            "listOptions": {
+                                                                "takeSugesstions": true,
+                                                                "buildTree": false,
+                                                                "iconize": false,
+                                                                "colorize": false
+                                                            }
+                                                        },
+                                                        "allowMultiple": false
+                                                    }
+                                                ],
+                                                "className": "",
+                                                "label": "Your Address",
+                                                "message": "please enter your address or n\/a",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)"
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    {
+                                                        "visibility": "public",
+                                                        "tableId": "4",
+                                                        "tableName": "rappAttributes",
+                                                        "tableSuffix": "_9408",
+                                                        "title": "phone",
+                                                        "label": "Phone",
+                                                        "description": "",
+                                                        "fieldType": "text",
+                                                        "color": "rgb(NaN, NaN, NaN)",
+                                                        "searchability": "public",
+                                                        "editability": "registered",
+                                                        "fieldTextOptions": {
+                                                            "textType": "input",
+                                                            "inputOptions": {
+                                                                "buildAutocomplete": false,
+                                                                "requireModeration": false,
+                                                                "limitMaxChars": 0,
+                                                                "limitMaxWords": 0,
+                                                                "allowHtml": false,
+                                                                "allowMedia": true,
+                                                                "allowLinks": true
+                                                            },
+                                                            "listOptions": {
+                                                                "takeSugesstions": true,
+                                                                "buildTree": false,
+                                                                "iconize": false,
+                                                                "colorize": false
+                                                            }
+                                                        },
+                                                        "allowMultiple": false
+                                                    }
+                                                ],
+                                                "className": "",
+                                                "label": "Your Phone Number",
+                                                "message": "please enter your phone number or n\/a",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)"
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    {
+                                                        "visibility": "public",
+                                                        "tableId": "4",
+                                                        "tableName": "rappAttributes",
+                                                        "tableSuffix": "_9408",
+                                                        "title": "email",
+                                                        "label": "Email",
+                                                        "description": "",
+                                                        "fieldType": "text",
+                                                        "color": "rgb(NaN, NaN, NaN)",
+                                                        "searchability": "public",
+                                                        "editability": "registered",
+                                                        "fieldTextOptions": {
+                                                            "textType": "input",
+                                                            "inputOptions": {
+                                                                "buildAutocomplete": false,
+                                                                "requireModeration": false,
+                                                                "limitMaxChars": 0,
+                                                                "limitMaxWords": 0,
+                                                                "allowHtml": false,
+                                                                "allowMedia": true,
+                                                                "allowLinks": true
+                                                            },
+                                                            "listOptions": {
+                                                                "takeSugesstions": true,
+                                                                "buildTree": false,
+                                                                "iconize": false,
+                                                                "colorize": false
+                                                            }
+                                                        },
+                                                        "allowMultiple": false
+                                                    }
+                                                ],
+                                                "className": "",
+                                                "label": "Your Email Address",
+                                                "message": "please enter your email address",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "footer": {
+                                    "modules": [
+                                        {
+                                            "type": "WizardButtons",
+                                            "config": {
+                                                "className": "WizardFooter",
+                                                "reduceOpacity": false,
+                                                "onCompleteScript": "widget.WizardBuilder.70.metadata.children.1.builderMetadata.positions.footer.modules.0.config.onCompleteScript.js"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "menu": {
+                                    "modules": []
+                                }
+                            },
+                            "positionList": [
+                                "title",
+                                "content",
+                                "footer",
+                                "menu"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "templateName": "ReportViolation",
+            "widgetTitle": "Report Violations",
+            "readAccess": "public"
+        }
+    },
+    "widget.62": {
+        "name": "Map Layers Widget",
+        "instance": "Layers",
+        "parameters": {}
+    },
+    "widget.63": {
+        "name": "Search Engine Optimization Helper",
+        "instance": "SearchEngineOptimizationHelper",
+        "parameters": {}
+    },
+    "widget.64": {
+        "name": "No Javascript Helper",
+        "instance": "NoJavascriptHelper",
+        "parameters": {}
+    },
+    "widget.65": {
+        "name": "Login Behavior",
+        "instance": "LoginWizard",
+        "parameters": {
+            "defineLoginScript": "widget.LoginWizard.65.defineLoginScript.js",
+            "defineLogoutScript": "widget.LoginWizard.65.defineLogoutScript.js",
+            "filterLoginModulesScript": "widget.LoginWizard.65.filterLoginModulesScript.js",
+            "widgetTitle": "",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER"
+        }
+    },
+    "widget.66": {
+        "name": "Session Behavior",
+        "instance": "Session",
+        "parameters": {}
+    }
+}
