@@ -198,7 +198,26 @@
         "name": "Custom Events",
         "instance": "CustomEvents",
         "parameters": {},
-        "customEvents": "plugin.CustomEvents.43.customEvents.json"
+        "events": [
+            {
+                "id": "1",
+                "description": "",
+                "eventName": "onDelayCreateMapitem",
+                "eventScript": "plugin.CustomEvents.43.0.eventScript.js"
+            },
+            {
+                "id": "2",
+                "description": "",
+                "eventName": "onViewImage",
+                "eventScript": "plugin.CustomEvents.43.1.eventScript.js"
+            },
+            {
+                "id": "3",
+                "description": "",
+                "eventName": "onCreateMapItem",
+                "eventScript": "plugin.CustomEvents.43.2.eventScript.js"
+            }
+        ]
     },
     "plugin.44": {
         "name": "Geolocation",
