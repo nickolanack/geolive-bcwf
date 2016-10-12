@@ -198,7 +198,7 @@
         "name": "Custom Events",
         "instance": "CustomEvents",
         "parameters": {},
-        "attributes": "plugin.CustomEvents.43.attributes.json"
+        "customEvents": "plugin.CustomEvents.43.customEvents.json"
     },
     "plugin.44": {
         "name": "Geolocation",
