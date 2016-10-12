@@ -1,0 +1,694 @@
+[
+    {
+        "id": "3",
+        "name": "wildlifeAttributes",
+        "description": "",
+        "label": "",
+        "suffix": "_4304",
+        "metadata": {
+            "title": "wildlifeAttributes",
+            "readAccess": "public",
+            "appliesTo": [
+                "marker"
+            ],
+            "id": "3",
+            "suffix": "_4304",
+            "description": "",
+            "fields": [
+                {
+                    "visibility": "public",
+                    "tableId": "3",
+                    "tableName": "wildlifeAttributes",
+                    "tableSuffix": "_4304",
+                    "title": "lastUpdate",
+                    "label": "Last Update",
+                    "description": "Items last update date",
+                    "fieldType": "text",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                }
+            ]
+        }
+    },
+    {
+        "id": "4",
+        "name": "rappAttributes",
+        "description": "",
+        "label": "",
+        "suffix": "_9408",
+        "metadata": {
+            "title": "rappAttributes",
+            "readAccess": "public",
+            "appliesTo": [
+                "marker"
+            ],
+            "id": "4",
+            "suffix": "_9408",
+            "description": "",
+            "fields": [
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "name",
+                    "label": "Name",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "address",
+                    "label": "Address",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "phone",
+                    "label": "Phone",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "email",
+                    "label": "Email",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "witnessed",
+                    "label": "Witnessed",
+                    "description": "",
+                    "fieldType": "boolean",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldBooleanOptions": {
+                        "trueIcon": false,
+                        "falseIcon": false,
+                        "hideFalse": true,
+                        "trueLabel": "",
+                        "falseLabel": "",
+                        "useFieldIcon": false
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "suspectDescription",
+                    "label": "Suspect Description",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "transport",
+                    "label": "Transportation",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "otherWitnesses",
+                    "label": "Other Witnesses",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": true
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "comments",
+                    "label": "Comments",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "suspectContact",
+                    "label": "Suspect Contact Details",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "violationAffects",
+                    "label": "Violation Affects",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "agenciesContacted",
+                    "label": "Agencies Contacted",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "urgencyReason",
+                    "label": "Urgency Reason",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "hazards",
+                    "label": "Hazards",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "inProgress",
+                    "label": "In Progress",
+                    "description": "",
+                    "fieldType": "boolean",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldBooleanOptions": {
+                        "trueIcon": false,
+                        "falseIcon": false,
+                        "hideFalse": true,
+                        "trueLabel": "",
+                        "falseLabel": "",
+                        "useFieldIcon": false
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "requestAnonymous",
+                    "label": "Request Anonymous",
+                    "description": "",
+                    "fieldType": "boolean",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldBooleanOptions": {
+                        "trueIcon": false,
+                        "falseIcon": false,
+                        "hideFalse": true,
+                        "trueLabel": "",
+                        "falseLabel": "",
+                        "useFieldIcon": false
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "dateStart",
+                    "label": "Date Start",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(NaN, NaN, NaN)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "dateEnd",
+                    "label": "Date End",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "violationType",
+                    "label": "Violation Type",
+                    "description": "",
+                    "fieldType": "text",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "sent",
+                    "label": "Sent to dispatch",
+                    "description": "",
+                    "fieldType": "boolean",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldBooleanOptions": {
+                        "trueIcon": false,
+                        "falseIcon": false,
+                        "hideFalse": true,
+                        "trueLabel": "",
+                        "falseLabel": "",
+                        "useFieldIcon": false
+                    },
+                    "allowMultiple": false
+                },
+                {
+                    "visibility": "public",
+                    "tableId": "4",
+                    "tableName": "rappAttributes",
+                    "tableSuffix": "_9408",
+                    "title": "viewed",
+                    "label": "Viewed by dispatch",
+                    "description": "",
+                    "fieldType": "boolean",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldBooleanOptions": {
+                        "trueIcon": false,
+                        "falseIcon": false,
+                        "hideFalse": true,
+                        "trueLabel": "",
+                        "falseLabel": "",
+                        "useFieldIcon": false
+                    },
+                    "allowMultiple": false
+                }
+            ]
+        }
+    }
+]
