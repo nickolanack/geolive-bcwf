@@ -1,0 +1,1 @@
+Core::Emit('onDelayCreateMapitem', $eventArgs);

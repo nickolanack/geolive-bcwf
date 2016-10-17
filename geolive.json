@@ -202,19 +202,19 @@
                 "id": "1",
                 "description": "",
                 "eventName": "onDelayCreateMapitem",
-                "eventScript": "plugin.CustomEvents.43.0.eventScript.js"
+                "eventScript": "plugin.CustomEvents.43.0.eventScript.php"
             },
             {
                 "id": "2",
                 "description": "",
                 "eventName": "onViewImage",
-                "eventScript": "plugin.CustomEvents.43.1.eventScript.js"
+                "eventScript": "plugin.CustomEvents.43.1.eventScript.php"
             },
             {
                 "id": "3",
                 "description": "",
                 "eventName": "onCreateMapItem",
-                "eventScript": "plugin.CustomEvents.43.2.eventScript.js"
+                "eventScript": "plugin.CustomEvents.43.2.eventScript.php"
             }
         ]
     },
