@@ -1,3 +1,5 @@
+<?php 
+
 $file = $eventArgs->image;
 $user = $eventArgs->user;
 
