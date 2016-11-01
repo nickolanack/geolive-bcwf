@@ -21,33 +21,70 @@ if (!file_exists($jsonFile)) {
 }
 
 $json = json_decode(file_get_contents($jsonFile));
-$file = $json->file;
 
-$ext = substr($file, strrpos($file, '.') + 1);
 
-if (!file_exists($file)) {
-    echo 'Error file does not exist: ' . $file;
+if(key_exists('file', $json)){
+
+    $file = $json->file;
+
+    $ext = substr($file, strrpos($file, '.') + 1);
+
+    if (!file_exists($file)) {
+        echo 'Error file does not exist: ' . $file;
+        return;
+    }
+
+    if (!in_array($ext, array('png', 'jpg', 'gif', 'jpeg', 'bmp'))) {
+        echo 'Error json->file not one of [png, jpg, gif, jpeg, bmp]';
+        return;
+    }
+
+    if ($json->event) {
+
+        include_once dirname(__DIR__) . '/administrator/components/com_geolive/core.php';
+
+        $eventArgs = array_merge(get_object_vars($json), array(
+            'image' => UrlFrom($file),
+            'trigger' => UrlFrom($image),
+        ));
+
+        Core::Emit($json->event, $eventArgs);
+        //Core::Broadcast("bcwfapp", "notification", array("text"=>"An administrator has viewed your report"));
+
+    }
+
+    header('Content-Type: image/' . $ext . ';');
+    echo file_get_contents($file);
+
     return;
 }
 
-if (!in_array($ext, array('png', 'jpg', 'gif', 'jpeg', 'bmp'))) {
-    echo 'Error json->file not one of [png, jpg, gif, jpeg, bmp]';
+
+if(key_exists('url', $json)){
+
+    $url = $json->url;
+
+    if ($json->event) {
+
+        include_once dirname(__DIR__) . '/administrator/components/com_geolive/core.php';
+
+        $eventArgs = array_merge(get_object_vars($json), array(
+            'image' => $url,
+            'trigger' => UrlFrom($image),
+        ));
+
+        Core::Emit($json->event, $eventArgs);
+        //Core::Broadcast("bcwfapp", "notification", array("text"=>"An administrator has viewed your report"));
+
+    }
+
+    header('Location: '.$url);
+ 
+
     return;
 }
 
-if ($json->event) {
 
-    include_once dirname(__DIR__) . '/administrator/components/com_geolive/core.php';
 
-    $eventArgs = array_merge(get_object_vars($json), array(
-        'image' => UrlFrom($file),
-        'trigger' => UrlFrom($image),
-    ));
 
-    Core::Emit($json->event, $eventArgs);
-    //Core::Broadcast("bcwfapp", "notification", array("text"=>"An administrator has viewed your report"));
 
-}
-
-header('Content-Type: image/' . $ext . ';');
-echo file_get_contents($file);
