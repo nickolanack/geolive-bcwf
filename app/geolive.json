@@ -68,7 +68,9 @@
         "parameters": {
             "enableLayerSyncronization": true,
             "onlyShowMarkersInIconset": false,
-            "tileCachePath": "\/srv\/www\/vhosts\/production\/bcwf.s54.ok.ubc.ca\/http\/tiles"
+            "tileCachePath": "\/srv\/www\/vhosts\/production\/bcwf.s54.ok.ubc.ca\/http\/tiles",
+            "googleMapsServerApiKey": "",
+            "layerDisplayFilterScript": "plugin.Maps.10.layerDisplayFilterScript.js"
         }
     },
     "plugin.11": {
@@ -139,6 +141,43 @@
                     "title": "lastUpdate",
                     "label": "Last Update",
                     "description": "Items last update date",
+                    "fieldType": "text",
+                    "color": "rgb(undefined, undefined, undefined)",
+                    "searchability": "public",
+                    "editability": "registered",
+                    "fieldTextOptions": {
+                        "textType": "input",
+                        "inputOptions": {
+                            "buildAutocomplete": false,
+                            "requireModeration": false,
+                            "limitMaxChars": 0,
+                            "limitMaxWords": 0,
+                            "allowHtml": false,
+                            "allowMedia": true,
+                            "allowLinks": true
+                        },
+                        "listOptions": {
+                            "takeSugesstions": true,
+                            "buildTree": false,
+                            "iconize": false,
+                            "colorize": false
+                        }
+                    },
+                    "allowMultiple": false
+                }
+            ],
+            "updateAttributeDefinedList": false,
+            "attributeDefinedListFields": [],
+            "storeCreationDate": true,
+            "attributeCreationDateField": [
+                {
+                    "visibility": "public",
+                    "tableId": "3",
+                    "tableName": "wildlifeAttributes",
+                    "tableSuffix": "_4304",
+                    "title": "creationDate",
+                    "label": "Creation Date",
+                    "description": "",
                     "fieldType": "text",
                     "color": "rgb(undefined, undefined, undefined)",
                     "searchability": "public",
@@ -1318,9 +1357,9 @@
                     "tableId": "3",
                     "tableName": "wildlifeAttributes",
                     "tableSuffix": "_4304",
-                    "title": "lastUpdate",
-                    "label": "Last Update",
-                    "description": "Items last update date",
+                    "title": "creationDate",
+                    "label": "Creation Date",
+                    "description": "",
                     "fieldType": "text",
                     "color": "rgb(undefined, undefined, undefined)",
                     "searchability": "public",
@@ -1475,6 +1514,100 @@
                                     "preferLocalContent": true,
                                     "portraitClip": true
                                 }
+                            },
+                            {
+                                "type": "plugin.Attributes.TextAttributes",
+                                "config": {
+                                    "attributeFieldArray": [
+                                        {
+                                            "visibility": "public",
+                                            "tableId": "4",
+                                            "tableName": "rappAttributes",
+                                            "tableSuffix": "_9408",
+                                            "title": "violationType",
+                                            "label": "Violation Type",
+                                            "description": "",
+                                            "fieldType": "text",
+                                            "color": "rgb(undefined, undefined, undefined)",
+                                            "searchability": "public",
+                                            "editability": "registered",
+                                            "fieldTextOptions": {
+                                                "textType": "input",
+                                                "inputOptions": {
+                                                    "buildAutocomplete": false,
+                                                    "requireModeration": false,
+                                                    "limitMaxChars": 0,
+                                                    "limitMaxWords": 0,
+                                                    "allowHtml": false,
+                                                    "allowMedia": true,
+                                                    "allowLinks": true
+                                                },
+                                                "listOptions": {
+                                                    "takeSugesstions": true,
+                                                    "buildTree": false,
+                                                    "iconize": false,
+                                                    "colorize": false
+                                                }
+                                            },
+                                            "allowMultiple": false
+                                        }
+                                    ],
+                                    "className": "",
+                                    "maxHeight": 0,
+                                    "maxWidth": 300,
+                                    "showLabels": true,
+                                    "showTitle": false,
+                                    "title": "",
+                                    "formatValueElement": "",
+                                    "formatContainerElement": ""
+                                }
+                            },
+                            {
+                                "type": "plugin.Attributes.TextAttributes",
+                                "config": {
+                                    "attributeFieldArray": [
+                                        {
+                                            "visibility": "public",
+                                            "tableId": "3",
+                                            "tableName": "wildlifeAttributes",
+                                            "tableSuffix": "_4304",
+                                            "title": "creationDate",
+                                            "label": "Creation Date",
+                                            "description": "",
+                                            "fieldType": "text",
+                                            "color": "rgb(undefined, undefined, undefined)",
+                                            "searchability": "public",
+                                            "editability": "registered",
+                                            "fieldTextOptions": {
+                                                "textType": "input",
+                                                "inputOptions": {
+                                                    "buildAutocomplete": false,
+                                                    "requireModeration": false,
+                                                    "limitMaxChars": 0,
+                                                    "limitMaxWords": 0,
+                                                    "allowHtml": false,
+                                                    "allowMedia": true,
+                                                    "allowLinks": true
+                                                },
+                                                "listOptions": {
+                                                    "takeSugesstions": true,
+                                                    "buildTree": false,
+                                                    "iconize": false,
+                                                    "colorize": false
+                                                }
+                                            },
+                                            "allowMultiple": false
+                                        }
+                                    ],
+                                    "className": "",
+                                    "maxHeight": 0,
+                                    "maxWidth": 300,
+                                    "showLabels": true,
+                                    "showTitle": false,
+                                    "title": "",
+                                    "formatValueElement": "",
+                                    "formatContainerElement": ""
+                                }
                             }
                         ]
                     },
@@ -1511,7 +1644,8 @@
                     "content",
                     "footer",
                     "menu"
-                ]
+                ],
+                "_diagramState": []
             },
             "templateName": "default",
             "widgetTitle": "Rapp Placemark",
