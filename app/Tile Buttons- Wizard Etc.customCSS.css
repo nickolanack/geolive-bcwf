@@ -1,0 +1,77 @@
+.tileButtonContainer {
+    background-size: 0;
+    background-color: rgb(0,160,80);
+    border-radius: 2px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.tileButtonContainer:hover {
+    box-shadow: 0 0 7px rgba(0,0,0,0.3);
+    background-color: rgb(0,160,80);
+}
+
+.rapp-tile>.tileButtonContainer {
+    background-color: rgb(254, 185, 19);
+}
+
+.label.top-left {
+    text-align: left;
+    display: block;
+}
+
+
+.BooleanAttribute {
+    text-align: left;
+    vertical-align: super;
+}
+
+.BooleanAttribute>label {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.BooleanAttribute>input {
+    display: inline-block;
+    vertical-align: middle;
+    margin:0;
+}
+
+.media-bar img, .media-bar .noIcon {
+    border-radius: 100%;
+    padding: 10px;
+    margin: 3px;
+}
+
+
+.icn-s-lst li {
+    width: 70px;
+    height: 70px;
+}
+
+.icn-s-lst li>img {
+    height: 40px;
+    top: 18px;
+}
+
+.era-bar.bk>div {
+    left: 96.9%;
+    width: 3.1%;
+    background: rgba(110, 138, 195, 0.5);
+    z-index: -1;
+    border-radius: 3px 3px 0 0;
+    border: 1px dashed cornflowerblue;
+}
+
+.LegendArea.minimized {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.LegendLayers {
+    border-bottom: none;
+}
+
+.LegendLayer {
+    margin-bottom: 25px;
+}

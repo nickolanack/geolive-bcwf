@@ -1,0 +1,6 @@
+{
+    "type": "button",
+    "label": "Skip",
+    "action": "event",
+    "event": "complete"
+}

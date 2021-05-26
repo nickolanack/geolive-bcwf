@@ -1,0 +1,18 @@
+{
+    "type": "WizardDescriptionField",
+    "config": {
+        "label": "Add a photo or Video",
+        "message": "add a description",
+        "lines": 3,
+        "mandatory": false,
+        "showAudios": true,
+        "showImages": true,
+        "showDocuments": true,
+        "showVideos": true,
+        "className": "hide-textbox",
+        "maxChars": 0,
+        "showExpandInput": true,
+        "toolbarPosition": "bottom",
+        "textFormatScript": ""
+    }
+}

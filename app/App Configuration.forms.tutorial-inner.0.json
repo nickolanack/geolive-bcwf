@@ -1,0 +1,22 @@
+{
+    "type": "scroll",
+    "direction": "horizontal",
+    "fields": [
+        {
+            "type": "image",
+            "image": "~\/tutorial-report.png"
+        },
+        {
+            "type": "image",
+            "image": "~\/tutorial-folder.png"
+        },
+        {
+            "type": "image",
+            "image": "~\/tutorial-survey.png"
+        },
+        {
+            "type": "image",
+            "image": "~\/tutorial-map.png"
+        }
+    ]
+}

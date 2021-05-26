@@ -1,0 +1,5 @@
+<?php
+
+Emit('onDelayCreateMapitem', $eventArgs);
+
+?>

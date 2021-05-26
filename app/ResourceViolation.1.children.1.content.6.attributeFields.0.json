@@ -1,0 +1,22 @@
+{
+    "visibility": "public",
+    "tableId": "4",
+    "tableName": "rappAttributes",
+    "tableSuffix": "_9408",
+    "title": "inProgress",
+    "label": "In Progress",
+    "description": "",
+    "fieldType": "boolean",
+    "color": "rgb(undefined, undefined, undefined)",
+    "searchability": "public",
+    "editability": "registered",
+    "fieldBooleanOptions": {
+        "trueIcon": false,
+        "falseIcon": false,
+        "hideFalse": true,
+        "trueLabel": "",
+        "falseLabel": "",
+        "useFieldIcon": false
+    },
+    "allowMultiple": false
+}

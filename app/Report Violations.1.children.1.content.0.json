@@ -1,0 +1,10 @@
+{
+    "type": "WizardTitleField",
+    "config": {
+        "label": "Violation Type",
+        "message": "what was the nature of the violation",
+        "className": "",
+        "maxChars": 0,
+        "textFormatScript": ""
+    }
+}

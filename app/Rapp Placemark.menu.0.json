@@ -1,0 +1,9 @@
+{
+    "type": "ReadAccessSelect",
+    "config": {
+        "className": "",
+        "listTitle": "Set Access",
+        "onSetAccessScript": "",
+        "mergeRestrictions": true
+    }
+}

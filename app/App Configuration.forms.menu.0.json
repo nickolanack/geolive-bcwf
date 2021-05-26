@@ -1,0 +1,12 @@
+{
+    "type": "buttonset",
+    "className": "create-report btn-main",
+    "buttons": [
+        {
+            "label": "Create Report",
+            "action": "form",
+            "form": "create-report",
+            "icon": "create-report"
+        }
+    ]
+}

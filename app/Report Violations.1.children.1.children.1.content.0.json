@@ -1,0 +1,51 @@
+{
+    "type": "plugin.Attributes.WizardTextAttribute",
+    "config": {
+        "attributeFields": [
+            {
+                "visibility": "public",
+                "tableId": "4",
+                "tableName": "rappAttributes",
+                "tableSuffix": "_9408",
+                "title": "transport",
+                "label": "Transportation",
+                "description": "",
+                "fieldType": "text",
+                "color": "rgb(NaN, NaN, NaN)",
+                "searchability": "public",
+                "editability": "registered",
+                "fieldTextOptions": {
+                    "textType": "input",
+                    "inputOptions": {
+                        "buildAutocomplete": false,
+                        "requireModeration": false,
+                        "limitMaxChars": 0,
+                        "limitMaxWords": 0,
+                        "allowHtml": false,
+                        "allowMedia": true,
+                        "allowLinks": true
+                    },
+                    "listOptions": {
+                        "takeSugesstions": true,
+                        "buildTree": false,
+                        "iconize": false,
+                        "colorize": false
+                    }
+                },
+                "allowMultiple": false
+            }
+        ],
+        "className": "",
+        "label": "Transportation Used",
+        "message": "",
+        "lines": 3,
+        "maxChars": 0,
+        "mandatory": false,
+        "multiEntry": false,
+        "autocomplete": true,
+        "muliTemplate": "lines",
+        "multiMessage": "",
+        "formatter": "none",
+        "iconTint": "rgb(100, 149, 237)"
+    }
+}

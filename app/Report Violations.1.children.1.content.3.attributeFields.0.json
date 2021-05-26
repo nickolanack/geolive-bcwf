@@ -1,0 +1,22 @@
+{
+    "visibility": "public",
+    "tableId": "4",
+    "tableName": "rappAttributes",
+    "tableSuffix": "_9408",
+    "title": "witnessed",
+    "label": "Witnessed",
+    "description": "",
+    "fieldType": "boolean",
+    "color": "rgb(NaN, NaN, NaN)",
+    "searchability": "public",
+    "editability": "registered",
+    "fieldBooleanOptions": {
+        "trueIcon": false,
+        "falseIcon": false,
+        "hideFalse": true,
+        "trueLabel": "",
+        "falseLabel": "",
+        "useFieldIcon": false
+    },
+    "allowMultiple": false
+}

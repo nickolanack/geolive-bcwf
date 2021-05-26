@@ -1,0 +1,33 @@
+<?php
+
+    $config=(new core\Configuration('mobile-app-config')); 
+   $params=$config->getParameter('parameters');
+    //print_r($params);
+
+   foreach($params as $key=>$value){
+     if(strpos($key,'-color-active')!==false){
+      ?>
+    .page.form .iconselect .icon.selected.value-<?php echo explode('-color', $key)[0];?>{
+      background-color:<?php echo $config->getParameter($key); ?>;
+    }
+     <?php
+       continue;
+     }
+
+
+ if(strpos($key,'-color')!==false){
+      ?>
+    .page.form .iconselect .icon.value-<?php echo explode('-color', $key)[0];?>{
+      border:1px solid <?php echo $config->getParameter($key); ?>;
+    }
+     <?php
+       continue;
+     }
+   }
+
+?>
+
+
+.page.form .submit{
+	background-color:#30b44b;
+}

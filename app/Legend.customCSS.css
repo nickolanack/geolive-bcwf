@@ -1,0 +1,59 @@
+.LegendLayer:after {
+    width: 50px;
+    height: 50px;
+    background: white;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -11px;
+    left: -12px;
+    z-index: -1;
+    border-radius: 100%;
+    border: 3px solid #e0e0e0;
+}
+.LegendLayer.active:after {
+    border-color: rgb(0,160,80);
+}
+.LegendArea .legend_layer_title {
+    display: none;
+}
+span.LegendLayerLight {
+    display: none;
+}
+
+.GeoliveLegend .LegendArea{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.GeoliveLegend .LegendLayer {
+    margin-bottom: 25px;
+}
+
+.hide-textbox textarea {
+    display: none;
+}
+
+.resource-tile .tileButtonContainer {
+    background-color: yellow;
+}
+
+
+
+
+#violationType-filter .iconized-select>li {
+    width:45px;
+    height:45px;
+    margin: 4px;
+}
+
+#violationType-filter .icn-s-lst li>img{
+    top: 8px;
+    height:30px;
+    left:10px;
+}
+
+#violationType-filter .iconized-select>li:before {
+    border-color: rgb(0,160,80);
+    border-width: 2px;
+}

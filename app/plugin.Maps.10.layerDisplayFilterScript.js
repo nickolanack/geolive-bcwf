@@ -1,5 +1,3 @@
-//throw new Exception(print_r($feature,true));
-
 if(Core::Client()->isAdmin()||Core::Client()->getUserId()===$feature['uid']){
    return true;
 }

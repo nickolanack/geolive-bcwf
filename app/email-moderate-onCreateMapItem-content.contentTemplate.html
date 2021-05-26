@@ -1,0 +1,145 @@
+<html><body style="
+    background-color: rgba(0,0,0,0.1);
+">
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "EmailMessage",
+  "potentialAction": {
+    "@type": "ViewAction",
+    "target": "{{siteUrl}}?mapitem={{marker.id}}",
+    "name": "View Item"
+    },
+  "description": "View '{{marker.name}}' at {{siteName}}"
+}
+	</script>
+	<section style="
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-bottom:20px;
+     background-color: white;
+">
+	<div style="text-align: left">
+		<h2 style="
+    font-family: sans-serif;
+    color: #0b6dd3;
+    font-weight: 100;
+">A BCWF Report | {{marker.name}}</h2>
+<h2 style="
+    font-family: sans-serif;
+    color: #0b6dd3;
+    font-weight: 100;
+">Destination | {{handler.variables.label}}</h2>
+		<p>Submitted by {{user.name}}<i>(unique id: {{user.id}})</i></p>
+
+		{{prefix|raw}}
+
+		<h3>User Details</h3>
+		<p><i>{{user.name}} {{user.username}} | 
+		{{marker.attributes.rappAttributes.name}} 
+		{{marker.attributes.rappAttributes.email}} 
+		{{marker.attributes.rappAttributes.phone}} 
+		{{marker.attributes.rappAttributes.address}}</i></p>
+		<h3>View this item on the map</h3>
+		<p>
+			<a href="{{siteUrl}}?mapitem={{marker.id}}"><img src="{{marker.tileUrl|replace({'400x400': '600x600'})|raw}}" /></a>.
+		</p>
+
+		<div>
+			
+
+		<h3>Report Details</h3>
+		<p>
+			<label>Violation Type:</label><i>{{marker.name}}</i>
+			<br/>
+			<label>Description:</label><i>{{marker.description}}</i>
+
+			<div>
+			    {{marker.media.imagesHtmlBlock|replace({'<img ': '<img style="max-width: 600px; hieght:auto;"'})|raw}}
+			</div>
+			<div>
+				{{marker.media.videosHtmlBlock|replace({'<video ': '<video style="max-width: 600px; hieght:auto;"'})|raw}}
+			</div>
+			
+		</p>
+
+		<p>
+		    <a href="{{linkTokenActions.delete}}">Click here to delete this item permanently from the map</a>
+		    <br/>
+		    <a href="{{linkTokenActions.publish}}">Click here to make this item only available to administrators</a>
+		    <br/>
+		    <a href="{{linkTokenActions.unpublish}}">Click here to make this item available to everyone</a>
+	    </p>
+
+		<p>
+		This item will automatically be submitted <span style="
+		    font-family: sans-serif;
+		    color: #0b6dd3;
+		    font-weight: 400;
+		">{{handler.variables.label}}</span> in 2 minutes if no action is taken
+		</p>
+		
+	
+		
+		<p>{{time}}</p>
+
+		{{suffix}}
+		
+		
+		
+
+	</div>
+	</section>
+
+
+<section style="
+    max-width: 600px;
+    text-align: left;
+    margin: auto;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-bottom:20px;
+    background-color: white;
+">	
+<h2 style="
+    font-family: sans-serif;
+    color: #0b6dd3;
+    font-weight: 100;
+">Raw Submission Handler Data</h2>
+<p>
+		
+		<pre >
+			    {{ handler|json_encode(constant('JSON_PRETTY_PRINT')) }}
+			</pre>
+		
+		</p></section>
+		<section style="
+    max-width: 600px;
+    text-align: left;
+    margin: auto;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.3);
+    background-color: white;
+">	
+<h2 style="
+    font-family: sans-serif;
+    color: #0b6dd3;
+    font-weight: 100;
+">Raw Marker Data</h2>
+<p>
+		
+		<pre >
+			    {{ marker|json_encode(constant('JSON_PRETTY_PRINT')) }}
+			</pre>
+		
+		</p></section>
+</body></html>

@@ -7,8 +7,17 @@ var erraSpan=container.appendChild(new Element('span', {'class':'era-s'}));
  var bar=erraSpan.appendChild(new Element('div', {'class':'era-bar'}));
  var graphBarDetail=erraSpan.appendChild(new Element('div',{'class':'timeline-graph detail'}))
 
+ var dayFromNowFloor=function(offset){
+
+  var d=new Date((new Date()).getTime()+offset);
+  d.setHours(0)
+  d.setMinutes(0);
+  d.setSeconds(0);
+  d.setMilliseconds(0)
+  return d;
+ };
  var eras=[
- {start:'2008', end:'2015', label:''}
+{start:dayFromNowFloor(-3600*24*1000), end:dayFromNowFloor(3600*24*1000), label:''}
  ];
  var dateToPercent=function(time){
     return Math.round((time/span)*100.0);

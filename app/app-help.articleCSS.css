@@ -1,0 +1,8 @@
+article img {
+    max-width: 200px;
+    background: white;
+    box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    border-radius: 4px;
+    vertical-align: top;
+    margin: 10px;
+}
