@@ -37,10 +37,13 @@
 
 		
 		
-		
+		 GetPlugin('GoogleMaps');
     
         include_once GetPath('{front}/bcwf/ViolationReport.php');
-        $reportData=(new \bcwf\ViolationReport())->submit($marker, $attributes);
+        $reportData=(new \bcwf\ViolationReport())
+            ->withBlacklistedLocations($config->getParameter('blacklist',array()))
+            ->withStaticMapLink((new \GoogleMapsStaticMapTiles())->featureTileUrl($marker))
+            ->submit($marker, $attributes);
         
         
         
