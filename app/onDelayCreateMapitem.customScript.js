@@ -18,6 +18,8 @@
 		
 		Broadcast('onHandleReportStart', 'event', $eventArgs);	
     
-       // include_once GetPath('{front}/bcwf/BCWFSubmit.php');
-       // BCWFSubmit::ProcessEvent($eventArgs);
+        include_once GetPath('{front}/bcwf/BCWFSubmit.php');
+        (new \BCWFReport())->submit($marker);
+        
+        Broadcast('onHandleReportCompletet', 'event', $eventArgs);	
        
