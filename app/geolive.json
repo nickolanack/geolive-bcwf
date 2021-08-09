@@ -2985,7 +2985,8 @@
             "widgetTitle": "email.moderate.onCreateMapItem.content",
             "target": "email.moderate.onCreateMapItem.content",
             "comments": "",
-            "readAccess": "public"
+            "readAccess": "public",
+            "formatVariablesScript": "return $variables;"
         }
     },
     "widget.53": {
