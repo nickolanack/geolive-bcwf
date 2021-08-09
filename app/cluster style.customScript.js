@@ -19,13 +19,33 @@ var resolveMapitem=function(app, id){
 
 application.setClusterRendererResolver(function(marker, clusterer){
     
-   var type=resolveMapitem(application, marker._markerid).getName().split('- ').pop().toLowerCase().replace(' ','-').replace('/','');
+  var type=getType(marker);
+   
    if(!renderers[type]){
        renderers[type]=clusterer.addRenderer();
    }
    return renderers[type];
     
 });
+
+
+var getType=function(marker){
+     var type=resolveMapitem(application, marker._markerid).getName().split('- ').pop().toLowerCase().replace(' ','-').replace('/','');
+   
+   
+   if(typeof config['cluster-'+type]=="undefined"){
+       
+       var oldNaming=type.split('-report').shift().split(' report').shift()
+       if(typeof config['cluster-'+oldNaming]!="undefined"){
+            type=oldNaming;
+       }else{
+            type="other";
+       }
+       
+   }
+   
+   return type;
+}
 
 
 if(window.Cluster){
@@ -39,7 +59,7 @@ ClusterSymbol.IconStyle=function(name){
     var color="rgb(0, 160, 80)";
     var cluster=this.cluster_;
     if(cluster&&cluster.markers_&&cluster.markers_.length){
-        var type='cluster-'+resolveMapitem(application, cluster.markers_[0]._markerid).getName().split('- ').pop().toLowerCase().replace(' ','-').replace('/','');
+        var type='cluster-'+getType(cluster.markers_[0]);
         if(config[type]){
             color=config[type]
         }

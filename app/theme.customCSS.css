@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+@import url("/webresources/font-awesome-4.7.0/css/font-awesome.min.css");
+
+
+.map-stats .analytic-item {
+    margin: -5px;
+    white-space: nowrap;
+    display: inline-block;
+    transform: scale(0.8);
+    transition: transform .5s, margin .5s;
+}
+
+.map-stats .analytic-item .keen-dataviz-metric-value, .map-stats .analytic-item .keen-dataviz-metric-title {
+    transform: scale(0.7);
+}
+
+.map-stats .analytic-item .keen-dataviz-metric-title {
+    position: relative;
+    top: -35px;
+}
+
+.map-stats .analytic-item .keen-dataviz-metric-value {
+    position: relative;
+    top: -20px;
+}
+
+span.search-bar-tab.widget_45.has-overlay>span, span.search-bar-tab.widget_67.has-overlay>span {padding: 5px 45px;color: white;font-size: 15px;}
+
+span.search-bar-tab.widget_45.has-overlay>span:after{
+    font-family: 'FontAwesome';
+    content: "\f0b0";
+    position: relative;
+    left: -130px;
+}
+
+.layer{
+    margin-bottom: 25px;
+}
+
+button.button-expand-left:after {content: "\f105";font-family: 'FontAwesome';}
+
+button.button-expand-left {
+    position: absolute;
+    top: 30px;
+    left: -6px;
+    height: 40px;
+    width: 20px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    background: #ffffff;
+    font-size: 29px;
+    color: #666666;
+    padding-right: 15px;
+    transition: left .3s, width .3s;
+    cursor: pointer;
+}
+button.button-expand-left:hover {
+    left: -15px;
+    width: 30px;
+}
+
+
+.minimized button.button-expand-left:after {
+    content: "\f104";
+}
+
+
+.minimized .analytic-item {
+    transform: scale(0);
+    transition: transform 0.2s, margin 0.2s;
+    margin: -72px;
+}
+
+button.button-expand-left:before {
+    content: "";
+    position: absolute;
+    right: -48px;
+    width: 50px;
+    height: 50px;
+    background: #00bbde;
+    top: -5px;
+    border-radius: 2px;
+    /* box-shadow: 0 0 5px rgb(0 0 0 / 20%); */
+    background-image: url("https://bcwf.geoforms.ca/php-core-app/assets/Map%20Item%20Icons/sm_bargraph.png?tint=rgba(255,255,255,1)");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.minimized button.button-expand-left:before {
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+}
+
+
+#violationType-filter .iconized-select>li {
+    margin: 20px;
+    margin-bottom: 40px;
+     width: 65px;
+    height: 65px;
+}
+
+#violationType-filter .icn-s-lst li>img {
+    top: 8px;
+    height: 50px;
+    left: 13px;
+}
+#violationType-filter .iconized-select>li:after {
+    content: attr(data-type);
+    white-space: nowrap;
+    width: 100px;
+    /* background: red; */
+    position: relative;
+    left: -17px;
+    display: inline-block;
+    text-align: center;
+    bottom: -17px;
+}
+
+#violationType-filter .iconized-select>li.selected img {
+    box-shadow: 0 0 28px #0387d3;
+}
+
+#violationType-filter .iconized-select>li.selected:before {
+    border-color: #0387d3;
+}
+#violationType-filter .iconized-select>li:after {
+    padding: 2px 0;
+}
+
+
+#violationType-filter .iconized-select>li.selected:after {
+    background-color:#00bbde;
+    border-radius:2px;
+}
+
+
+#violationType-filter.map-filter.regions-filter .icn-s-lst li>img {
+    width: 61px;
+    height: 61px;
+    left: 2px;
+    top: 2px;
+    border-radius: 100%;
+}
+
+
+.widget-23.geolive-top-bar .search-bar-btn.clear {
+    background-color: rgb(254, 185, 19);
+}
+
+
+
+
+
+
+li.layer.LegendLayer.layer:before {
+    content: "";
+    width: 69px;
+    position: absolute;
+    height: 35px;
+    display: inline-block;
+    background-color: white;
+    z-index: -1;
+    border-radius: 25px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    top: 0px;
+}
+
+li.layer.LegendLayer.layer:hover:before {
+    left:0;
+}
+
+
+li.layer.LegendLayer.layer.active:before {
+    background-color: #00bbde;
+}
+
+li.layer.LegendLayer.layer.active:after {
+    left: 20px;
+}
+
+li.layer.LegendLayer.layer.active img{
+    left: 33px;
+    position:relative;
+}
+li.layer.LegendLayer.layer img{
+    position:relative;
+    left:0;
+}
+li.layer.LegendLayer.layer img, li.layer.LegendLayer.layer:after{
+    transition:left 0.2s;
+}
+li.layer.LegendLayer.layer.active img, li.layer.LegendLayer.layer.active:after{
+    transition:left 0.2s;
+}
+li.layer.LegendLayer{
+     padding-right:7px;
+}
+li.layer.LegendLayer.active{
+    padding-right:40px;
+}
+
+
+

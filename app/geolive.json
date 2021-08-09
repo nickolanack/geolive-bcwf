@@ -1,20 +1,73 @@
 {
-    "plugin.35": {
-        "name": "Attributes",
-        "instance": "Attributes",
-        "parameters": {},
-        "attributes": "plugin.Attributes.35.attributes.json"
+    "plugin.1": {
+        "name": "Monolog Plugin",
+        "instance": "Monolog",
+        "parameters": {
+            "enabled": true,
+            "logPath": "{core}\/log",
+            "logToSentry": false
+        }
     },
-    "plugin.24": {
+    "plugin.2": {
         "name": "Upgrade",
         "instance": "Upgrade",
         "parameters": {
-            "releaseServer": "http:\/\/release.geolive.ca",
+            "releaseServer": "https:\/\/release.geolive.ca",
             "releasePackage": "master",
+            "composerPath": "",
+            "bowerPath": "",
             "autoUpdate": false
         }
     },
+    "plugin.3": {
+        "name": "Sentry IO Error reporting",
+        "instance": "SentryIO",
+        "parameters": {
+            "clientSecretUrl": "",
+            "clientPublicUrl": "",
+            "enabled": false,
+            "enabledFrontEnd": false
+        }
+    },
+    "plugin.4": {
+        "name": "Events",
+        "instance": "Events",
+        "parameters": {
+            "logPath": "{core}\/log"
+        }
+    },
+    "plugin.5": {
+        "name": "User Interface",
+        "instance": "UserInterface",
+        "parameters": {
+            "defaultRoute": {
+                "view": "plugin",
+                "plugin": "UserInterface",
+                "pluginView": "widget",
+                "widget": "dashboard"
+            },
+            "routes": [
+                "plugin.UserInterface.5.routes.0.json"
+            ]
+        }
+    },
     "plugin.6": {
+        "name": "Users",
+        "instance": "Users",
+        "parameters": {
+            "customUserGroups": [],
+            "customUserScript": "",
+            "customGroupMemberOfGroupScript": "",
+            "defaultImage": [],
+            "userProfileImageScript": "return $defaultImage;",
+            "validateEmail": true,
+            "magicLinkUrl": "",
+            "useRecaptcha": false,
+            "recaptchaKey": false,
+            "recaptchaSecret": false
+        }
+    },
+    "plugin.7": {
         "name": "System Parameters",
         "instance": "SystemParameters",
         "parameters": {
@@ -22,44 +75,31 @@
             "JSInlineObfuscationEnabled": false,
             "CSSFileObfuscationEnabled": false,
             "CSSInlineObfuscationEnabled": false,
-            "PHPDebugEnabled": false,
+            "PHPDebugEnabled": true,
             "JSDebugEnabled": true,
             "CachingEnabled": false,
-            "PrettyPrintJson": true,
-            "JSCacheObfuscationEnabled": false,
-            "dev": "1",
-            "phase": "alpha",
             "ExternalizeWidgetScripts": true,
+            "PrettyPrintJson": true,
+            "showFrontEndEditButtons": true,
+            "JSCacheObfuscationEnabled": false,
+            "phase": "production",
             "ForceHTTPS": false,
             "allowProxiesFrom": [
-                "*",
-                ""
+                "*"
             ],
-            "showFrontEndEditButtons": false,
-            "pluginPaths": [
-                ""
-            ],
-            "widgetPaths": [
-                ""
-            ],
-            "modulePaths": [
-                ""
-            ],
+            "pluginPaths": [],
+            "widgetPaths": [],
+            "modulePaths": [],
             "sandboxDomains": [
                 "*.z.geolive.ca",
                 "*.s22.ok.ubc.ca",
-                ""
+                "localhost"
             ]
         }
     },
-    "plugin.7": {
+    "plugin.8": {
         "name": "Data Types",
         "instance": "Data",
-        "parameters": {}
-    },
-    "plugin.41": {
-        "name": "Timeline",
-        "instance": "Timeline",
         "parameters": {}
     },
     "plugin.9": {
@@ -67,15 +107,100 @@
         "instance": "Filesystem",
         "parameters": {
             "enableFileMetadataCache": true,
-            "showDropboxImagePicker": true,
-            "dropbox-app-key": "XXXX-XXXX",
-            "uploadViewInlineCss": ".helloworld.{\r\n\r\n}",
+            "showDropboxImagePicker": false,
+            "dropbox-app-key": "",
+            "uploadViewInlineCss": "",
             "uploadViewPageScript": "",
             "enableFileAttributes": false,
-            "fileAttributesTableName": "filesystemAttributes"
+            "fileAttributesTableName": "filesystemAttributes",
+            "useS3Storage": false,
+            "bucket": "",
+            "folder": "bcwf.geoforms.ca",
+            "region": "us-west-2",
+            "version": "latest",
+            "key": "",
+            "secret": "",
+            "useCloudFront": false,
+            "cloudFrontDomain": "",
+            "renderSpatialThumbs": true,
+            "mime-image": [],
+            "mime-audio": [],
+            "mime-video": [],
+            "mime-document": [],
+            "mime-spatial": [],
+            "mime-document-pdf": [],
+            "mime-document-doc": []
         }
     },
     "plugin.10": {
+        "name": "Deploy",
+        "instance": "Deploy",
+        "parameters": "_Deploy.json"
+    },
+    "plugin.11": {
+        "name": "Email",
+        "instance": "Email",
+        "parameters": {
+            "fromEmail": "",
+            "fromEmailName": "",
+            "useSmtp": false,
+            "smtpHost": "",
+            "username": "",
+            "password": "",
+            "port": "587",
+            "useMailgun": false,
+            "domain": "",
+            "apiKey": "",
+            "validateSenderDomain": false,
+            "useGlobalMailTemplate": false,
+            "globalTemplate": "DefaultMailerTemplate",
+            "recieveMail": false,
+            "recieveMailSecretToken": "XXXX-XXXX"
+        }
+    },
+    "plugin.12": {
+        "name": "External Content",
+        "instance": "ExternalContent",
+        "parameters": {
+            "youtube-api-key": "",
+            "thumbnailUrls": true
+        }
+    },
+    "plugin.13": {
+        "name": "Language",
+        "instance": "Language",
+        "parameters": {
+            "localizations": "plugin.Language.13.localizations.json",
+            "googleTranslateApiKey": ""
+        }
+    },
+    "plugin.14": {
+        "name": "Links",
+        "instance": "Links",
+        "parameters": {}
+    },
+    "plugin.15": {
+        "name": "Message Subscription Server",
+        "instance": "MessageSystem",
+        "parameters": "_MessageSystem.json"
+    },
+    "plugin.16": {
+        "name": "Search Plugin",
+        "instance": "Search",
+        "parameters": {}
+    },
+    "plugin.17": {
+        "name": "Attributes",
+        "instance": "Attributes",
+        "parameters": {},
+        "attributes": "plugin.Attributes.17.attributes.json"
+    },
+    "plugin.18": {
+        "name": "Google Maps",
+        "instance": "GoogleMaps",
+        "parameters": {}
+    },
+    "plugin.19": {
         "name": "Maps",
         "instance": "Maps",
         "parameters": {
@@ -83,193 +208,129 @@
             "onlyShowMarkersInIconset": false,
             "googleMapsServerApiKey": "XXXX-XXXX",
             "googleMapsVersion": "",
-            "tileCachePath": "\/srv\/www\/vhosts\/production\/bcwf.s54.ok.ubc.ca\/http\/tiles",
-            "layerDisplayFilterScript": "plugin.Maps.10.layerDisplayFilterScript.js",
-            "formatMapitemScript": "plugin.Maps.10.formatMapitemScript.js"
+            "tileCachePath": "{site}\/..\/map-tiles",
+            "layerDisplayFilterScript": "",
+            "layerDisplayFormatScript": "plugin.Maps.19.layerDisplayFormatScript.js",
+            "layerDisplayChildLayersScript": "",
+            "formatMapitemScript": "",
+            "featureUrlScript": ""
         }
     },
-    "plugin.11": {
-        "name": "Users",
-        "instance": "Users",
+    "plugin.20": {
+        "name": "Timeline",
+        "instance": "Timeline",
         "parameters": {}
     },
-    "plugin.17": {
-        "name": "External Content",
-        "instance": "ExternalContent",
-        "parameters": {
-            "youtube-api-key": "XXXX-XXXX"
-        }
-    },
-    "plugin.36": {
+    "plugin.21": {
         "name": "Mobile Device Interface",
         "instance": "IOSApplication",
         "parameters": {
             "registrationType": "create",
+            "requireProvisioningKey": false,
+            "provisioningKey": "XXXX-XXXX",
+            "messageDomain": "mobile.",
             "applicationSettings": {
                 "applicationName": "Map Collect",
                 "visibleLayers": [
                     "user"
                 ],
+                "forms": {
+                    "name": "form",
+                    "button": "Report Violation"
+                },
                 "form": {
                     "layer": 11,
                     "media": [
                         "image",
                         "video"
                     ],
-                    "icon": "https:\/\/bcwf.geolive.ca\/components\/com_geolive\/users_files\/user_files_400\/Uploads\/dlN_[ImAgE]_E36_2F0_[G].png",
+                    "icon": "DEFAULT",
                     "attributes": []
                 }
-            },
-            "messageDomain": "bcwfapp."
-        }
-    },
-    "plugin.34": {
-        "name": "Pusher Message Server",
-        "instance": "PusherMessages",
-        "parameters": "_PusherMessages.json"
-    },
-    "plugin.21": {
-        "name": "Google Maps",
-        "instance": "GoogleMaps",
-        "parameters": {}
-    },
-    "plugin.22": {
-        "name": "Integration Testing",
-        "instance": "UnitTest",
-        "parameters": {}
-    },
-    "plugin.23": {
-        "name": "User Interface",
-        "instance": "UserInterface",
-        "parameters": {
-            "defaultRoute": {
-                "view": "plugin",
-                "plugin": "UserInterface",
-                "pluginView": "front"
             }
         }
     },
-    "plugin.38": {
-        "name": "Auto Attributes",
-        "instance": "AutoAttributes",
-        "parameters": {
-            "storeUpdateDate": true,
-            "attributeUpdateDateField": [
-                "plugin.AutoAttributes.38.attributeUpdateDateField.0.json"
-            ],
-            "updateAttributeDefinedList": false,
-            "attributeDefinedListFields": [],
-            "storeCreationDate": true,
-            "attributeCreationDateField": [
-                "plugin.AutoAttributes.38.attributeCreationDateField.0.json"
-            ]
-        }
-    },
-    "plugin.39": {
-        "name": "Language",
-        "instance": "Language",
-        "parameters": {}
-    },
-    "plugin.40": {
-        "name": "Slack Monitor",
-        "instance": "SlackMonitor",
-        "parameters": "_SlackMonitor.json"
-    },
-    "plugin.42": {
-        "name": "Email Moderate",
-        "instance": "EmailModerate",
-        "parameters": {
-            "moderator": [
-                "nickblackwell82@gmail.com",
-                "jessezeman@gmail.com",
-                "Cidalia.Martin@bcwf.bc.ca",
-                ""
-            ],
-            "enableEmails": true,
-            "fromEmailName": "BCWF Map Notifications",
-            "fromEmail": "geolivemap.ca+bcwf@gmail.com",
-            "siteUrl": "https:\/\/bcwf.geolive.ca",
-            "siteName": "BCWF Map",
-            "formatEmailScript": "return $message;",
-            "formatVariablesScript": "plugin.EmailModerate.42.formatVariablesScript.js"
-        }
-    },
-    "plugin.44": {
-        "name": "Geolocation",
-        "instance": "Geolocate",
-        "parameters": {}
-    },
-    "plugin.45": {
-        "name": "Deploy",
-        "instance": "Deploy",
-        "parameters": "_Deploy.json"
-    },
-    "plugin.46": {
-        "name": "Email",
-        "instance": "Email",
-        "parameters": {
-            "useSmtp": true,
-            "smtpHost": "smtp.gmail.com",
-            "username": "XXXX-XXXX",
-            "password": "XXXX-XXXX",
-            "port": "587",
-            "useMailgun": false,
-            "domain": "",
-            "apiKey": "",
-            "fromEmail": "geolivemap.ca+bcwf@gmail.com",
-            "fromEmailName": "BCWF Conservation Map",
-            "recieveMail": false,
-            "recieveMailSecretToken": "XXXX-XXXX"
-        }
-    },
-    "plugin.47": {
-        "name": "Events",
-        "instance": "Events",
-        "parameters": {}
-    },
-    "plugin.48": {
-        "name": "Links",
-        "instance": "Links",
-        "parameters": {}
-    },
-    "plugin.49": {
-        "name": "Search Plugin",
-        "instance": "Search",
-        "parameters": {}
-    },
-    "plugin.50": {
-        "name": "Monolog Plugin",
-        "instance": "Monolog",
-        "parameters": {
-            "logPath": "{front}\/..\/log",
-            "logToSentry": false
-        }
-    },
-    "plugin.51": {
-        "name": "Sentry IO Error reporting",
-        "instance": "SentryIO",
-        "parameters": {
-            "clientSecretUrl": "XXXX-XXXX",
-            "clientPublicUrl": "https:\/\/eeb5adc3633c4790a6f24b1bee8fcc17@sentry.io\/206183",
-            "enabled": true
-        }
-    },
-    "plugin.52": {
+    "plugin.22": {
         "name": "Keen I O",
         "instance": "KeenIO",
         "parameters": {
-            "enabled": false,
-            "projectId": "5b72099bc9e77c0001287145",
-            "writeKey": "XXXX-XXXX",
-            "readKey": "XXXX-XXXX",
+            "enabled": true,
+            "exportData": true,
+            "exportDataPath": "{front}\/..\/export",
+            "projectId": "",
+            "writeKey": "",
+            "readKey": "",
             "ignoreEvents": [
+                "onManipulateMap",
                 "onDisplayView",
-                ""
+                "onDisplayMap"
             ],
             "eventPrefix": ""
         }
     },
     "widget.1": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "dashboard",
+            "target": "dashboard",
+            "templateName": "dashboard",
+            "requireTarget": false,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "dashboard.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.2": {
+        "name": "Google Map",
+        "instance": "GoogleMap",
+        "parameters": {
+            "widgetTitle": "googlemap",
+            "loadMapId": "{default}",
+            "target": "googlemap",
+            "templateName": "googlemap",
+            "loadWidgetsWithTarget": "map.1",
+            "mapOptions": [],
+            "readAccess": "public"
+        }
+    },
+    "widget.3": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "contentTemplate": "Error",
+            "widgetTitle": "site.error.html",
+            "target": "site.error.html"
+        }
+    },
+    "widget.4": {
         "name": "Google Controls",
         "instance": "GoogleControl",
         "parameters": {
@@ -292,10 +353,35 @@
             "readAccess": "public"
         }
     },
-    "widget.2": {
+    "widget.5": {
         "name": "Tile Buttons",
         "instance": "TileButtons",
         "parameters": {
+            "widgetTitle": "Controls",
+            "target": "",
+            "position": "RIGHT_CENTER",
+            "fullscreen": true,
+            "home": true,
+            "iconset": true,
+            "login": true,
+            "logout": true,
+            "controlColor": "rgb(255, 255, 255)",
+            "subControlColor": "rgb(0, 136, 204)",
+            "tileIcon": [],
+            "displayMapSave": true,
+            "tileSize": 50,
+            "markerSize": 24,
+            "markerIconset": [],
+            "iconsetMetadata": [],
+            "groupIcon": [],
+            "showToolTips": true,
+            "useTipIconsetLayerTitle": false,
+            "showLogoutProfile": false,
+            "formatTipScript": "",
+            "guestLoginDrag": true,
+            "onDragEndScript": "defaultBehaviorFn();",
+            "onDisplayTileScript": "",
+            "onProfileClickScript": "",
             "sections": [
                 "home",
                 "iconset",
@@ -305,15 +391,10 @@
             "discussionTag": false,
             "iconSetReferenceName": "",
             "markerSearch": true,
-            "tileIcon": [],
-            "position": "RIGHT_CENTER",
             "offsetX": 100,
             "offsetY": 100,
             "tilePadding": 0,
             "direction": "auto",
-            "markerSize": 24,
-            "tileSize": 50,
-            "showToolTips": true,
             "fullscreenTip": "",
             "homeTip": "",
             "markerTip": "",
@@ -322,24 +403,25 @@
             "profileTip": "",
             "layerMap": [],
             "tipMap": [],
-            "widgetTitle": "Controls",
             "readAccess": "public",
-            "groupIcon": [],
-            "markerIconset": [],
-            "filterLayerMappedIcons": true,
-            "iconsetMetadata": [],
-            "controlColor": "rgb(255, 255, 255)",
-            "guestLoginDrag": true,
-            "onDragEndScript": "defaultBehaviorFn();",
-            "subControlColor": "rgb(0, 136, 204)",
-            "useTipIconsetLayerTitle": false,
-            "formatTipScript": ""
+            "filterLayerMappedIcons": true
         }
     },
-    "widget.86": {
-        "name": "Generic Wizard",
+    "widget.6": {
+        "name": "Generic Form",
         "instance": "WizardBuilder",
         "parameters": {
+            "widgetTitle": "ResourceViolation",
+            "target": "",
+            "templateName": "ResourceViolation",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DescisionNode",
                 "_diagramState": {
@@ -755,26 +837,24 @@
                     }
                 ]
             },
-            "beforeSubmitScript": "",
-            "onCreateScript": "",
-            "onUpdateScript": "",
-            "onSaveScript": "",
-            "templateName": "ResourceViolation",
-            "widgetTitle": "ResourceViolation",
             "readAccess": "public"
         }
     },
-    "widget.67": {
+    "widget.7": {
         "name": "Stylesheet",
         "instance": "CSS",
         "parameters": {
-            "customCSS": "Tile Buttons- Wizard Etc.customCSS.css",
+            "cacheable": false,
+            "link": false,
+            "sass": false,
             "widgetTitle": "Tile Buttons, Wizard Etc",
-            "readAccess": "public",
-            "target": "map.1"
+            "target": "map.1",
+            "customCSS": "Tile Buttons- Wizard Etc.customCSS.css",
+            "sassParamters": [],
+            "readAccess": "public"
         }
     },
-    "widget.68": {
+    "widget.8": {
         "name": "Timeline",
         "instance": "Timeline",
         "parameters": {
@@ -787,23 +867,24 @@
             "showTip": false,
             "roundDownMonth": false,
             "tipTitle": "Project Date Filter",
-            "tipDescription": "widget.Timeline.68.tipDescription.js",
+            "tipDescription": "widget.Timeline.8.tipDescription.js",
             "lockMinDate": "-60",
             "lockMaxDate": "+1",
             "attributeSelection": [
-                "widget.Timeline.68.attributeSelection.0.json"
+                "widget.Timeline.8.attributeSelection.0.json"
             ],
-            "onRenderScript": "widget.Timeline.68.onRenderScript.js",
+            "onRenderScript": "widget.Timeline.8.onRenderScript.js",
             "sendNotifications": true,
             "widgetTitle": "",
             "readAccess": "public",
             "useTileButton": true,
             "hideTimelineAtStart": true,
             "tileIcon": [],
-            "tilePosition": "RIGHT_CENTER"
+            "tilePosition": "RIGHT_CENTER",
+            "target": "map.1"
         }
     },
-    "widget.72": {
+    "widget.9": {
         "name": "Legend",
         "instance": "Legend",
         "parameters": {
@@ -827,46 +908,50 @@
             "readAccess": "public"
         }
     },
-    "widget.73": {
+    "widget.10": {
         "name": "Stylesheet",
         "instance": "CSS",
         "parameters": {
-            "customCSS": "Legend.customCSS.css",
+            "cacheable": false,
+            "link": false,
+            "sass": false,
             "widgetTitle": "Legend",
-            "readAccess": "public",
-            "target": "map.1"
+            "target": "map.1",
+            "customCSS": "Legend.customCSS.css",
+            "sassParamters": [],
+            "readAccess": "public"
         }
     },
-    "widget.76": {
-        "name": "Icon Set",
+    "widget.11": {
+        "name": "Marker Icon Set",
         "instance": "IconSet",
         "parameters": {
             "markerIconset": [
                 "components\/com_geolive\/users_files\/user_files_400\/Uploads\/dlN_[ImAgE]_E36_2F0_[G].png"
             ],
-            "layerMap": [],
-            "tipMap": [],
-            "filterLayerMappedIcons": true,
             "iconsetMetadata": {
                 "layerMap": {
                     "components\/com_geolive\/users_files\/user_files_400\/Uploads\/dlN_[ImAgE]_E36_2F0_[G].png": 11
                 },
                 "renderSettings": []
             },
+            "layerMap": [],
+            "tipMap": [],
+            "filterLayerMappedIcons": true,
             "widgetTitle": "",
             "readAccess": "public",
             "_raw_layerMap": null,
             "_raw_tipMap": null
         }
     },
-    "widget.75": {
+    "widget.12": {
         "name": "Draggable Marker Tile",
         "instance": "MarkerTile",
         "parameters": {
             "customScript": "",
             "controlColor": "rgb(48,84,107)",
             "markerIconset": [
-                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/dlN_[ImAgE]_E36_2F0_[G].png"
+                "uploads-bcwf.geoforms.ca\/user_files_1\/Uploads\/WXf_hjU_[ImAgE]_[G]_PuS.png"
             ],
             "markerSize": 32,
             "hoverTip": "Place a violation report marker",
@@ -877,10 +962,11 @@
             "widgetTitle": "",
             "readAccess": "public",
             "position": "RIGHT_CENTER",
-            "wizardName": "ReportViolation"
+            "wizardName": "ReportViolation",
+            "target": "map.1"
         }
     },
-    "widget.77": {
+    "widget.13": {
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
@@ -888,7 +974,9 @@
             "target": "",
             "templateName": "default",
             "requireTarget": true,
+            "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -956,52 +1044,21 @@
             "readAccess": "public"
         }
     },
-    "widget.78": {
-        "name": "Map Layers Widget",
-        "instance": "Layers",
-        "parameters": {}
-    },
-    "widget.79": {
-        "name": "Search Engine Optimization Helper",
-        "instance": "SearchEngineOptimizationHelper",
-        "parameters": {}
-    },
-    "widget.80": {
-        "name": "No Javascript Helper",
-        "instance": "NoJavascriptHelper",
-        "parameters": {}
-    },
-    "widget.81": {
-        "name": "Login Behavior",
-        "instance": "LoginWizard",
-        "parameters": {}
-    },
-    "widget.82": {
-        "name": "Session Behavior",
-        "instance": "Session",
-        "parameters": {}
-    },
-    "widget.83": {
-        "name": "Google Controls",
-        "instance": "GoogleControl",
-        "parameters": {}
-    },
-    "widget.84": {
-        "name": "Tile Buttons",
-        "instance": "TileButtons",
-        "parameters": {}
-    },
-    "widget.87": {
+    "widget.21": {
         "name": "Stylesheet",
         "instance": "CSS",
         "parameters": {
-            "customCSS": "Infowindow.customCSS.css",
+            "cacheable": false,
+            "link": false,
+            "sass": false,
             "widgetTitle": "Infowindow",
-            "readAccess": "public",
-            "target": "map.1"
+            "target": "map.1",
+            "customCSS": "Infowindow.customCSS.css",
+            "sassParamters": [],
+            "readAccess": "public"
         }
     },
-    "widget.88": {
+    "widget.22": {
         "name": "Javascript",
         "instance": "CustomBehaviorScript",
         "parameters": {
@@ -1011,7 +1068,7 @@
             "target": "map.1"
         }
     },
-    "widget.5": {
+    "widget.23": {
         "name": "Attr Search Bar",
         "instance": "AttributesSearch",
         "parameters": {
@@ -1039,7 +1096,7 @@
             "searchUsers": false
         }
     },
-    "widget.43": {
+    "widget.24": {
         "name": "Cluster Behavior",
         "instance": "ClusterBehaviors",
         "parameters": {
@@ -1051,20 +1108,26 @@
             "target": "map.1"
         }
     },
-    "widget.20": {
+    "widget.25": {
         "name": "Uncluster Button",
         "instance": "LayerClusterToggleTile",
         "parameters": {
             "widgetTitle": "add a label or comment for this widget",
-            "readAccess": "public",
+            "target": "map.1",
             "position": "RIGHT_CENTER",
+            "readAccess": "public",
             "controlColor": "rgb(255, 255, 255)",
             "tileIcon": [],
+            "showHeatmapTile": true,
+            "heatmapIcon": [
+                "uploads-bcwf.geoforms.ca\/user_files_1\/Uploads\/[G]_Txb_AJT_u2L_[ImAgE].png"
+            ],
             "unclusterTip": "Ungroup icons",
-            "clusterTip": "Group icons"
+            "clusterTip": "Group icons",
+            "heatmapTip": "Show heatmap"
         }
     },
-    "widget.24": {
+    "widget.26": {
         "name": "Attribute Search Drop",
         "instance": "AttributesSearchDropMarker",
         "parameters": {
@@ -1076,7 +1139,7 @@
             "onDropScript": "add a label or comment for this widget.onDropScript.js"
         }
     },
-    "widget.28": {
+    "widget.27": {
         "name": "Map Url Segment Parser",
         "instance": "UrlVariablesBehavior",
         "parameters": {
@@ -1088,7 +1151,7 @@
             "onUserDoesNotHaveAccessToFeature": "window.openLoginWindow();"
         }
     },
-    "widget.90": {
+    "widget.28": {
         "name": "Javascript",
         "instance": "CustomBehaviorScript",
         "parameters": {
@@ -1097,56 +1160,63 @@
             "readAccess": "public"
         }
     },
-    "widget.55": {
-        "name": "Custom Tile Control Script",
-        "instance": "CustomTileControlScript",
-        "parameters": {
-            "customScript": "heat map tile.customScript.js",
-            "tileIcon": [
-                "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_[ImAgE]_gtw_Ch3_6gE.png"
-            ],
-            "hoverTip": "Show data as a heatmap",
-            "widgetTitle": "heat map tile",
-            "readAccess": "public",
-            "position": "RIGHT_CENTER"
-        }
-    },
-    "widget.56": {
+    "widget.30": {
         "name": "Flexible Height Widget",
         "instance": "FlexibleHeight",
         "parameters": {
             "widgetTitle": "",
-            "target": "",
-            "offset": "100",
-            "maxHeight": "1000",
+            "target": "map.1",
+            "offset": "0",
+            "maxHeight": "2000",
             "minHeight": "400",
+            "offsetScript": "",
             "customScript": "",
             "readAccess": "public"
         }
     },
-    "widget.101": {
+    "widget.31": {
         "name": "Content",
         "instance": "CustomContent",
         "parameters": {
-            "customScript": "mobile-app-download.customScript.js",
             "widgetTitle": "mobile-app-download",
             "target": "mobile-app-download",
+            "customScript": "mobile-app-download.customScript.js",
+            "language": "html\/text",
+            "returnsValue": false,
+            "cacheable": false,
+            "parseMarkdown": false,
             "readAccess": "public"
         }
     },
-    "widget.69": {
+    "widget.32": {
         "name": "Stylesheet",
         "instance": "CSS",
         "parameters": {
-            "customCSS": "Timeline.customCSS.css",
+            "cacheable": false,
+            "link": false,
+            "sass": false,
             "widgetTitle": "Timeline",
+            "target": "map.1",
+            "customCSS": "Timeline.customCSS.css",
+            "sassParamters": [],
             "readAccess": "public"
         }
     },
-    "widget.70": {
-        "name": "Generic Wizard",
+    "widget.33": {
+        "name": "Generic Form",
         "instance": "WizardBuilder",
         "parameters": {
+            "widgetTitle": "Report Violations",
+            "target": "",
+            "templateName": "ReportViolation",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
             "metadata": {
                 "class": "DescisionNode",
                 "_diagramState": {
@@ -1559,48 +1629,30 @@
                     }
                 ]
             },
-            "beforeSubmitScript": "",
-            "onCreateScript": "",
-            "onUpdateScript": "",
-            "onSaveScript": "",
-            "templateName": "ReportViolation",
-            "widgetTitle": "Report Violations",
             "readAccess": "public"
         }
     },
-    "widget.62": {
+    "widget.34": {
         "name": "Map Layers Widget",
         "instance": "Layers",
         "parameters": {}
     },
-    "widget.63": {
+    "widget.35": {
         "name": "Search Engine Optimization Helper",
         "instance": "SearchEngineOptimizationHelper",
         "parameters": {}
     },
-    "widget.64": {
+    "widget.36": {
         "name": "No Javascript Helper",
         "instance": "NoJavascriptHelper",
         "parameters": {}
     },
-    "widget.65": {
-        "name": "Login Behavior",
-        "instance": "LoginWizard",
-        "parameters": {
-            "defineLoginScript": "return window.openLoginWindow;",
-            "defineLogoutScript": "return defaultLogoutFn;",
-            "filterLoginModulesScript": "return modules;",
-            "widgetTitle": "",
-            "readAccess": "public",
-            "position": "RIGHT_CENTER"
-        }
-    },
-    "widget.66": {
+    "widget.38": {
         "name": "Session Behavior",
         "instance": "Session",
         "parameters": {}
     },
-    "widget.91": {
+    "widget.39": {
         "name": "Configuration",
         "instance": "Configuration",
         "parameters": {
@@ -2289,6 +2341,7 @@
                     },
                     {
                         "type": "iconselect",
+                        "fieldFormatter": "iconsetListFormat",
                         "name": "violationType",
                         "value": "Wildlife",
                         "icons": [
@@ -2611,25 +2664,30 @@
             "fishing-cover": [
                 "components\/com_geolive\/users_files\/user_files_400\/Uploads\/a07_[G]_[ImAgE]_ajk_VHt.jpg"
             ],
-            "privacy": "<h1>BCWF Conservation App And Website Privacy Policy<\/h1>\r\n<h2>What this policy covers<\/h2>\r\n<p>Your privacy is important to us, and so is being transparent about how we collect, use, and share information about you. This policy is intended to help you understand:<\/p>\r\n<ul>\r\n<li>What information we collect about you<\/li>\r\n<li>How we use information we collect<\/li>\r\n<li>How we share information we collect<\/li>\r\n<li>How we store and secure information we collect<\/li>\r\n<li>How to access and control your information<\/li>\r\n<li>How we transfer information we collect internationally<\/li>\r\n<li>Other important privacy information<\/li>\r\n<\/ul>\r\n<p>This Privacy Policy covers the information we collect about you when you use our products or services, or otherwise interact with The BCWF Conservation App and Website (for example, submitting a Environmental Violation Report), unless a different privacy policy is displayed. This policy also explains your choices about how we use information about you. Your choices include how you can object to certain uses of information about you and how you can access and update certain information about you. <b>If you do not agree with this policy, do not access or use our Services or interact with any other aspect of our business.<\/b><\/p>\r\n<p>When we refer to \"BCWF Conservation App,\" \"we,\" or \"us\" in this policy, we mean BC Wildlife Federation., which controls the information The BCWF Conservation App collects when you use the Services. BCWF offers collaborative tools, including our web, and mobile products, which help you create reports and view other activity in British Columbia. <\/p>\r\n<h3>Information you provide to us<\/h3>\r\n<p>We collect information about you when you input it into the Services or otherwise provide it directly to us.<\/p>\r\n<ul>\r\n<li><b>Contact Information:<\/b> We collect information about you when you create a report and add your personal contact information. Your contact information is then sent to our servers and to the appropriate violation agency for that report.<\/li>\r\n<li><b>Content you provide through our products:<\/b>  Content includes images and videos that you upload through the Service. Examples of content we collect and store include: images you attach to a report, the name, description, and other details including locational data about the violation report that is submitted<\/li>\r\n<\/ul>\r\n<h3>Information we collect automatically when you use the Services<\/h3>\r\n<p>We collect information about you when you use our Services, including browsing our websites and taking certain actions within the Services.<\/p>\r\n<ul>\r\n<li><b>Your use of the Services:<\/b> We keep track of certain information about you when you visit and interact with any of our Services. This information includes the features you use; the type, size and filenames of attachments you upload to the Services; frequently used search terms; <\/li>\r\n<li><b>Device and Connection Information:<\/b> We collect information about your computer, phone, tablet, or other devices you use to access the Services. This device information includes your connection type, when you install, access, update, or use our Services. We also collect information through your device about your operating system, browser type, IP address, URLs of referring\/exit pages, device identifiers, and crash data. We use your IP address and\/or country preference in order to approximate your location to provide you with a better Service experience. How much of this information we collect depends on the type and settings of the device you use to access the Services.<\/li>\r\n<\/ul>\r\n<h2 id=\"how-we-use-information\">How we use information we collect<\/h2>\r\n<p>How we use the information we collect depends in part on which Services you use, how you use them, and any preferences you have communicated to us. Below are the specific purposes for which we use the information we collect about you.<\/p>\r\n<ul>\r\n<li><b>To provide the Services and personalize your experience:<\/b> We use information about you to provide the Services to you, including to authenticate you when you log in, provide customer support, and operate and maintain the Services. <\/li>\r\n<li><b>For research and development:<\/b> We are always looking for ways to improve our Services and make them useful to you. We use collective learnings about how people use our Services and feedback provided directly to us to troubleshoot and to identify trends, usage, activity patterns and areas for integration and improvement of the Services. We also test and analyze certain new features with some users before rolling the feature out to all users.<\/li>\r\n<li><b>To communicate with you about the Services:<\/b> We may use your contact information to send communications via email and within the Services, including responding to your comments, questions and requests, providing customer support, and sending you technical notices, updates, security alerts, and administrative messages. We may also provide tailored communications based on your activity and interactions with us. For example, certain actions you take in the Services may automatically trigger a feature within the Services that would make that task easier. Some of these communications are part of the Services and in most cases you cannot opt out of them. If an opt out is available, you will find that option within the communication itself or in your account settings.<\/li>\r\n<li><b>Customer support:<\/b> We use your information to resolve technical issues you encounter, to respond to your requests for assistance, to analyze crash information, and to repair and improve the Services. Where you give us permission to do so, we share your information with a Technician for the purpose of responding to support-related requests. <\/li>\r\n<li><b>For safety and security:<\/b> We use information about you and your Service use to verify accounts and activity, to monitor suspicious or fraudulent activity and to identify violations of Service policies.<\/li>\r\n<li><b>To protect our legitimate business interests and legal rights:<\/b>Where required by law or where we believe it is necessary to protect our legal rights, interests and the interests of others, we use information about you in connection with legal claims, compliance, regulatory, and audit functions<\/li>\r\n<li>If you have consented to our use of information about you for a specific purpose, you have the right to change your mind at any time, but this will not affect any processing that has already taken place. Where we are using your information because we or a third party (e.g. your employer) have a legitimate interest to do so, you have the right to object to that use though, in some cases, this may mean no longer using the Services.<\/li>\r\n<\/ul>\r\n<h2 id=\"how-we-share\">How we share information we collect<\/h2>\r\n<p>We want our environmental reporting tools to work well for you. This means sharing information through the Services and with certain third parties and Environmental and Resource Authorities in British Columbia. We share information we collect about you in the ways discussed below, but we are not in the business of selling information about you to advertisers or other third parties.<\/p>\r\n<h3>Sharing with other Service users<\/h3>\r\n<p>When you use the Services, we share certain information about you with other Service users.<\/p>\r\n<ul>\r\n<li><b>For collaboration:<\/b> You can create content, which may contain information about you, and other users can see, share, and download that much of that content. The collaboration features of the Services <strong>do not display any of your profile information<\/strong> to other Service users when you share or interact with specific content. For example, when you create a report, we display images and descriptions about the report on a map so that other users with access to the map understand the report. Please be aware that most reports will be made publicly available, meaning any content posted on the map, including report images can be publicly viewed and indexed by and returned in search results of search engines.<\/li>\r\n<\/ul>\r\n<h3>Sharing with third parties<\/h3>\r\n<p>We share information with third parties that help us operate, provide, improve, integrate, customize, support and market our Services.<\/p>\r\n<ul>\r\n<li><b>Service Providers:<\/b> We work with third-party service providers to provide website and application development, hosting, maintenance, backup, storage, infrastructure, analysis and other services for us. If a service provider needs to access information about you to perform services on our behalf, they do so under instruction from us, including abiding by policies and procedures designed to protect your information.<\/li>\r\n<li><b>Partners:<\/b> We work with The University Of British Columbia to provide solutions around the Services. We may share your information with these third parties in connection with their services, such as to assist with providing localized support, and to provide customizations. We may also share information with these third parties where you have agreed to that sharing, like when you agree to us sharing your information with a Technical Expert for support-related questions.<\/li>\r\n<li><b>Links to Third-Party Sites:<\/b> The Services may include links that direct you to other websites or services whose privacy practices may differ from ours. Your use of and any information you submit to any of those third-party sites is governed by their privacy policies, not this one.<\/li>\r\n<li><b>Third-Party Widgets:<\/b> Some of our Services contain widgets and social media features, such as the 'Share this app' button. These widgets and features collect your IP address, which page you are visiting on the Services, and may set a cookie to enable the feature to function properly. Widgets and social media features are either hosted by a third party or hosted directly on our Services. Your interactions with these features are governed by the privacy policy of the company providing it.<\/li>\r\n<li><b>With your consent:<\/b> We share information about you with third parties when you give us consent to do so. For example, with your consent, we may post your name alongside a testimonial.<\/li>\r\n<li><b>Compliance with Enforcement Requests and Applicable Laws; Enforcement of Our Rights:<\/b> In exceptional circumstances, we may share information about you with a third party if we believe that sharing is reasonably necessary to (a) comply with any applicable law, regulation, legal process or governmental request, including to meet national security requirements, (b) enforce our agreements, policies and terms of service, (c) protect the security or integrity of our products and services, (d) protect BCWF, our customers or the public from harm or illegal activities, or (e) respond to an emergency which we believe in good faith requires us to disclose information to assist in preventing the death or serious bodily injury of any person.<br \/><br \/><\/li>\r\n<\/ul>\r\n<h2 id=\"how-we-store\">How we store and secure information we collect<\/h2>\r\n<h3>Information storage and security<\/h3>\r\n<p>We use data hosting service providers in Canada to host the information we collect, and we use technical measures to secure your data. While we implement safeguards designed to protect your information, no security system is impenetrable and due to the inherent nature of the Internet, we cannot guarantee that data, during transmission through the Internet or while stored on our systems or otherwise in our care, is absolutely safe from intrusion by others. We will respond to requests about this within a reasonable timeframe.<\/p>\r\n<h3>How long we keep information<\/h3>\r\n<p>How long we keep information we collect about you depends on the type of information, as described in further detail below. After such time, we will either delete or anonymize your information or, if this is not possible (for example, because the information has been stored in backup archives), then we will securely store your information and isolate it from any further use until deletion is possible.<\/p>\r\n<ul>\r\n<li><b>Account information:<\/b> We retain your account information until you delete your account. We also retain some of your information as necessary to comply with our legal obligations, to resolve disputes, to enforce our agreements, to support business operations and to continue to develop and improve our Services. Where we retain information for Service improvement and development, we take steps to eliminate information that directly identifies you, and we only use the information to uncover collective insights about the use of our Services, not to specifically analyze personal characteristics about you.<\/li>\r\n<li><b>Information you share on the Services:<\/b> If your account is deactivated or disabled, some of your information and the content you have provided will remain in order to allow other users to make full use of the Services. For example, we continue to display reports you made on our map.<\/li>\r\n<\/ul>\r\n<h2 id=\"how-to-access\">How to access and control your information<\/h2>\r\n<p>You have certain choices available to you when it comes to your information. Below is a summary of those choices, how to exercise them and any limitations. We will respond to requests about this within a reasonable timeframe.<\/p>\r\n<h3>Your Choices:<\/h3>\r\n<p>You have the right to request a copy of your information, to object to our use of your information (including for marketing purposes), to request the deletion or restriction of your information, or to request your information in a structured, electronic format. Below, we describe the tools and processes for making these requests. You can exercise some of the choices by logging into the Services and using settings available within the Services or your account. Where the Services are administered for you by an administrator (see \"Notice to End Users\" below), you may need to contact your administrator to assist with your requests first. For all other requests, you may contact us as provided in the Contact Us section below to request assistance.<\/p>\r\n<p>Your request and choices may be limited in certain cases: for example, if fulfilling your request would reveal information about another person, or if you ask to delete information which we or your administrator are permitted by law or have compelling legitimate interests to keep. Where you have asked us to share data with third parties, for example, by enabling a Power-Up, you will need to contact those third-party service providers directly to have your information deleted or otherwise restricted. If you have unresolved concerns, you may have the right to complain to a data protection authority in the country where you live, where you work or where you feel your rights were infringed.<\/p>\r\n<ul>\r\n<li><b>Access and update your information:<\/b> Our Services and related documentation give you the ability to access and update certain information about you from within the Service. For example, you can access your profile information from your account and search for content containing information about you using key word searches in the Service. You can update your profile information within your profile settings and modify content that contains information about you using the editing tools associated with that content.<\/li>\r\n<li><b>Deactivate your account:<\/b> You or an administrator can deactivate your access to the Service. If you can deactivate your own access, that setting is available to you in your account settings. Otherwise, please contact us. Please be aware that deactivating an account does not delete your reports from the map; your information remains visible to other Service users based on your past participation within the Services. For more information on how to delete your information, see below.<\/li>\r\n<li><b>Delete your information:<\/b> Our Services and related documentation give you the ability to delete certain information about you from within the Service. For example, you can remove content that contains information about you using the key word search and editing tools associated with that content and you can remove certain profile information within your profile settings. Please note, however, that we may need to retain certain information for record keeping purposes or to comply with our legal obligations.<\/li>\r\n<li><b>Request that we stop using your information:<\/b> In some cases, you may ask us to stop accessing, storing, using and otherwise processing your information where you believe we don't have the appropriate rights to do so. For example, if you believe a Services account was created for you without your permission or you are no longer an active user, you can request that we delete your account as provided in this policy. Where you gave us consent to use your information for a limited purpose, you can contact us to withdraw that consent, but this will not affect any processing that has already taken place at the time. You can also opt-out of our use of your information for marketing purposes by contacting us, as provided below. When you make such requests, we may need time to investigate and facilitate your request. If there is a delay or dispute as to whether we have the right to continue using your information, we will restrict any further use of your information until the request is honored or the dispute is resolved, provided your administrator does not object (where applicable). If you object to information about you being shared with a third-party app, please disable the app or contact your administrator to do so.<\/li>\r\n<li><b>Opt out of communications:<\/b> You may opt out of receiving promotional communications from us by using the unsubscribe link within each email, updating your email preferences within your Service account settings menu, or by contacting us as provided below to have your contact information removed from our promotional email list or registration database. Even after you opt out from receiving promotional messages from us, you will continue to receive messages from us regarding our Services. You can opt out of some notification messages in your account settings. Please note, you will continue to receive generic ads.<\/li>\r\n<li><b>Data portability:<\/b> Data portability is the ability to obtain some of your information in a format you can move from one service provider to another (for instance, when you transfer your mobile phone number to another carrier). Depending on the context, this applies to some of your information, but not to all of your information. Should you request it, we will provide you with an electronic file of your basic account information and the information you create on the spaces under your sole control, like your own boards.<\/li>\r\n<\/ul>\r\n<h2 id=\"how-we-transfer\">How we transfer information we collect internationally<\/h2>\r\n<h3>International transfers of information we collect<\/h3>\r\n<p>We only collect information within British Columbia and only store that information in Canada. <\/p>\r\n<h3>Our policy towards children<\/h3>\r\n<p>The Services are not directed to individuals under 16. We do not knowingly collect personal information from children under 16. If we become aware that a child under 16 has provided us with personal information, we will take steps to delete such information. If you become aware that a child has provided us with personal information, please contact our support services.<\/p>\r\n<h3>Changes to our Privacy Policy<\/h3>\r\n<p>We may change this privacy policy from time to time. We will post any privacy policy changes on this page and, if the changes are significant, we will provide a more prominent notice by adding a notice on the Services homepages, login screens, or by sending you an email notification. We will also keep prior versions of this Privacy Policy in an archive for your review. We encourage you to review our privacy policy whenever you use the Services to stay informed about our information practices and the ways you can help protect your privacy.<\/p>\r\n<p>If you disagree with any changes to this privacy policy, you will need to stop using the Services and deactivate your account(s), as outlined above.<\/p>\r\n<h3>Contact Us<\/h3>\r\n<p>Your information is controlled by The BC Wildlife Federation. If you have questions or concerns about how your information is handled, please direct your inquiry toThe BC Wildlife Federation.<\/p>"
+            "privacy": "<h1>BCWF Conservation App And Website Privacy Policy<\/h1>\r\n<h2>What this policy covers<\/h2>\r\n<p>Your privacy is important to us, and so is being transparent about how we collect, use, and share information about you. This policy is intended to help you understand:<\/p>\r\n<ul>\r\n<li>What information we collect about you<\/li>\r\n<li>How we use information we collect<\/li>\r\n<li>How we share information we collect<\/li>\r\n<li>How we store and secure information we collect<\/li>\r\n<li>How to access and control your information<\/li>\r\n<li>How we transfer information we collect internationally<\/li>\r\n<li>Other important privacy information<\/li>\r\n<\/ul>\r\n<p>This Privacy Policy covers the information we collect about you when you use our products or services, or otherwise interact with The BCWF Conservation App and Website (for example, submitting a Environmental Violation Report), unless a different privacy policy is displayed. This policy also explains your choices about how we use information about you. Your choices include how you can object to certain uses of information about you and how you can access and update certain information about you. <b>If you do not agree with this policy, do not access or use our Services or interact with any other aspect of our business.<\/b><\/p>\r\n<p>When we refer to \"BCWF Conservation App,\" \"we,\" or \"us\" in this policy, we mean BC Wildlife Federation., which controls the information The BCWF Conservation App collects when you use the Services. BCWF offers collaborative tools, including our web, and mobile products, which help you create reports and view other activity in British Columbia. <\/p>\r\n<h3>Information you provide to us<\/h3>\r\n<p>We collect information about you when you input it into the Services or otherwise provide it directly to us.<\/p>\r\n<ul>\r\n<li><b>Contact Information:<\/b> We collect information about you when you create a report and add your personal contact information. Your contact information is then sent to our servers and to the appropriate violation agency for that report.<\/li>\r\n<li><b>Content you provide through our products:<\/b>  Content includes images and videos that you upload through the Service. Examples of content we collect and store include: images you attach to a report, the name, description, and other details including locational data about the violation report that is submitted<\/li>\r\n<\/ul>\r\n<h3>Information we collect automatically when you use the Services<\/h3>\r\n<p>We collect information about you when you use our Services, including browsing our websites and taking certain actions within the Services.<\/p>\r\n<ul>\r\n<li><b>Your use of the Services:<\/b> We keep track of certain information about you when you visit and interact with any of our Services. This information includes the features you use; the type, size and filenames of attachments you upload to the Services; frequently used search terms; <\/li>\r\n<li><b>Device and Connection Information:<\/b> We collect information about your computer, phone, tablet, or other devices you use to access the Services. This device information includes your connection type, when you install, access, update, or use our Services. We also collect information through your device about your operating system, browser type, IP address, URLs of referring\/exit pages, device identifiers, and crash data. We use your IP address and\/or country preference in order to approximate your location to provide you with a better Service experience. How much of this information we collect depends on the type and settings of the device you use to access the Services.<\/li>\r\n<\/ul>\r\n<h2 id=\"how-we-use-information\">How we use information we collect<\/h2>\r\n<p>How we use the information we collect depends in part on which Services you use, how you use them, and any preferences you have communicated to us. Below are the specific purposes for which we use the information we collect about you.<\/p>\r\n<ul>\r\n<li><b>To provide the Services and personalize your experience:<\/b> We use information about you to provide the Services to you, including to authenticate you when you log in, provide customer support, and operate and maintain the Services. <\/li>\r\n<li><b>For research and development:<\/b> We are always looking for ways to improve our Services and make them useful to you. We use collective learnings about how people use our Services and feedback provided directly to us to troubleshoot and to identify trends, usage, activity patterns and areas for integration and improvement of the Services. We also test and analyze certain new features with some users before rolling the feature out to all users.<\/li>\r\n<li><b>To communicate with you about the Services:<\/b> We may use your contact information to send communications via email and within the Services, including responding to your comments, questions and requests, providing customer support, and sending you technical notices, updates, security alerts, and administrative messages. We may also provide tailored communications based on your activity and interactions with us. For example, certain actions you take in the Services may automatically trigger a feature within the Services that would make that task easier. Some of these communications are part of the Services and in most cases you cannot opt out of them. If an opt out is available, you will find that option within the communication itself or in your account settings.<\/li>\r\n<li><b>Customer support:<\/b> We use your information to resolve technical issues you encounter, to respond to your requests for assistance, to analyze crash information, and to repair and improve the Services. Where you give us permission to do so, we share your information with a Technician for the purpose of responding to support-related requests. <\/li>\r\n<li><b>For safety and security:<\/b> We use information about you and your Service use to verify accounts and activity, to monitor suspicious or fraudulent activity and to identify violations of Service policies.<\/li>\r\n<li><b>To protect our legitimate business interests and legal rights:<\/b>Where required by law or where we believe it is necessary to protect our legal rights, interests and the interests of others, we use information about you in connection with legal claims, compliance, regulatory, and audit functions<\/li>\r\n<li>If you have consented to our use of information about you for a specific purpose, you have the right to change your mind at any time, but this will not affect any processing that has already taken place. Where we are using your information because we or a third party (e.g. your employer) have a legitimate interest to do so, you have the right to object to that use though, in some cases, this may mean no longer using the Services.<\/li>\r\n<\/ul>\r\n<h2 id=\"how-we-share\">How we share information we collect<\/h2>\r\n<p>We want our environmental reporting tools to work well for you. This means sharing information through the Services and with certain third parties and Environmental and Resource Authorities in British Columbia. We share information we collect about you in the ways discussed below, but we are not in the business of selling information about you to advertisers or other third parties.<\/p>\r\n<h3>Sharing with other Service users<\/h3>\r\n<p>When you use the Services, we share certain information about you with other Service users.<\/p>\r\n<ul>\r\n<li><b>For collaboration:<\/b> You can create content, which may contain information about you, and other users can see, share, and download that much of that content. The collaboration features of the Services <strong>do not display any of your profile information<\/strong> to other Service users when you share or interact with specific content. For example, when you create a report, we display images and descriptions about the report on a map so that other users with access to the map understand the report. Please be aware that most reports will be made publicly available, meaning any content posted on the map, including report images can be publicly viewed and indexed by and returned in search results of search engines.<\/li>\r\n<\/ul>\r\n<h3>Sharing with third parties<\/h3>\r\n<p>We share information with third parties that help us operate, provide, improve, integrate, customize, support and market our Services.<\/p>\r\n<ul>\r\n<li><b>Service Providers:<\/b> We work with third-party service providers to provide website and application development, hosting, maintenance, backup, storage, infrastructure, analysis and other services for us. If a service provider needs to access information about you to perform services on our behalf, they do so under instruction from us, including abiding by policies and procedures designed to protect your information.<\/li>\r\n<li><b>Partners:<\/b> We work with The University Of British Columbia to provide solutions around the Services. We may share your information with these third parties in connection with their services, such as to assist with providing localized support, and to provide customizations. We may also share information with these third parties where you have agreed to that sharing, like when you agree to us sharing your information with a Technical Expert for support-related questions.<\/li>\r\n<li><b>Links to Third-Party Sites:<\/b> The Services may include links that direct you to other websites or services whose privacy practices may differ from ours. Your use of and any information you submit to any of those third-party sites is governed by their privacy policies, not this one.<\/li>\r\n<li><b>Third-Party Widgets:<\/b> Some of our Services contain widgets and social media features, such as the 'Share this app' button. These widgets and features collect your IP address, which page you are visiting on the Services, and may set a cookie to enable the feature to function properly. Widgets and social media features are either hosted by a third party or hosted directly on our Services. Your interactions with these features are governed by the privacy policy of the company providing it.<\/li>\r\n<li><b>With your consent:<\/b> We share information about you with third parties when you give us consent to do so. For example, with your consent, we may post your name alongside a testimonial.<\/li>\r\n<li><b>Compliance with Enforcement Requests and Applicable Laws; Enforcement of Our Rights:<\/b> In exceptional circumstances, we may share information about you with a third party if we believe that sharing is reasonably necessary to (a) comply with any applicable law, regulation, legal process or governmental request, including to meet national security requirements, (b) enforce our agreements, policies and terms of service, (c) protect the security or integrity of our products and services, (d) protect BCWF, our customers or the public from harm or illegal activities, or (e) respond to an emergency which we believe in good faith requires us to disclose information to assist in preventing the death or serious bodily injury of any person.<br \/><br \/><\/li>\r\n<\/ul>\r\n<h2 id=\"how-we-store\">How we store and secure information we collect<\/h2>\r\n<h3>Information storage and security<\/h3>\r\n<p>We use data hosting service providers in Canada to host the information we collect, and we use technical measures to secure your data. While we implement safeguards designed to protect your information, no security system is impenetrable and due to the inherent nature of the Internet, we cannot guarantee that data, during transmission through the Internet or while stored on our systems or otherwise in our care, is absolutely safe from intrusion by others. We will respond to requests about this within a reasonable timeframe.<\/p>\r\n<h3>How long we keep information<\/h3>\r\n<p>How long we keep information we collect about you depends on the type of information, as described in further detail below. After such time, we will either delete or anonymize your information or, if this is not possible (for example, because the information has been stored in backup archives), then we will securely store your information and isolate it from any further use until deletion is possible.<\/p>\r\n<ul>\r\n<li><b>Account information:<\/b> We retain your account information until you delete your account. We also retain some of your information as necessary to comply with our legal obligations, to resolve disputes, to enforce our agreements, to support business operations and to continue to develop and improve our Services. Where we retain information for Service improvement and development, we take steps to eliminate information that directly identifies you, and we only use the information to uncover collective insights about the use of our Services, not to specifically analyze personal characteristics about you.<\/li>\r\n<li><b>Information you share on the Services:<\/b> If your account is deactivated or disabled, some of your information and the content you have provided will remain in order to allow other users to make full use of the Services. For example, we continue to display reports you made on our map.<\/li>\r\n<\/ul>\r\n<h2 id=\"how-to-access\">How to access and control your information<\/h2>\r\n<p>You have certain choices available to you when it comes to your information. Below is a summary of those choices, how to exercise them and any limitations. We will respond to requests about this within a reasonable timeframe.<\/p>\r\n<h3>Your Choices:<\/h3>\r\n<p>You have the right to request a copy of your information, to object to our use of your information (including for marketing purposes), to request the deletion or restriction of your information, or to request your information in a structured, electronic format. Below, we describe the tools and processes for making these requests. You can exercise some of the choices by logging into the Services and using settings available within the Services or your account. Where the Services are administered for you by an administrator (see \"Notice to End Users\" below), you may need to contact your administrator to assist with your requests first. For all other requests, you may contact us as provided in the Contact Us section below to request assistance.<\/p>\r\n<p>Your request and choices may be limited in certain cases: for example, if fulfilling your request would reveal information about another person, or if you ask to delete information which we or your administrator are permitted by law or have compelling legitimate interests to keep. Where you have asked us to share data with third parties, for example, by enabling a Power-Up, you will need to contact those third-party service providers directly to have your information deleted or otherwise restricted. If you have unresolved concerns, you may have the right to complain to a data protection authority in the country where you live, where you work or where you feel your rights were infringed.<\/p>\r\n<ul>\r\n<li><b>Access and update your information:<\/b> Our Services and related documentation give you the ability to access and update certain information about you from within the Service. For example, you can access your profile information from your account and search for content containing information about you using key word searches in the Service. You can update your profile information within your profile settings and modify content that contains information about you using the editing tools associated with that content.<\/li>\r\n<li><b>Deactivate your account:<\/b> You or an administrator can deactivate your access to the Service. If you can deactivate your own access, that setting is available to you in your account settings. Otherwise, please contact us. Please be aware that deactivating an account does not delete your reports from the map; your information remains visible to other Service users based on your past participation within the Services. For more information on how to delete your information, see below.<\/li>\r\n<li><b>Delete your information:<\/b> Our Services and related documentation give you the ability to delete certain information about you from within the Service. For example, you can remove content that contains information about you using the key word search and editing tools associated with that content and you can remove certain profile information within your profile settings. Please note, however, that we may need to retain certain information for record keeping purposes or to comply with our legal obligations.<\/li>\r\n<li><b>Request that we stop using your information:<\/b> In some cases, you may ask us to stop accessing, storing, using and otherwise processing your information where you believe we don't have the appropriate rights to do so. For example, if you believe a Services account was created for you without your permission or you are no longer an active user, you can request that we delete your account as provided in this policy. Where you gave us consent to use your information for a limited purpose, you can contact us to withdraw that consent, but this will not affect any processing that has already taken place at the time. You can also opt-out of our use of your information for marketing purposes by contacting us, as provided below. When you make such requests, we may need time to investigate and facilitate your request. If there is a delay or dispute as to whether we have the right to continue using your information, we will restrict any further use of your information until the request is honored or the dispute is resolved, provided your administrator does not object (where applicable). If you object to information about you being shared with a third-party app, please disable the app or contact your administrator to do so.<\/li>\r\n<li><b>Opt out of communications:<\/b> You may opt out of receiving promotional communications from us by using the unsubscribe link within each email, updating your email preferences within your Service account settings menu, or by contacting us as provided below to have your contact information removed from our promotional email list or registration database. Even after you opt out from receiving promotional messages from us, you will continue to receive messages from us regarding our Services. You can opt out of some notification messages in your account settings. Please note, you will continue to receive generic ads.<\/li>\r\n<li><b>Data portability:<\/b> Data portability is the ability to obtain some of your information in a format you can move from one service provider to another (for instance, when you transfer your mobile phone number to another carrier). Depending on the context, this applies to some of your information, but not to all of your information. Should you request it, we will provide you with an electronic file of your basic account information and the information you create on the spaces under your sole control, like your own boards.<\/li>\r\n<\/ul>\r\n<h2 id=\"how-we-transfer\">How we transfer information we collect internationally<\/h2>\r\n<h3>International transfers of information we collect<\/h3>\r\n<p>We only collect information within British Columbia and only store that information in Canada. <\/p>\r\n<h3>Our policy towards children<\/h3>\r\n<p>The Services are not directed to individuals under 16. We do not knowingly collect personal information from children under 16. If we become aware that a child under 16 has provided us with personal information, we will take steps to delete such information. If you become aware that a child has provided us with personal information, please contact our support services.<\/p>\r\n<h3>Changes to our Privacy Policy<\/h3>\r\n<p>We may change this privacy policy from time to time. We will post any privacy policy changes on this page and, if the changes are significant, we will provide a more prominent notice by adding a notice on the Services homepages, login screens, or by sending you an email notification. We will also keep prior versions of this Privacy Policy in an archive for your review. We encourage you to review our privacy policy whenever you use the Services to stay informed about our information practices and the ways you can help protect your privacy.<\/p>\r\n<p>If you disagree with any changes to this privacy policy, you will need to stop using the Services and deactivate your account(s), as outlined above.<\/p>\r\n<h3>Contact Us<\/h3>\r\n<p>Your information is controlled by The BC Wildlife Federation. If you have questions or concerns about how your information is handled, please direct your inquiry toThe BC Wildlife Federation.<\/p>",
+            "enableUserAjaxWrite": false,
+            "authUserAjaxScript": "XXXX-XXXX",
+            "saveParametersAsData": false
         }
     },
-    "widget.92": {
+    "widget.40": {
         "name": "Stylesheet",
         "instance": "CSS",
         "parameters": {
-            "customCSS": "App Style.customCSS.css",
+            "cacheable": false,
+            "link": false,
+            "sass": false,
             "widgetTitle": "App Style",
             "target": "mobile-app-css",
+            "customCSS": "App Style.customCSS.css",
+            "sassParamters": [],
             "readAccess": "public"
         }
     },
-    "widget.93": {
+    "widget.41": {
         "name": "Named Iconset",
         "instance": "NamedIconset",
         "parameters": {
-            "exposeIconset": true,
-            "iconsetName": "mobile-app-markers",
             "icons": [
                 "components\/com_geolive\/users_files\/user_files_400\/Uploads\/pnE_[G]_Zoj_[ImAgE]_xHl.png",
                 "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_[ImAgE]_ZTX_U7h_fY2.png",
@@ -2671,18 +2729,18 @@
                     "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_[ImAgE]_6ar_E4f_swR.png": ""
                 }
             },
+            "exposeIconset": true,
+            "iconsetName": "mobile-app-markers",
             "widgetTitle": "App Iconset",
             "target": "mobile-app-markers",
             "readAccess": "public",
             "position": ""
         }
     },
-    "widget.94": {
+    "widget.42": {
         "name": "Named Iconset",
         "instance": "NamedIconset",
         "parameters": {
-            "exposeIconset": true,
-            "iconsetName": "mobile-tutorial-icons",
             "icons": [
                 "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_yHs_[ImAgE]_6RV_HS7.png",
                 "components\/com_geolive\/users_files\/user_files_400\/Uploads\/[G]_mMz_[ImAgE]_mbM_ml.png",
@@ -2703,13 +2761,15 @@
                     "components\/com_geolive\/users_files\/user_files_400\/Uploads\/uTR_XeD_Bmm_[G]_[ImAgE].png": ""
                 }
             },
+            "exposeIconset": true,
+            "iconsetName": "mobile-tutorial-icons",
             "widgetTitle": "App Tutorial Views",
             "target": "mobile-tutorial-icons",
             "readAccess": "public",
             "position": ""
         }
     },
-    "widget.96": {
+    "widget.43": {
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
@@ -2717,7 +2777,9 @@
             "target": "map.1",
             "templateName": "filtersView",
             "requireTarget": true,
+            "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -2747,7 +2809,7 @@
             "readAccess": "public"
         }
     },
-    "widget.98": {
+    "widget.44": {
         "name": "Template",
         "instance": "Template",
         "parameters": {
@@ -2755,7 +2817,7 @@
             "widgetTitle": "module..text"
         }
     },
-    "widget.97": {
+    "widget.45": {
         "name": "Search Bar Tab View",
         "instance": "SearchBarTabOverlayView",
         "parameters": {
@@ -2782,7 +2844,7 @@
             "position": "RIGHT_CENTER"
         }
     },
-    "widget.100": {
+    "widget.46": {
         "name": "Configuration",
         "instance": "Configuration",
         "parameters": {
@@ -2810,7 +2872,7 @@
             ]
         }
     },
-    "widget.99": {
+    "widget.47": {
         "name": "Configuration",
         "instance": "Configuration",
         "parameters": {
@@ -2844,37 +2906,46 @@
             "cluster-block-access": "rgb(178, 0, 178)"
         }
     },
-    "widget.102": {
+    "widget.48": {
         "name": "Function",
         "instance": "UserFunction",
         "parameters": {
             "widgetTitle": "onDelayCreateMapitem",
             "target": "onDelayCreateMapitem",
             "customScript": "onDelayCreateMapitem.customScript.js",
+            "language": "php",
+            "returnsValue": false,
+            "cacheable": false,
             "readAccess": "public"
         }
     },
-    "widget.103": {
+    "widget.49": {
         "name": "Function",
         "instance": "UserFunction",
         "parameters": {
             "widgetTitle": "onViewImage",
             "target": "onViewImage",
             "customScript": "onViewImage.customScript.js",
+            "language": "html\/text",
+            "returnsValue": false,
+            "cacheable": false,
             "readAccess": "public"
         }
     },
-    "widget.104": {
+    "widget.50": {
         "name": "Function",
         "instance": "UserFunction",
         "parameters": {
             "widgetTitle": "onCreateMapItem",
             "target": "onCreateMapItem",
             "customScript": "onCreateMapItem.customScript.js",
+            "language": "php",
+            "returnsValue": false,
+            "cacheable": false,
             "readAccess": "public"
         }
     },
-    "widget.105": {
+    "widget.51": {
         "name": "Template",
         "instance": "Template",
         "parameters": {
@@ -2885,7 +2956,7 @@
             "readAccess": "public"
         }
     },
-    "widget.106": {
+    "widget.52": {
         "name": "Template",
         "instance": "Template",
         "parameters": {
@@ -2896,7 +2967,7 @@
             "readAccess": "public"
         }
     },
-    "widget.107": {
+    "widget.53": {
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
@@ -2904,7 +2975,9 @@
             "target": "mobileAnalytics",
             "templateName": "mobileAnalytics",
             "requireTarget": false,
+            "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -2934,7 +3007,7 @@
             "readAccess": "public"
         }
     },
-    "widget.108": {
+    "widget.54": {
         "name": "Detail View",
         "instance": "DetailView",
         "parameters": {
@@ -2942,7 +3015,9 @@
             "target": "mapAnalytics",
             "templateName": "mapAnalytics",
             "requireTarget": false,
+            "resolveItemScript": "return item",
             "onRenderApplictionScript": "",
+            "formatModulesScript": "",
             "notifyViewer": false,
             "metadata": {
                 "positions": {
@@ -2972,7 +3047,7 @@
             "readAccess": "public"
         }
     },
-    "widget.110": {
+    "widget.55": {
         "name": "Article",
         "instance": "Article",
         "parameters": {
@@ -2994,43 +3069,38 @@
             "readAccess": "public"
         }
     },
-    "widget.109": {
-        "name": "Template",
-        "instance": "Template",
-        "parameters": {
-            "contentTemplate": "site-error-html.contentTemplate.html",
-            "widgetTitle": "site.error.html",
-            "target": "site.error.html",
-            "comments": "",
-            "readAccess": "public"
-        }
-    },
-    "widget.111": {
+    "widget.57": {
         "name": "Attr CSV Export",
-        "instance": "AttributesCSVExport",
+        "instance": "ExportData",
         "parameters": {
+            "widgetTitle": "",
+            "readAccess": "special",
             "target": "map.1",
+            "position": "TOP_RIGHT",
             "downloadImage": [],
-            "uploadImage": [],
-            "controlColor": "rgb(48,84,107)",
+            "controlColor": "rgb(255, 255, 255)",
             "tileHoverTip": "Download CSV File",
+            "skipConsitencyCheck": false,
+            "exportEncoding": "UTF-8",
+            "filename": "BCWF Export DATE[Y-m-d (H.i.s)]",
             "exportMetadata": {
                 "fields": "DEFAULT"
             },
-            "showImport": false,
-            "tileIcon": [],
-            "exportEncoding": "UTF-8",
-            "importEncoding": "UTF-8",
             "showImportEncoding": false,
-            "filename": "Geolive Export DATE[Y-m-d (H.i.s)]",
-            "filterRowScript": "return true;",
+            "importEncoding": "UTF-8",
+            "showImport": false,
             "filterFieldsScript": "return true;",
-            "widgetTitle": "",
-            "readAccess": "special",
-            "position": "RIGHT_CENTER"
+            "filterRowScript": "return true;",
+            "formatFieldsScript": "return $fields;",
+            "formatRowScript": "return $record;",
+            "formatMapTile": "",
+            "exportDataScript": "widget.ExportData.57.exportDataScript.js",
+            "formatExporterScript": "widget.ExportData.57.formatExporterScript.js",
+            "uploadImage": [],
+            "tileIcon": []
         }
     },
-    "widget.112": {
+    "widget.58": {
         "name": "Attributes Table",
         "instance": "AttributesTable",
         "parameters": {
@@ -3038,19 +3108,19 @@
             "metadata": {
                 "title": "wildlifeAttributes",
                 "_tableDiagramState": {
-                    "x": 321,
-                    "y": 254
+                    "x": 0,
+                    "y": 0
                 },
                 "_diagramState": {
-                    "x": 321,
-                    "y": 254
+                    "x": 0,
+                    "y": 0
                 },
                 "appliesTo": [
                     "marker"
                 ],
                 "_typeDiagramState": {
-                    "x": 100,
-                    "y": 300
+                    "x": 0,
+                    "y": 0
                 },
                 "readAccess": "public",
                 "maxEntries": 1,
@@ -3059,19 +3129,11 @@
                 "fields": [
                     "wildlifeAttributes.metadata.fields.0.json",
                     {
-                        "icon": [],
-                        "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
-                            "hideFalse": true,
-                            "trueLabel": "",
-                            "falseLabel": "",
-                            "useFieldIcon": false
-                        },
                         "was": "",
                         "title": "lastUpdate",
                         "label": "Last Update",
                         "description": "Items last update date",
+                        "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3100,14 +3162,24 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
                         }
                     }
                 ]
             },
-            "target": "wildlifeAttributes"
+            "target": "wildlifeAttributes",
+            "readAccess": "public",
+            "position": ""
         }
     },
-    "widget.113": {
+    "widget.59": {
         "name": "Attributes Table",
         "instance": "AttributesTable",
         "parameters": {
@@ -3115,12 +3187,12 @@
             "metadata": {
                 "title": "rappAttributes",
                 "_tableDiagramState": {
-                    "x": 316,
-                    "y": 269
+                    "x": 324,
+                    "y": 255
                 },
                 "_diagramState": {
-                    "x": 316,
-                    "y": 269
+                    "x": 324,
+                    "y": 255
                 },
                 "appliesTo": [
                     "marker"
@@ -3136,19 +3208,11 @@
                 "fields": [
                     "rappAttributes.metadata.fields.0.json",
                     {
-                        "icon": [],
-                        "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
-                            "hideFalse": true,
-                            "trueLabel": "",
-                            "falseLabel": "",
-                            "useFieldIcon": false
-                        },
                         "was": "",
                         "title": "address",
                         "label": "Address",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3177,22 +3241,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "phone",
                         "label": "Phone",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3221,22 +3285,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "email",
                         "label": "Email",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3265,22 +3329,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "witnessed",
                         "label": "Witnessed",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3309,22 +3373,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "suspectDescription",
                         "label": "Suspect Description",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3353,22 +3417,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "transport",
                         "label": "Transportation",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3397,22 +3461,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "otherWitnesses",
                         "label": "Other Witnesses",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3441,22 +3505,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "comments",
                         "label": "Comments",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3485,22 +3549,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "suspectContact",
                         "label": "Suspect Contact Details",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3529,22 +3593,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "violationAffects",
                         "label": "Violation Affects",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3573,22 +3637,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "agenciesContacted",
                         "label": "Agencies Contacted",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3617,22 +3681,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "urgencyReason",
                         "label": "Urgency Reason",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3661,22 +3725,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "hazards",
                         "label": "Hazards",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3705,22 +3769,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "inProgress",
                         "label": "In Progress",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3749,22 +3813,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "requestAnonymous",
                         "label": "Request Anonymous",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3793,22 +3857,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "dateStart",
                         "label": "Date Start",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(NaN, NaN, NaN)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3837,22 +3901,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "dateEnd",
                         "label": "Date End",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3881,22 +3945,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "violationType",
                         "label": "Violation Type",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3925,22 +3989,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "sent",
                         "label": "Sent to dispatch",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
                         "visibility": "public",
                         "editability": "registered",
@@ -3969,22 +4033,22 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
-                        }
-                    },
-                    {
-                        "icon": [],
+                        },
                         "fieldBooleanOptions": {
-                            "trueIcon": [],
-                            "falseIcon": [],
                             "hideFalse": true,
                             "trueLabel": "",
                             "falseLabel": "",
-                            "useFieldIcon": false
-                        },
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
+                        }
+                    },
+                    {
                         "was": "",
                         "title": "viewed",
                         "label": "Viewed by dispatch",
                         "description": "",
+                        "icon": [],
                         "color": "rgb(undefined, undefined, undefined)",
                         "visibility": "public",
                         "editability": "registered",
@@ -4013,11 +4077,528 @@
                             "precision": 0,
                             "limitMinValue": "",
                             "limitMaxValue": ""
+                        },
+                        "fieldBooleanOptions": {
+                            "hideFalse": true,
+                            "trueLabel": "",
+                            "falseLabel": "",
+                            "useFieldIcon": false,
+                            "trueIcon": [],
+                            "falseIcon": []
                         }
                     }
                 ]
             },
-            "target": "rappAttributes"
+            "target": "rappAttributes",
+            "readAccess": "public",
+            "position": ""
+        }
+    },
+    "widget.60": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "quickStats",
+            "target": "quickStats",
+            "templateName": "quickStats",
+            "requireTarget": false,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "quickStats.metadata.positions.content.modules.0.json",
+                            {
+                                "type": "plugin.KeenIO.Analytic",
+                                "config": {
+                                    "title": "IOS",
+                                    "type": "metric",
+                                    "height": "200",
+                                    "getDataScript": "callback({result:7900});"
+                                }
+                            },
+                            {
+                                "type": "plugin.KeenIO.Analytic",
+                                "config": {
+                                    "title": "Android",
+                                    "type": "metric",
+                                    "height": "200",
+                                    "getDataScript": "callback({result:3060});"
+                                }
+                            },
+                            {
+                                "type": "WizardScriptElement",
+                                "config": {
+                                    "name": "My Custom Script",
+                                    "script": "quickStats.metadata.positions.content.modules.3.config.script.js",
+                                    "description": "Info about my custom script"
+                                }
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.61": {
+        "name": "Map Overlay View",
+        "instance": "MapOverlayView",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "map.1",
+            "position": "RIGHT_TOP",
+            "className": "map-stats minimized",
+            "identifier": "",
+            "viewType": "view",
+            "namedView": "quickStats",
+            "shouldRender": true,
+            "namedViewScript": "return namedView",
+            "showInlineEdit": false,
+            "namedFormView": "defaultView",
+            "formOptions": "{}",
+            "showDeleteButton": false,
+            "deleteItemScript": "defaultBehaviorFn()",
+            "initModuleScript": "",
+            "formatModuleScript": "",
+            "resolveItemScript": "return item",
+            "filterModulesScript": "return list",
+            "itemButtonsScript": "return [];",
+            "insertAtTop": false,
+            "targetName": "",
+            "readAccess": "public"
+        }
+    },
+    "widget.62": {
+        "name": "Stylesheet",
+        "instance": "CSS",
+        "parameters": {
+            "cacheable": true,
+            "link": true,
+            "sass": false,
+            "widgetTitle": "theme",
+            "target": "map.1",
+            "customCSS": "theme.customCSS.css",
+            "sassParamters": [],
+            "readAccess": "public"
+        }
+    },
+    "widget.63": {
+        "name": "Custom Tile Control Script",
+        "instance": "CustomTileControlScript",
+        "parameters": {
+            "widgetTitle": "Create Report",
+            "target": "map.1",
+            "readAccess": "registered",
+            "position": "TOP_RIGHT",
+            "customScript": "Create Report.customScript.js",
+            "hoverTip": "Generate Report",
+            "className": "",
+            "tileIcon": [
+                "uploads-bcwf.geoforms.ca\/user_files_1\/Uploads\/[ImAgE]_[G]_eng_FHJ_pAZ.png"
+            ],
+            "subTileIcons": []
+        }
+    },
+    "widget.65": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "target": "report",
+            "contentTemplate": "Report.contentTemplate.html",
+            "comments": "",
+            "widgetTitle": "Report",
+            "readAccess": "public",
+            "formatVariablesScript": "Report.formatVariablesScript.js"
+        }
+    },
+    "widget.67": {
+        "name": "Search Bar Tab View",
+        "instance": "SearchBarTabOverlayView",
+        "parameters": {
+            "target": "map.1",
+            "tabColor": "rgb(0, 187, 222)",
+            "fontColor": "rgb(0,0,0)",
+            "tabName": "Regions",
+            "showIcon": true,
+            "icon": [],
+            "iconActive": [],
+            "customScript": "",
+            "className": "",
+            "viewType": "view",
+            "namedView": "regionsView",
+            "showInlineEdit": false,
+            "namedFormView": "defaultView",
+            "showDeleteButton": false,
+            "deleteItemScript": "defaultBehaviorFn()",
+            "formatModuleScript": "",
+            "resolveItemScript": "",
+            "itemButtonsScript": "return [];",
+            "widgetTitle": "",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER"
+        }
+    },
+    "widget.68": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "regionsView",
+            "target": "map.1",
+            "templateName": "regionsView",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": []
+                    },
+                    "content": {
+                        "modules": [
+                            "regionsView.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": []
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.69": {
+        "name": "Javascript",
+        "instance": "CustomBehaviorScript",
+        "parameters": {
+            "target": "map.1",
+            "customScript": "Map view setup.customScript.js",
+            "widgetTitle": "Map view setup",
+            "readAccess": "public"
+        }
+    },
+    "widget.70": {
+        "name": "Detail View",
+        "instance": "DetailView",
+        "parameters": {
+            "widgetTitle": "polygonView",
+            "target": "map.1",
+            "templateName": "polygonView",
+            "requireTarget": true,
+            "resolveItemScript": "return item",
+            "onRenderApplictionScript": "",
+            "formatModulesScript": "",
+            "notifyViewer": false,
+            "metadata": {
+                "positions": {
+                    "title": {
+                        "modules": [
+                            "polygonView.metadata.positions.title.modules.0.json"
+                        ]
+                    },
+                    "content": {
+                        "modules": [
+                            "polygonView.metadata.positions.content.modules.0.json"
+                        ]
+                    },
+                    "footer": {
+                        "modules": [
+                            "polygonView.metadata.positions.footer.modules.0.json"
+                        ]
+                    },
+                    "menu": {
+                        "modules": []
+                    }
+                },
+                "positionList": [
+                    "title",
+                    "content",
+                    "footer",
+                    "menu"
+                ],
+                "_diagramState": []
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.71": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "polygonForm",
+            "target": "map.1",
+            "templateName": "polygonForm",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
+            "metadata": {
+                "class": "DecisionNode",
+                "_diagramState": {
+                    "x": -18,
+                    "y": 171
+                },
+                "children": [
+                    "polygonForm.metadata.children.0.json",
+                    {
+                        "title": "New Empty Step",
+                        "class": "AttributesTableNode",
+                        "fields": [
+                            "polygonForm.metadata.children.1.fields.0.json"
+                        ],
+                        "_diagramState": {
+                            "x": 158,
+                            "y": 290
+                        },
+                        "children": [
+                            "polygonForm.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 118,
+                                    "y": 466
+                                }
+                            }
+                        ],
+                        "builderMetadata": {
+                            "positions": {
+                                "title": {
+                                    "modules": [
+                                        "polygonForm.metadata.children.1.builderMetadata.positions.title.modules.0.json"
+                                    ]
+                                },
+                                "content": {
+                                    "modules": [
+                                        "polygonForm.metadata.children.1.builderMetadata.positions.content.modules.0.json",
+                                        {
+                                            "type": "WizardDescriptionField",
+                                            "config": {
+                                                "label": "Description",
+                                                "message": "add a description",
+                                                "lines": 3,
+                                                "mandatory": false,
+                                                "showAudios": true,
+                                                "showImages": true,
+                                                "showDocuments": true,
+                                                "showVideos": true,
+                                                "className": "",
+                                                "maxChars": 0,
+                                                "showExpandInput": true,
+                                                "toolbarPosition": "bottom",
+                                                "textFormatScript": "",
+                                                "mediaIconTint": "rgb(100, 149, 237)",
+                                                "onRenderModuleFn": ""
+                                            }
+                                        },
+                                        {
+                                            "type": "plugin.Attributes.WizardTextAttribute",
+                                            "config": {
+                                                "attributeFields": [
+                                                    "polygonForm.metadata.children.1.builderMetadata.positions.content.modules.2.config.attributeFields.0.json"
+                                                ],
+                                                "className": "",
+                                                "label": "Region",
+                                                "message": "",
+                                                "lines": 1,
+                                                "maxChars": 0,
+                                                "mandatory": false,
+                                                "multiEntry": false,
+                                                "muliTemplate": "lines",
+                                                "multiMessage": "add more values",
+                                                "formatter": "none",
+                                                "iconTint": "rgb(100, 149, 237)",
+                                                "autocomplete": true,
+                                                "inputOptions": "{}",
+                                                "onRenderTextFieldScript": "",
+                                                "formatValueScript": ""
+                                            }
+                                        }
+                                    ]
+                                },
+                                "footer": {
+                                    "modules": [
+                                        "polygonForm.metadata.children.1.builderMetadata.positions.footer.modules.0.json"
+                                    ]
+                                },
+                                "menu": {
+                                    "modules": []
+                                }
+                            },
+                            "positionList": [
+                                "title",
+                                "content",
+                                "footer",
+                                "menu"
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
+                        }
+                    }
+                ]
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.72": {
+        "name": "Attributes Table",
+        "instance": "AttributesTable",
+        "parameters": {
+            "widgetTitle": "",
+            "metadata": {
+                "title": "regionAttributes",
+                "_tableDiagramState": {
+                    "x": 322,
+                    "y": 275
+                },
+                "_diagramState": {
+                    "x": 322,
+                    "y": 275
+                },
+                "appliesTo": [
+                    "polygon"
+                ],
+                "_typeDiagramState": {
+                    "x": 100,
+                    "y": 300
+                },
+                "readAccess": "public",
+                "maxEntries": 1,
+                "createAutomatically": 1,
+                "description": "",
+                "fields": [
+                    "widget.AttributesTable.72.metadata.fields.0.json"
+                ]
+            },
+            "target": "regionAttributes",
+            "readAccess": "public",
+            "position": ""
+        }
+    },
+    "widget.73": {
+        "name": "Generic Form",
+        "instance": "WizardBuilder",
+        "parameters": {
+            "widgetTitle": "loginForm",
+            "target": "forTheMap",
+            "templateName": "loginForm",
+            "requireTarget": true,
+            "resolveItemScript": "return item;",
+            "beforeSubmitScript": "",
+            "onCreateScript": "",
+            "onUpdateScript": "",
+            "onSaveScript": "",
+            "onLoadScript": "",
+            "formatStepModulesScript": "",
+            "metadata": {
+                "class": "DecisionNode",
+                "_diagramState": {
+                    "x": -18,
+                    "y": 171
+                },
+                "children": [
+                    "loginForm.metadata.children.0.json",
+                    {
+                        "title": "New Empty Step",
+                        "class": "AttributesTableNode",
+                        "fields": [
+                            "loginForm.metadata.children.1.fields.0.json"
+                        ],
+                        "_diagramState": {
+                            "x": 138,
+                            "y": 270
+                        },
+                        "children": [
+                            "loginForm.metadata.children.1.children.0.json",
+                            {
+                                "class": "InsertNode",
+                                "_diagramState": {
+                                    "x": 98,
+                                    "y": 436
+                                }
+                            }
+                        ],
+                        "builderMetadata": {
+                            "positions": {
+                                "title": {
+                                    "modules": [
+                                        "loginForm.metadata.children.1.builderMetadata.positions.title.modules.0.json"
+                                    ]
+                                },
+                                "content": {
+                                    "modules": [
+                                        "loginForm.metadata.children.1.builderMetadata.positions.content.modules.0.json"
+                                    ]
+                                },
+                                "footer": {
+                                    "modules": []
+                                },
+                                "menu": {
+                                    "modules": []
+                                }
+                            },
+                            "positionList": [
+                                "title",
+                                "content",
+                                "footer",
+                                "menu"
+                            ],
+                            "_diagramState": {
+                                "minimized": false
+                            }
+                        }
+                    }
+                ]
+            },
+            "readAccess": "public"
+        }
+    },
+    "widget.74": {
+        "name": "Login Behavior",
+        "instance": "LoginWizard",
+        "parameters": {
+            "target": "map.1",
+            "defineLoginScript": "return defaultLoginFn;",
+            "defineLogoutScript": "return defaultLogoutFn;",
+            "filterLoginModulesScript": "return modules;",
+            "widgetTitle": "Login behaviour ",
+            "readAccess": "public",
+            "position": "RIGHT_CENTER"
         }
     }
 }

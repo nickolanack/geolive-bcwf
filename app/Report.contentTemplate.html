@@ -1,0 +1,289 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,400i,500,600,700,800,900" rel="stylesheet">
+
+<style>
+
+    @page{ margin: 0px; }
+    body{ margin: 0px; }
+    html { margin: 0px; }
+
+
+
+    .main, @page, body, html{
+         background-color: #fefbf2;
+    }
+
+    .main{
+       
+        font-family:"Montserrat", serif;
+        color:#315704;
+        
+    }
+    
+    .header{
+        margin-bottom:30px; 
+        background-color: #f0f0f0; 
+        height:100px;
+    }
+    
+    
+    .header img{
+        float:left; 
+        margin-right:20px;
+    }
+    
+    
+    .header h2{
+        margin-bottom:5px;
+        font-weight: 300;
+    }
+    .header h3{
+        margin-top:5px;
+        font-weight: 300;
+    }
+    
+    .header, .content{
+        padding:30px;
+    }
+    
+    .content h4{
+        font-weight:500;
+        color:#0087d3;
+    }
+    
+    .content h4 .item-id{
+        color:#888888;
+        font-size:12px;
+    }
+    
+    .content p{
+        color:#444444;
+    }
+    
+    .content .charts{
+       height:300px;
+    }
+    .content .charts img{
+        float:left;
+        margin:10px;
+        width:240px;
+        height:240px;
+    }
+    
+    .content .charts .pie{
+
+    }
+    .content .charts .legend{
+       
+    }
+    
+    .content .charts ul{
+        float:left;
+        margin:10px;
+        display:inline-block;
+        list-style: none;
+        padding:0;
+    }
+    
+    .content ul.regions-legend, .content ul.years-legend, .content ul.months-legend{
+    
+        display:inline-block;
+        list-style: none;
+        width:500px;
+        
+        
+    }
+    
+  
+    
+    
+    .content ul.regions-legend li, .content ul.years-legend li, .content ul.months-legend li{
+        float: left;
+        width:100px;
+        height:100px;
+        background-color:white;
+        border-radius:5px;
+        border:1px solid #f0f0f0;
+        margin:5px;
+        text-align:center;
+        padding-top:20px;
+        box-sizing: border-box;
+    }
+    
+    .content ul.years-legend, .content ul.months-legend{
+        height:100px;
+    }
+    .content ul.years-legend li{
+        width:50px;
+        height:50px;
+        
+    }
+    .content ul.months-legend li{
+        width:50px;
+        height:50px;
+        
+    }
+    
+    
+    li.idx-0, li.idx-1, li.idx-8 {
+        color: white;
+    }
+    
+    li .label-pre{
+        font-size:12px;
+    }
+    li .label-suff{
+        font-size:12px;
+    }
+    
+    .regions-legend .value{
+        font-size:30px;
+        margin-bottom:10px;
+    }
+    
+    .years-legend .label,.months-legend .label{
+        position:relative;
+        top:20px;
+    }
+    
+    .content .charts .legend-color{
+        display:inline-block;
+        width:16px;
+        height:16px;
+        margin-right: 5px;
+        border:1px solid #555555;
+    }
+    
+</style>
+<div class="main">
+
+    <div class="header">
+        <img src="{{logo|raw}}">
+        
+        <h2>BCWF Conservation App: violation report</h2>
+        <h3>Generated: {{ "now"|date("l jS \\of F Y") }}</h3>
+    </div>
+    
+    <div class="content">
+        <div class="charts">
+            <img src="{{overviewTile|raw}}" />
+            <img class="pie" src="{{chart|raw}}" />
+            <ul class="legend">
+            {% for key, count in counters %}
+            <li>
+                <span class="legend-color" style="background-color:{{ data[key].color }}"></span>{{key}} - {{count}}
+            </li>
+            {% endfor %}
+            </ul>
+        </div>
+        
+        
+        {% if regions|length %}
+        <h3>Items in this report are filtered by region: {{ regions | join(', ')}}
+        </h3>
+        {% if regions|length>1 %}
+        {% endif %}
+        
+        
+        {% if regionCounters|length>1 %}
+        <p>Items by management unit:</p>
+        <ul class="regions-legend">
+            {% for key, count in regionCounters %}
+            <li style="background-color:{{ regionData[key].color }}" class="idx-{{loop.index0}}">
+                <div class="value">{{count}}</div>
+                <div class="label"><span class="label-pre">unit: </span>{{key}}</div>
+            </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        
+        
+        {% if years|length>1 %}
+        <p>Items by year:</p>
+        <ul class="years-legend">
+            {% for key, count in years %}
+            <li>
+                <div class="value">{{count}}</div>
+                <div class="label">{{key}}</div>
+            </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        
+        <!--
+        
+        {% if months|length>1 %}
+        <p>Items by month:</p>
+        <ul class="months-legend">
+            {% for key, count in months %}
+            <li>
+                <div class="value">{{count}}</div>
+                <div class="label">{{['2000-',key,'-01 12:00:00']| join() | date("M") }}</div>
+            </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        
+        -->
+        
+        
+        {% endif %}
+        <div style="page-break-after: always;"></div>
+        
+        
+        
+        
+        <h3>Violations List:</h3>
+        <p>Displaying {{results|length}} violation reports. </p>
+        {% for result in results %}
+        
+        <h4>{{ result.title}} <span class="item-id">{{result.id}}</span></h4>
+        <p>{{result.description}}</p>
+        <img class="item-tile" src="{{ result.tileUrl }}" />
+        <p>Management region/unit: {{result.mu}}</p>
+        
+        
+        {% if result.Name|length or result.Address|length or result.Phone|length or result.Email|length %}
+        <ul>
+            <label> Contact Info:</label>
+            {% if result.Name|length %}<li>{{result.Name|slice(0,3)}}-XXXXX (hidden)</li>{% endif %}
+            {% if result.Address|length %}<li>{{result.Address|slice(0,3)}}-XXXXX (hidden</li>{% endif %}
+            {% if result.Phone|length %}<li>{{result.Phone|slice(0,3)}}-XXXXX (hidden</li>{% endif %}
+            {% if result.Email|length %}<li>{{result.Email|slice(0,3)}}-XXXXX (hidden</li>{% endif %}
+        </ul>
+        {% endif %}
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+

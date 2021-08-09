@@ -1,11 +1,13 @@
-.timeline-container .ui-ctrl-handle > span:after {
-    color: teal;
-    font-size: 30px;
-    width: 200px;
-    top: 30px;
-}
 
 @CHARSET "UTF-8";
+
+
+.timeline-container .ui-ctrl-handle > span:after {
+    color: teal;
+    font-size: 20px;
+    width: 200px;
+    top: 20px;
+}
 
 .bar_slider {
 	z-index: 2;
@@ -167,3 +169,21 @@
 	font-weight: 400;
 	color: black;
 }
+
+
+
+.Graph_Title.dropdown-menu button {
+    margin: 5px;
+    margin-right: 0;
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+}
+
+.Graph_Title.dropdown-menu button.active {
+    background-color: #00bbde;
+}
+
+
+
+

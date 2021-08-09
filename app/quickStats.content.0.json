@@ -1,0 +1,9 @@
+{
+    "type": "plugin.KeenIO.Analytic",
+    "config": {
+        "title": "Total Installs",
+        "type": "metric",
+        "height": "200",
+        "getDataScript": "callback({result:16100-5140});"
+    }
+}
