@@ -1,4 +1,4 @@
 
-
-Emit('onDelayCreateMapitem', $eventArgs);
 Broadcast('onDelayCreateMapitem','event', $eventArgs);
+Emit('onDelayCreateMapitem', $eventArgs);
+
