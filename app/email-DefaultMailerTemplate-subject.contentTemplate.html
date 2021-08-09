@@ -9,16 +9,20 @@ body{
     padding:10px 30px;
 }
 
-.main-content{
+.main-content, .header-content{
     text-align:left;
     display:inline-block;
     width:100%;
     max-width:800px;
     min-width:500px;
-    background-color:white;
-    box-shadow:0 0 3px rgba(0,0,0,0.5);
+    
     border-radius:8px;
     padding:10px;
+}
+
+.main-content{
+    background-color:white;
+    box-shadow:0 0 3px rgba(0,0,0,0.5);
 }
 
 
@@ -26,21 +30,20 @@ body{
 
 
 </style><body>
+    <div class="header-content">
+        <section class="header__logo header__logo___2909e"><a href="https://bcwf.bc.ca/">
+              
+                <img src="https://import.cdn.thinkific.com/232268/5Hr9yJteQ2GL7RT9YC5w_logo.svg" alt="" class="logo img-responsive" loading="lazy"><h1 class="sr-only">
+                  BCWF
+                </h1>
+              
+            </a>
+        </section>
+    </div>
     <div class="main-content">
-    <section class="header__logo header__logo___2909e">
-  
-        <a href="https://bcwf.bc.ca/">
-          
-            <img src="https://import.cdn.thinkific.com/232268/5Hr9yJteQ2GL7RT9YC5w_logo.svg" alt="" class="logo img-responsive" loading="lazy">
-            <h1 class="sr-only">
-              BCWF
-            </h1>
-          
-        </a>
-      
-    </section>
+    
 
-{{message|raw}}
+        {{message|raw}}
     </div>
 
 </body></html>
