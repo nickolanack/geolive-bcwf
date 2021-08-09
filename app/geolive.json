@@ -2593,6 +2593,7 @@
                     {
                         "type": "textfield",
                         "name": "email",
+                        "keyboardType": "XXXX-XXXX",
                         "placeholder": "add your email address",
                         "value": ""
                     },
@@ -2603,6 +2604,7 @@
                     {
                         "type": "textfield",
                         "name": "phone",
+                        "keyboardType": "XXXX-XXXX",
                         "placeholder": "add your phone number",
                         "value": ""
                     },
