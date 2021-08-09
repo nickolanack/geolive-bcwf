@@ -4628,7 +4628,7 @@
             },
             "widgetTitle": "",
             "readAccess": "public",
-            "delay": "5"
+            "delay": "0"
         }
     }
 }
