@@ -273,6 +273,21 @@
         "instance": "Geolocate",
         "parameters": {}
     },
+    "plugin.24": {
+        "name": "Email Moderate",
+        "instance": "EmailModerate",
+        "parameters": {
+            "moderator": [
+                "some@email.address"
+            ],
+            "enableEmails": true,
+            "fromEmailName": "Geolive Moderation",
+            "fromEmail": "notifications@geolive.ca",
+            "siteName": "",
+            "formatEmailScript": "return $message;",
+            "formatVariablesScript": "return $variables;"
+        }
+    },
     "widget.1": {
         "name": "Detail View",
         "instance": "DetailView",
