@@ -4614,14 +4614,21 @@
             "authUserAjaxScript": "XXXX-XXXX",
             "saveParametersAsData": false,
             "parameters": [
-                "widget.Configuration.75.parameters.0.json"
+                "widget.Configuration.75.parameters.0.json",
+                {
+                    "type": "text",
+                    "name": "delay",
+                    "default": "5",
+                    "label": "Submit Delay"
+                }
             ],
             "blacklist": {
                 "Washington Seattle": "Suspected Google Play Store Bot",
                 "California Mountain View": "Google Play Store Bot"
             },
             "widgetTitle": "",
-            "readAccess": "public"
+            "readAccess": "public",
+            "delay": "5"
         }
     }
 }
