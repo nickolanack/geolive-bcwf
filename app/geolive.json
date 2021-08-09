@@ -278,11 +278,12 @@
         "instance": "EmailModerate",
         "parameters": {
             "moderator": [
-                "some@email.address"
+                "nickblackwell82@gmail.com",
+                ""
             ],
             "enableEmails": true,
             "fromEmailName": "Geolive Moderation",
-            "fromEmail": "notifications@geolive.ca",
+            "fromEmail": "geolivemap.ca+bcwf@gmail.com",
             "siteName": "",
             "formatEmailScript": "return $message;",
             "formatVariablesScript": "return $variables;"
