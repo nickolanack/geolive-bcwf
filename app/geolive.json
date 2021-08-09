@@ -4616,7 +4616,10 @@
             "parameters": [
                 "widget.Configuration.75.parameters.0.json"
             ],
-            "blacklist": [],
+            "blacklist": {
+                "Washington Seattle": "Suspected Google Play Store Bot",
+                "California Mountain View": "Google Play Store Bot"
+            },
             "widgetTitle": "",
             "readAccess": "public"
         }
