@@ -277,14 +277,16 @@
         "name": "Email Moderate",
         "instance": "EmailModerate",
         "parameters": {
+            "enableEmails": true,
             "moderator": [
                 "nickblackwell82@gmail.com",
                 ""
             ],
-            "enableEmails": true,
             "fromEmailName": "BCWF Map Notifications",
             "fromEmail": "geolivemap.ca+bcwf@gmail.com",
+            "siteUrl": "",
             "siteName": "BCWF Map",
+            "staticMapApiKey": "XXXX-XXXX",
             "formatEmailScript": "return $message;",
             "formatVariablesScript": "plugin.EmailModerate.24.formatVariablesScript.js"
         }
