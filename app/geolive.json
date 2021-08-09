@@ -286,7 +286,7 @@
             "fromEmail": "geolivemap.ca+bcwf@gmail.com",
             "siteName": "BCWF Map",
             "formatEmailScript": "return $message;",
-            "formatVariablesScript": "return $variables;"
+            "formatVariablesScript": "plugin.EmailModerate.24.formatVariablesScript.js"
         }
     },
     "widget.1": {
