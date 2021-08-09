@@ -1,5 +1,5 @@
 
-$variables->logo=UrlFrom("{front}/bcwf-assets/bcwf_logo.png");
+$variables->logo=UrlFrom("{front}/bcwf_logo.png");
 
 
 return $variables;
