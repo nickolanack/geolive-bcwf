@@ -9,6 +9,11 @@
             GetPlugin('Maps');
             GetPlugin('Attributes');
 			$marker = (new \spatial\FeatureLoader())->fromId($eventArgs->id);
+			
+			(new attributes\Record('rappAttributes'))->setValues($marker->getId(), $marker->getType(), array(
+    			'sent' => true,
+    		));
+			
 			$attributes = (new attributes\Record('rappAttributes'))->getValues($marker->getId(), $marker->getType());
 		} catch (Exception $e) {
 			Emit('onDelayedCreateMapitemMarkerWasDeletedWhileSleeping', array_merge(get_object_vars($eventArgs), array(
