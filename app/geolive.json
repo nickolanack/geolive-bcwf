@@ -346,9 +346,12 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "Error",
             "widgetTitle": "site.error.html",
-            "target": "site.error.html"
+            "target": "site.error.html",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "contentTemplate": "Error"
         }
     },
     "widget.4": {
@@ -2834,8 +2837,12 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "module--text.contentTemplate.html",
-            "widgetTitle": "module..text"
+            "widgetTitle": "module..text",
+            "target": "",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "contentTemplate": "module--text.contentTemplate.html"
         }
     },
     "widget.45": {
@@ -2970,10 +2977,12 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "email-moderate-onCreateMapItem-subject.contentTemplate.html",
             "widgetTitle": "email.moderate.onCreateMapItem.subject",
             "target": "email.moderate.onCreateMapItem.subject",
             "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "contentTemplate": "email-moderate-onCreateMapItem-subject.contentTemplate.html",
             "readAccess": "public"
         }
     },
@@ -2981,12 +2990,13 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "email-moderate-onCreateMapItem-content.contentTemplate.html",
             "widgetTitle": "email.moderate.onCreateMapItem.content",
             "target": "email.moderate.onCreateMapItem.content",
             "comments": "",
-            "readAccess": "public",
-            "formatVariablesScript": "return $variables;"
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "contentTemplate": "email-moderate-onCreateMapItem-content.contentTemplate.html",
+            "readAccess": "public"
         }
     },
     "widget.53": {
@@ -4245,12 +4255,13 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "target": "report",
-            "contentTemplate": "Report.contentTemplate.html",
-            "comments": "",
             "widgetTitle": "Report",
-            "readAccess": "public",
-            "formatVariablesScript": "Report.formatVariablesScript.js"
+            "target": "report",
+            "comments": "",
+            "formatVariablesScript": "Report.formatVariablesScript.js",
+            "convertStylesToInline": false,
+            "contentTemplate": "Report.contentTemplate.html",
+            "readAccess": "public"
         }
     },
     "widget.67": {
@@ -4664,11 +4675,12 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "email-DefaultMailerTemplate-subject.contentTemplate.html",
             "widgetTitle": "email.DefaultMailerTemplate.subject",
             "target": "email.DefaultMailerTemplate.subject",
             "comments": "",
             "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": true,
+            "contentTemplate": "email-DefaultMailerTemplate-subject.contentTemplate.html",
             "readAccess": "public"
         }
     }
