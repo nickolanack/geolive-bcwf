@@ -268,6 +268,11 @@
             "eventPrefix": ""
         }
     },
+    "plugin.23": {
+        "name": "Geolocation",
+        "instance": "Geolocate",
+        "parameters": {}
+    },
     "widget.1": {
         "name": "Detail View",
         "instance": "DetailView",
