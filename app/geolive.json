@@ -152,7 +152,7 @@
             "domain": "",
             "apiKey": "",
             "validateSenderDomain": false,
-            "useGlobalMailTemplate": false,
+            "useGlobalMailTemplate": true,
             "globalTemplate": "DefaultMailerTemplate",
             "recieveMail": false,
             "recieveMailSecretToken": "XXXX-XXXX"
