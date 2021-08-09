@@ -20,6 +20,8 @@
 				'error' => $e->getMessage(),
 			)));
 			
+			return;
+			
 		}
 		
 		
