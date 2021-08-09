@@ -4663,9 +4663,12 @@
         "name": "Template",
         "instance": "Template",
         "parameters": {
-            "contentTemplate": "{{message|raw}}",
+            "contentTemplate": "email-DefaultMailerTemplate-subject.contentTemplate.html",
             "widgetTitle": "email.DefaultMailerTemplate.subject",
-            "target": "email.DefaultMailerTemplate.subject"
+            "target": "email.DefaultMailerTemplate.subject",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "readAccess": "public"
         }
     }
 }
