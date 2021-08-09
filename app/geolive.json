@@ -4605,7 +4605,20 @@
         "name": "Configuration",
         "instance": "Configuration",
         "parameters": {
-            "target": "none"
+            "target": "app-config",
+            "contentTemplate": "",
+            "comments": "",
+            "formatParametersScript": "return $parameters;",
+            "formatOutputScript": "return $parameters;",
+            "enableUserAjaxWrite": false,
+            "authUserAjaxScript": "XXXX-XXXX",
+            "saveParametersAsData": false,
+            "parameters": [
+                "widget.Configuration.75.parameters.0.json"
+            ],
+            "blacklist": [],
+            "widgetTitle": "",
+            "readAccess": "public"
         }
     }
 }

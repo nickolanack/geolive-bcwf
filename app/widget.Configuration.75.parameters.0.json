@@ -1,0 +1,6 @@
+{
+    "type": "json",
+    "name": "blacklist",
+    "default": {},
+    "label": "Blacklisted Location Names"
+}
