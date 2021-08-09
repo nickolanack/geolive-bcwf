@@ -282,7 +282,7 @@
                 ""
             ],
             "enableEmails": true,
-            "fromEmailName": "Geolive Moderation",
+            "fromEmailName": "BCWF Map Notifications",
             "fromEmail": "geolivemap.ca+bcwf@gmail.com",
             "siteName": "",
             "formatEmailScript": "return $message;",
