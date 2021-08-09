@@ -4678,7 +4678,7 @@
             "widgetTitle": "email.DefaultMailerTemplate.subject",
             "target": "email.DefaultMailerTemplate.subject",
             "comments": "",
-            "formatVariablesScript": "return $variables;",
+            "formatVariablesScript": "email-DefaultMailerTemplate-subject.formatVariablesScript.js",
             "convertStylesToInline": true,
             "contentTemplate": "email-DefaultMailerTemplate-subject.contentTemplate.html",
             "readAccess": "public"
