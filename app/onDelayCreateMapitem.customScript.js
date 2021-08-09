@@ -15,6 +15,8 @@
 			Emit('onDelayedCreateMapitemMarkerWasDeletedWhileSleeping', array_merge(get_object_vars($eventArgs), array(
 				'error' => $e->getMessage(),
 			)));
+			
+		}
 		
 		
 		Broadcast('onHandleReportStart', 'event', $eventArgs);	
