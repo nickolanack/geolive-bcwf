@@ -24,9 +24,56 @@
 		
 		
 		Broadcast('onHandleReportStart', 'event', $eventArgs);	
+		
+		
+		$mobile = GetPlugin('Apps');
+		$devices = $mobile->getUsersDeviceIds($marker->getUserId());
+
+		$devicesMetadata = array_map(function ($deviceId) use ($mobile) {
+
+			return $mobile->getDeviceMetadata($deviceId);
+
+		}, $devices);
+
+		Emit("onNotifyDevicesAndClients", array(
+			"devices" => $devices,
+			"devicesMetadata" => $devicesMetadata,
+			"text" => "Your report has been submitted to " . $destinationLabel,
+			"trigger" => "onCreateMapitem: (delay:180) " . $marker->getId(),
+		));
+		
+		
     
         include_once GetPath('{front}/bcwf/ViolationReport.php');
-        (new \bcwf\ViolationReport())->submit($marker, $attributes);
+        $reportData=(new \bcwf\ViolationReport())->submit($marker, $attributes);
         
-        Broadcast('onHandleReportCompletet', 'event', $eventArgs);	
+        
+        
+        
+        
+        
+        Emit("onSubmitedBCWFReportForItem", array(
+			"item" => $marker->getId(),
+			"reportData" => $reportData
+		));
+
+		foreach ($devices as $device) {
+			Broadcast(
+			        "bcwfapp." . $device, 
+			        "notification", 
+			        array("text" => "Your report has been submitted to {destinationLabel}")
+			    );
+		}
+
+		Broadcast(
+		        "user." . $marker->getUserId(), 
+		        "notification", 
+		        array("text" => "Your report has been submitted to {destinationLabel}")
+		    );
+
+        
+        
+        
+        
+        Broadcast('onHandleReportComplete', 'event', $eventArgs);	
        
