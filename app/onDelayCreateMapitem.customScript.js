@@ -42,7 +42,11 @@
         include_once GetPath('{front}/bcwf/ViolationReport.php');
         $reportData=(new \bcwf\ViolationReport())
             ->withBlacklistedLocations($config->getParameter('blacklist',array()))
-            ->withStaticMapLink((new \GoogleMapsStaticMapTiles())->featureTileUrl($marker))
+            ->withStaticMapLink(
+                (new \GoogleMapsStaticMapTiles())->featureTileUrl($marker,array(
+                    "key"=> GetPlugin('Maps')->getParameter('googleMapsServerApiKey')
+                ))
+            )
             ->submit($marker, $attributes);
         
         
