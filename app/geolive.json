@@ -4619,7 +4619,7 @@
                     "type": "text",
                     "name": "delay",
                     "default": "5",
-                    "label": "Submit Delay"
+                    "label": "Submit Delay (Internal)"
                 }
             ],
             "blacklist": {
