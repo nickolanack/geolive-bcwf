@@ -44,7 +44,7 @@
             ->withBlacklistedLocations($config->getParameter('blacklist',array()))
             ->withStaticMapLink(
                 (new \GoogleMapsStaticMapTiles())->featureTileUrl($marker,array(
-                    "key"=> GetPlugin('Maps')->getParameter('googleMapsServerApiKey')
+                    "key"=> $config->getParameter('staticMapApiKey')
                 ))
             )
             ->submit($marker, $attributes);
