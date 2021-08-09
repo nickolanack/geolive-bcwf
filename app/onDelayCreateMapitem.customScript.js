@@ -35,12 +35,7 @@
 
 		}, $devices);
 
-		Emit("onNotifyDevicesAndClients", array(
-			"devices" => $devices,
-			"devicesMetadata" => $devicesMetadata,
-			"text" => "Your report has been submitted to " . $destinationLabel,
-			"trigger" => "onCreateMapitem: (delay:180) " . $marker->getId(),
-		));
+		
 		
 		
     
@@ -56,19 +51,27 @@
 			"item" => $marker->getId(),
 			"reportData" => $reportData
 		));
+		
+		
+		Emit("onNotifyDevicesAndClients", array(
+			"devices" => $devices,
+			"devicesMetadata" => $devicesMetadata,
+			"text" => "Your report has been submitted to " . $reportData['destinationLabel'],
+			"trigger" => "onCreateMapitem: (delay:180) " . $marker->getId(),
+		));
 
 		foreach ($devices as $device) {
 			Broadcast(
 			        "bcwfapp." . $device, 
 			        "notification", 
-			        array("text" => "Your report has been submitted to {destinationLabel}")
+			        array("text" => "Your report has been submitted to ". $reportData['destinationLabel'])
 			    );
 		}
 
 		Broadcast(
 		        "user." . $marker->getUserId(), 
 		        "notification", 
-		        array("text" => "Your report has been submitted to {destinationLabel}")
+		        array("text" => "Your report has been submitted to ". $reportData['destinationLabel'])
 		    );
 
         
