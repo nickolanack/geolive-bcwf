@@ -55,6 +55,11 @@
 			"reportData" => $reportData
 		));
 		
+		Broadcast("onSubmitedBCWFReportForItem",'event', array(
+			"item" => $marker->getId(),
+			"reportData" => $reportData
+		));
+		
 		
 		Emit("onNotifyDevicesAndClients", array(
 			"devices" => $devices,
