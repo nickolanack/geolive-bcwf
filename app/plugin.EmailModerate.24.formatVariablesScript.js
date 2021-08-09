@@ -3,7 +3,7 @@ if (key_exists('marker', $variables)) {
     try {
             GetPlugin('Maps');
             GetPlugin('Attributes');
-			$marker = (new \spatial\FeatureLoader())->fromId($eventArgs->id);
+			$marker = (new \spatial\FeatureLoader())->fromId($variables['marker']['id']);
 	        $attributes = (new attributes\Record('rappAttributes'))->getValues($marker->getId(), $marker->getType());
     } catch (Exception $e) {
 		Emit('onEmailModeratorsMarkerWasDeletedWhileSleeping', array_merge(get_object_vars($variables), array(
