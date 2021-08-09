@@ -11,28 +11,35 @@
   "description": "View '{{marker.name}}' at {{siteName}}"
 }
 	</script>
-	<section style="
-    max-width: 600px;
-    text-align: center;
-    margin: auto;
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    padding: 10px 20px;
-    border-radius: 2px;
-    border: 1px solid rgba(0,0,0,0.3);
-    margin-bottom:20px;
-     background-color: white;
-">
+	
+	<style>
+	    section{
+	        
+	        max-width: 600px;
+            text-align: center;
+            margin: auto;
+            padding: 10px 20px;
+            margin-bottom:20px;
+            background-color: white; 
+	        
+	    }
+	    
+	    section h2{
+	        font-family: sans-serif;
+            color: #0b6dd3;
+            font-weight: 100;
+	    }
+	</style>
+	
+	
+	
+	
+	
+	
+<section style="">
 	<div style="text-align: left">
-		<h2 style="
-    font-family: sans-serif;
-    color: #0b6dd3;
-    font-weight: 100;
-">A BCWF Report | {{marker.name}}</h2>
-<h2 style="
-    font-family: sans-serif;
-    color: #0b6dd3;
-    font-weight: 100;
-">Destination | {{handler.variables.label}}</h2>
+		<h2>A BCWF Report | {{marker.name}}</h2>
+        <h2>Destination | {{handler.variables.label}}</h2>
 		<p>Submitted by {{user.name}}<i>(unique id: {{user.id}})</i></p>
 
 		{{prefix|raw}}
@@ -95,51 +102,6 @@
 	</section>
 
 
-<section style="
-    max-width: 600px;
-    text-align: left;
-    margin: auto;
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    padding: 10px 20px;
-    border-radius: 2px;
-    border: 1px solid rgba(0,0,0,0.3);
-    margin-bottom:20px;
-    background-color: white;
-">	
-<h2 style="
-    font-family: sans-serif;
-    color: #0b6dd3;
-    font-weight: 100;
-">Raw Submission Handler Data</h2>
-<p>
-		
-		<pre >
-			    {{ handler|json_encode(constant('JSON_PRETTY_PRINT')) }}
-			</pre>
-		
-		</p></section>
-		<section style="
-    max-width: 600px;
-    text-align: left;
-    margin: auto;
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    padding: 10px 20px;
-    border-radius: 2px;
-    border: 1px solid rgba(0,0,0,0.3);
-    background-color: white;
-">	
-<h2 style="
-    font-family: sans-serif;
-    color: #0b6dd3;
-    font-weight: 100;
-">Raw Marker Data</h2>
-<p>
-		
-		<pre >
-			    {{ marker|json_encode(constant('JSON_PRETTY_PRINT')) }}
-			</pre>
-		
-		</p></section>
 
 
 
