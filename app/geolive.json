@@ -4625,6 +4625,12 @@
                     "name": "delay",
                     "default": "5",
                     "label": "Submit Delay (Internal)"
+                },
+                {
+                    "type": "text",
+                    "name": "staticMapApiKey",
+                    "default": "5",
+                    "label": "Static Map Api Key (google)"
                 }
             ],
             "blacklist": {
@@ -4633,7 +4639,8 @@
             },
             "widgetTitle": "",
             "readAccess": "public",
-            "delay": "0"
+            "delay": "0",
+            "staticMapApiKey": "XXXX-XXXX"
         }
     }
 }
