@@ -4658,5 +4658,14 @@
             "delay": "0",
             "staticMapApiKey": "XXXX-XXXX"
         }
+    },
+    "widget.76": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "contentTemplate": "{{message|raw}}",
+            "widgetTitle": "email.DefaultMailerTemplate.subject",
+            "target": "email.DefaultMailerTemplate.subject"
+        }
     }
 }
