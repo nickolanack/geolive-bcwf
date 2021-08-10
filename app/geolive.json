@@ -4725,5 +4725,29 @@
             "contentTemplate": "email-moderate-publish-onCreateMapItem-content.contentTemplate.html",
             "readAccess": "public"
         }
+    },
+    "widget.79": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "email.moderate.unpublish.onCreateMapItem.subject",
+            "target": "email.moderate.unpublish.onCreateMapItem.subject",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "contentTemplate": "Subject"
+        }
+    },
+    "widget.80": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "email.moderate.unpublish.onCreateMapItem.content",
+            "target": "email.moderate.unpublish.onCreateMapItem.content",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "contentTemplate": "Message Content"
+        }
     }
 }
