@@ -2339,6 +2339,14 @@
                     {
                         "type": "label",
                         "value": "{domain}"
+                    },
+                    {
+                        "type": "image",
+                        "image": "~\/bccf-h.png"
+                    },
+                    {
+                        "type": "image",
+                        "image": "~\/obwb.png"
                     }
                 ],
                 "create-report": [
