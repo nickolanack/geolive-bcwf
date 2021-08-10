@@ -2958,7 +2958,7 @@
             "widgetTitle": "onViewImage",
             "target": "onViewImage",
             "customScript": "onViewImage.customScript.js",
-            "language": "html\/text",
+            "language": "php",
             "returnsValue": false,
             "cacheable": false,
             "readAccess": "public"
