@@ -68,7 +68,7 @@
 		<p>
 			<label>Violation Type:</label><i>{{marker.name}}</i>
 			<br/>
-			<label>Description:</label><i>{{marker.description}}</i>
+			<label>Description:</label><i>{{marker.description|raw}}</i>
 
 			<div>
 			    {{marker.media.imagesHtmlBlock|replace({'<img ': '<img style="max-width: 600px; hieght:auto;"'})|raw}}
