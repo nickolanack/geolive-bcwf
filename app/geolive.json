@@ -4722,7 +4722,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "contentTemplate": "Message Content"
+            "contentTemplate": "email-moderate-publish-onCreateMapItem-content.contentTemplate.html",
+            "readAccess": "public"
         }
     }
 }
