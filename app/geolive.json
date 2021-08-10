@@ -4709,7 +4709,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
-            "contentTemplate": "Subject"
+            "contentTemplate": "email-moderate-publish-onCreateMapItem-subject.contentTemplate.html",
+            "readAccess": "public"
         }
     },
     "widget.78": {
