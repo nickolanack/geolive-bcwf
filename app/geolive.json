@@ -2341,6 +2341,10 @@
                         "value": "{domain}"
                     },
                     {
+                        "type": "label",
+                        "value": "Sponsors."
+                    },
+                    {
                         "type": "image",
                         "image": "~\/bccf-h.png"
                     },
