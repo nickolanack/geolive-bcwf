@@ -10,7 +10,7 @@ $uid = $user;
 
 $devices = GetPlugin('Apps')->getUsersDeviceIds($uid);
 
-GetPlugin('Maps')
+GetPlugin('Maps');
 $marker = (new \spatial\FeatureLoader())->fromId($eventArgs->item);
 
 $images = HtmlDocument()->parseImageUrls($marker->getDescription());
