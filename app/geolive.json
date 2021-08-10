@@ -4699,5 +4699,29 @@
             "contentTemplate": "email-DefaultMailerTemplate-subject.contentTemplate.html",
             "readAccess": "public"
         }
+    },
+    "widget.77": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "email.moderate.publish.onCreateMapItem.subject",
+            "target": "email.moderate.publish.onCreateMapItem.subject",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "contentTemplate": "Subject"
+        }
+    },
+    "widget.78": {
+        "name": "Template",
+        "instance": "Template",
+        "parameters": {
+            "widgetTitle": "email.moderate.publish.onCreateMapItem.content",
+            "target": "email.moderate.publish.onCreateMapItem.content",
+            "comments": "",
+            "formatVariablesScript": "return $variables;",
+            "convertStylesToInline": false,
+            "contentTemplate": "Message Content"
+        }
     }
 }
