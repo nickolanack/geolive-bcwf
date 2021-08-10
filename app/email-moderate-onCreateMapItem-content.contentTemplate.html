@@ -29,6 +29,11 @@
             color: #0b6dd3;
             font-weight: 100;
 	    }
+	    
+	    .prefix img{
+	        height:30px;
+	        width:auto;
+	    }
 	</style>
 	
 	
@@ -42,8 +47,9 @@
         <h2>Destination | {{handler.variables.label}}</h2>
 		<p>Submitted by {{user.name}}<i>(unique id: {{user.id}})</i></p>
 
+        <span class="prefix">
 		{{prefix|raw}}
-
+        </span>
 		<h3>User Details</h3>
 		<p><i>{{user.name}} {{user.username}} | 
 		{{marker.attributes.rappAttributes.name}} 
