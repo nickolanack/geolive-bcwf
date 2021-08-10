@@ -68,13 +68,13 @@
 		<p>
 			<label>Violation Type:</label><i>{{marker.name}}</i>
 			<br/>
-			<label>Description:</label><i>{{marker.description|raw}}</i>
+			<label>Description:</label><i>{{marker.description|raw|striptags}}</i>
 
 			<div>
-			    {{marker.media.imagesHtmlBlock|replace({'<img ': '<img style="max-width: 600px; hieght:auto;"'})|raw}}
+			    {{marker.media.imagesHtmlBlock|replace({'<img ': '<img style="max-width: 600px; height:auto;"'})|raw}}
 			</div>
 			<div>
-				{{marker.media.videosHtmlBlock|replace({'<video ': '<video style="max-width: 600px; hieght:auto;"'})|raw}}
+				{{marker.media.videosHtmlBlock|replace({'<video ': '<video style="max-width: 600px; height:auto;"'})|raw}}
 			</div>
 			
 		</p>
