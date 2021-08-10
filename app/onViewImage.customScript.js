@@ -1,4 +1,4 @@
-<?php
+
 
 $file = $eventArgs->image;
 $user = $eventArgs->user;
@@ -8,20 +8,19 @@ $user = $eventArgs->user;
 $uid = $user;
 //Core::Emit("onNotifyDevices", array("uid"=>$uid));
 
-$mobile = Core::LoadPlugin('IOSApplication');
-$devices = $mobile->getUsersDeviceIds($uid);
+$devices = GetPlugin('Apps')->getUsersDeviceIds($uid);
 
-Core::LoadPlugin('Maps');
-$marker = MapController::LoadMapItem($eventArgs->item);
+GetPlugin('Maps')
+$marker = (new \spatial\FeatureLoader())->fromId($eventArgs->item);
 
-$images = Core::HTML()->parseImageUrls($marker->getDescription());
+$images = HtmlDocument()->parseImageUrls($marker->getDescription());
 $images = array_map(function ($i) {
 
     if (strpos($i, 'http') !== 0) {
-        return Core::HTML()->website() . '/' . ltrim($i, '/');
+        return HtmlDocument()->website() . '/' . ltrim($i, '/');
     }
 
-}, array_merge($images, Core::HTML()->parseVideoPosterUrls($marker->getDescription())));
+}, array_merge($images, HtmlDocument()->parseVideoPosterUrls($marker->getDescription())));
 
 $data = array(
     "devices" => $devices,
@@ -34,19 +33,17 @@ if (count($images)) {
     $data['image'] = $images[0];
 }
 
-Core::Emit("onNotifyDevicesAndClients", $data);
+Emit("onNotifyDevicesAndClients", $data);
 
-Core::LoadPlugin('Attributes');
-$tableMeta = AttributesTable::GetMetadata("rappAttributes");
+GetPlugin('Attributes');
 
-AttributesRecord::Set($eventArgs->item, $eventArgs->type, array(
+(new attributes\Record('rappAttributes'))->setValues($marker->getId(), $marker->getType(), array(
     'viewed' => true,
-), $tableMeta);
+));
 
 foreach ($devices as $device) {
-    Core::Broadcast("bcwfapp." . $device, "notification", $data);
+    Broadcast("bcwfapp." . $device, "notification", $data);
 }
 
-Core::Broadcast("user." . $uid, "notification", $data);
+Broadcast("user." . $uid, "notification", $data);
 
-?>
