@@ -22,12 +22,17 @@ body{
     line-height:50px;
     
 }
-.main-content, .header-content{
-    text-align:left;
+.main-container{
+    
+     text-align:left;
     display:inline-block;
     width:100%;
     max-width:800px;
     min-width:500px;
+    
+}
+.main-content, .header-content{
+   
     
     border-radius:6px;
     padding:10px;
@@ -44,18 +49,20 @@ body{
 
 
 </style><body>
-    <div class="header-content">
-        <section><a href="https://bcwf.geoforms.ca/">
-              
-                <img src="{{logo|raw}}"/>
-                <h1>BCWF Conservation App</h1>
-            </a>
-        </section>
-    </div>
-    <div class="main-content">
-    
-
-        {{message|raw}}
+    <divclass="main-container">
+        <div class="header-content">
+            <section><a href="https://bcwf.geoforms.ca/">
+                  
+                    <img src="{{logo|raw}}"/>
+                    <h1>BCWF Conservation App</h1>
+                </a>
+            </section>
+        </div>
+        <div class="main-content">
+        
+            {{message|raw}}
+            
+        </div>
     </div>
 
 </body></html>
