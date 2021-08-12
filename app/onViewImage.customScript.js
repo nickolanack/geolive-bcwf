@@ -11,8 +11,11 @@ $uid = $user;
 $devices = GetPlugin('Apps')->getUsersDeviceIds($uid);
 
 GetPlugin('Maps');
+try{
 $marker = (new \spatial\FeatureLoader())->fromId($eventArgs->item);
-
+}catch(\Exception $e){
+    return;
+}
 $images = HtmlDocument()->parseImageUrls($marker->getDescription());
 $images = array_map(function ($i) {
 
