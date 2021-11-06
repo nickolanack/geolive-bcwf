@@ -186,7 +186,11 @@
 
         setData: function(data, metadata) {
 
-
+            if(data.length==0){
+               this._data=[];
+               this._setHintBar();
+               return;
+            }
 
             var unitStep = Date.parse(data[0].end) - Date.parse(data[0].start);
 
@@ -251,6 +255,14 @@
             timeline.setDateRangeSpan(range);
 
 
+            this._setHintBar();
+            
+            
+            slider._checkResize();
+
+        },
+
+        _setHintBar:function(){
             if (this._hintBarGraph) {
                 this._hintBarGraph.setData(this._data.map(function(d) {
                     return d.count;
@@ -259,8 +271,6 @@
             if (this._detailBarGraph) {
                 this._detailBarGraph.setData(this._data);
             }
-            
-            slider._checkResize();
 
         },
 

@@ -48,7 +48,9 @@
             },
             "routes": [
                 "plugin.UserInterface.5.routes.0.json"
-            ]
+            ],
+            "useRemoteServerUI": false,
+            "remoteServerUrl": ""
         }
     },
     "plugin.6": {
@@ -303,6 +305,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -877,6 +880,8 @@
             "target": "map.1",
             "customCSS": "Tile Buttons- Wizard Etc.customCSS.css",
             "sassParamters": [],
+            "formatSassParametersScript": "return $parameters;",
+            "useRemote": "",
             "readAccess": "public"
         }
     },
@@ -945,6 +950,8 @@
             "target": "map.1",
             "customCSS": "Legend.customCSS.css",
             "sassParamters": [],
+            "formatSassParametersScript": "return $parameters;",
+            "useRemote": "",
             "readAccess": "public"
         }
     },
@@ -1004,6 +1011,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -1081,6 +1089,8 @@
             "target": "map.1",
             "customCSS": "Infowindow.customCSS.css",
             "sassParamters": [],
+            "formatSassParametersScript": "return $parameters;",
+            "useRemote": "",
             "readAccess": "public"
         }
     },
@@ -1225,6 +1235,8 @@
             "target": "map.1",
             "customCSS": "Timeline.customCSS.css",
             "sassParamters": [],
+            "formatSassParametersScript": "return $parameters;",
+            "useRemote": "",
             "readAccess": "public"
         }
     },
@@ -2721,6 +2733,8 @@
             "target": "mobile-app-css",
             "customCSS": "App Style.customCSS.css",
             "sassParamters": [],
+            "formatSassParametersScript": "return $parameters;",
+            "useRemote": "",
             "readAccess": "public"
         }
     },
@@ -2821,6 +2835,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -3027,6 +3042,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -3067,6 +3083,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4154,6 +4171,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4247,6 +4265,8 @@
             "target": "map.1",
             "customCSS": "theme.customCSS.css",
             "sassParamters": [],
+            "formatSassParametersScript": "return $parameters;",
+            "useRemote": "",
             "readAccess": "public"
         }
     },
@@ -4319,6 +4339,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
@@ -4369,6 +4390,7 @@
             "onRenderApplictionScript": "",
             "formatModulesScript": "",
             "notifyViewer": false,
+            "useRemote": "",
             "metadata": {
                 "positions": {
                     "title": {
