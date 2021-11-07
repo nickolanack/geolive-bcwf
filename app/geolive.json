@@ -4703,6 +4703,12 @@
                     "name": "enableSubmitReportForm",
                     "default": true,
                     "label": "Enable form submission"
+                },
+                {
+                    "type": "boolean",
+                    "name": "enableModeratorMail",
+                    "default": true,
+                    "label": "Enable moderator mailer"
                 }
             ],
             "blacklist": {
@@ -4713,7 +4719,8 @@
             "readAccess": "public",
             "delay": "0",
             "staticMapApiKey": "XXXX-XXXX",
-            "enableSubmitReportForm": true
+            "enableSubmitReportForm": true,
+            "enableModeratorMail": true
         }
     },
     "widget.76": {
