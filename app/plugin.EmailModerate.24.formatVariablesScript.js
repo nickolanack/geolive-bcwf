@@ -25,7 +25,7 @@ if (key_exists('marker', $variables)) {
                 ->addEventHandler(function($event, $data){
 
                     Emit('violationReportMailer.'.$event, $data);
-                    Broadcast('violationReportMailer.'.$event,  $data);
+                    Broadcast('violationReportMailer.'.$event, 'event', $data);
 
                 })
                 ->withBlacklistedLocations($config->getParameter('blacklist',array()))
