@@ -43,6 +43,14 @@
     
         include_once GetPath('{front}/bcwf/ViolationReport.php');
         $reportData=(new \bcwf\ViolationReport())
+        	->setEnabled($config->getParameter('enableSubmitReportForm'))
+        	->addEventHandler(function($event, $data){
+
+                Emit('violationReport.'.$event, $data);
+                Broadcast('violationReport.'.$event,  $data);
+
+            })
+        	
             ->withBlacklistedLocations($config->getParameter('blacklist',array()))
             ->withStaticMapLink(
                 (new \GoogleMapsStaticMapTiles())->featureTileUrl($marker,array(
