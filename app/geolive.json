@@ -4719,7 +4719,7 @@
             "readAccess": "public",
             "delay": "0",
             "staticMapApiKey": "XXXX-XXXX",
-            "enableSubmitReportForm": true,
+            "enableSubmitReportForm": false,
             "enableModeratorMail": true
         }
     },
