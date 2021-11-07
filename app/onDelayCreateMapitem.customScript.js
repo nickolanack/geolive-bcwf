@@ -47,7 +47,7 @@
         	->addEventHandler(function($event, $data){
 
                 Emit('violationReport.'.$event, $data);
-                Broadcast('violationReport.'.$event,  $data);
+                Broadcast('violationReport.'.$event, 'event', $data);
 
             })
         	
