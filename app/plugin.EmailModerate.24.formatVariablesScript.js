@@ -22,13 +22,19 @@ if (key_exists('marker', $variables)) {
             include_once GetPath('{front}/bcwf/ViolationReport.php');
             
             return (new \bcwf\ViolationReport())
-            ->withBlacklistedLocations($config->getParameter('blacklist',array()))
-            ->withStaticMapLink(
-                (new \GoogleMapsStaticMapTiles())->featureTileUrl($marker,array(
-                    "key"=> $config->getParameter('staticMapApiKey')
-                ))
-            )
-            ->formatEmailModerationVariables($marker, $attributes, $variables);
+                ->addEventHandler(function($event, $data){
+
+                    Emit('violationReportMailer.'.$event, $data);
+                    Broadcast('violationReportMailer.'.$event,  $data);
+
+                })
+                ->withBlacklistedLocations($config->getParameter('blacklist',array()))
+                ->withStaticMapLink(
+                    (new \GoogleMapsStaticMapTiles())->featureTileUrl($marker,array(
+                        "key"=> $config->getParameter('staticMapApiKey')
+                    ))
+                )
+                ->formatEmailModerationVariables($marker, $attributes, $variables);
         
         
 
