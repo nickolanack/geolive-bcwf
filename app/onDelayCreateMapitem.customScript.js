@@ -78,7 +78,7 @@
 		Emit("onNotifyDevicesAndClients", array(
 			"devices" => $devices,
 			"devicesMetadata" => $devicesMetadata,
-			"text" => "Your report has been submitted to " . $reportData['destinationLabel'],
+			"text" => "Your report has been submitted to " . $reportData['destinationName'],
 			"trigger" => "onCreateMapitem: (delay:180) " . $marker->getId(),
 		));
 
@@ -86,14 +86,14 @@
 			Broadcast(
 			        "bcwfapp." . $device, 
 			        "notification", 
-			        array("text" => "Your report has been submitted to ". $reportData['destinationLabel'])
+			        array("text" => "Your report has been submitted to ". $reportData['destinationName'])
 			    );
 		}
 
 		Broadcast(
 		        "user." . $marker->getUserId(), 
 		        "notification", 
-		        array("text" => "Your report has been submitted to ". $reportData['destinationLabel'])
+		        array("text" => "Your report has been submitted to ". $reportData['destinationName'])
 		    );
 
         
