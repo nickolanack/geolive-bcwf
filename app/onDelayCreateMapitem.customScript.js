@@ -43,7 +43,7 @@
     
         include_once GetPath('{front}/bcwf/ViolationReport.php');
         $reportData=(new \bcwf\ViolationReport())
-        	->setEnabled($config->getParameter('enableSubmitReportForm'))
+        	->setEnabled($config->getParameter('enableSubmitReportForm'), 'disabled by app-config')
         	->addEventHandler(function($event, $data){
 
                 Emit('violationReport.'.$event, $data);
