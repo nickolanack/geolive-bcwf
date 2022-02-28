@@ -202,7 +202,7 @@
 
             var max = 1500;
             while (data.length) {
-                while (data[0].start !== dateString) {
+                while (data[0].start > dateString) {
 
                     var next = new Date(Date.parse(dateString) + unitStep);
                     var nextString = next.toISOString().split('T').shift();
