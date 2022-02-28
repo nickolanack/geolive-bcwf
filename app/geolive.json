@@ -356,6 +356,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "Error"
         }
     },
@@ -889,30 +891,30 @@
         "name": "Timeline",
         "instance": "Timeline",
         "parameters": {
+            "widgetTitle": "",
+            "target": "map.1",
+            "readAccess": "public",
             "position": "BOTTOM_CENTER",
             "className": "",
             "barColor": "#f3f3f3",
             "spanColor": "rgb(0, 160, 80)",
             "minSpanColor": "#EEEEEE",
             "knobColor": "#EEEEEE",
-            "showTip": false,
-            "roundDownMonth": false,
-            "tipTitle": "Project Date Filter",
-            "tipDescription": "widget.Timeline.8.tipDescription.js",
             "lockMinDate": "-60",
             "lockMaxDate": "+1",
+            "roundDownMonth": false,
             "attributeSelection": [
                 "widget.Timeline.8.attributeSelection.0.json"
             ],
+            "showTip": false,
+            "tipTitle": "Project Date Filter",
+            "tipDescription": "widget.Timeline.8.tipDescription.js",
             "onRenderScript": "widget.Timeline.8.onRenderScript.js",
-            "sendNotifications": true,
-            "widgetTitle": "",
-            "readAccess": "public",
             "useTileButton": true,
-            "hideTimelineAtStart": true,
-            "tileIcon": [],
             "tilePosition": "RIGHT_CENTER",
-            "target": "map.1"
+            "tileIcon": [],
+            "hideTimelineAtStart": true,
+            "sendNotifications": true
         }
     },
     "widget.9": {
@@ -2873,6 +2875,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "module--text.contentTemplate.html"
         }
     },
@@ -3013,6 +3017,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-onCreateMapItem-subject.contentTemplate.html",
             "readAccess": "public"
         }
@@ -3026,6 +3032,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-onCreateMapItem-content.contentTemplate.html",
             "readAccess": "public"
         }
@@ -4296,6 +4304,8 @@
             "comments": "",
             "formatVariablesScript": "Report.formatVariablesScript.js",
             "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "Report.contentTemplate.html",
             "readAccess": "public"
         }
@@ -4732,6 +4742,8 @@
             "comments": "",
             "formatVariablesScript": "email-DefaultMailerTemplate-subject.formatVariablesScript.js",
             "convertStylesToInline": true,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "email-DefaultMailerTemplate-subject.contentTemplate.html",
             "readAccess": "public"
         }
@@ -4745,6 +4757,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-publish-onCreateMapItem-subject.contentTemplate.html",
             "readAccess": "public"
         }
@@ -4758,6 +4772,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-publish-onCreateMapItem-content.contentTemplate.html",
             "readAccess": "public"
         }
@@ -4771,6 +4787,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-unpublish-onCreateMapItem-subject.contentTemplate.html",
             "readAccess": "public"
         }
@@ -4784,6 +4802,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-unpublish-onCreateMapItem-content.contentTemplate.html",
             "readAccess": "public"
         }
@@ -4797,6 +4817,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-delete-onCreateMapItem-subject.contentTemplate.html",
             "readAccess": "public"
         }
@@ -4810,6 +4832,8 @@
             "comments": "",
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
+            "parseMarkdown": false,
+            "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-delete-onCreateMapItem-content.contentTemplate.html",
             "readAccess": "public"
         }
