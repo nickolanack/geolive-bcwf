@@ -228,7 +228,7 @@
 
             var dateStringEnd = metadata.range[1];
 
-            while(dateString!==dateStringEnd){
+            while(dateString<dateStringEnd){
                 var next = new Date(Date.parse(dateString) + unitStep);
                 var nextString = next.toISOString().split('T').shift();
 
