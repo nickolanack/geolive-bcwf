@@ -200,7 +200,7 @@
 
             var formattedData = [];
 
-            var max = 1000;
+            var max = 1500;
             while (data.length) {
                 while (data[0].start !== dateString) {
 
