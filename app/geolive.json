@@ -903,9 +903,7 @@
             "lockMinDate": "-60",
             "lockMaxDate": "+1",
             "roundDownMonth": false,
-            "attributeSelection": [
-                "widget.Timeline.8.attributeSelection.0.json"
-            ],
+            "attributeSelection": [],
             "showTip": false,
             "tipTitle": "Project Date Filter",
             "tipDescription": "widget.Timeline.8.tipDescription.js",
