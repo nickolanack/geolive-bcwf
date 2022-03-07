@@ -4841,8 +4841,9 @@
         "instance": "AjaxMethod",
         "parameters": {
             "widgetTitle": "",
-            "target": "none",
-            "customScript": "return true;"
+            "target": "mobileStats",
+            "customScript": "widget.AjaxMethod.83.customScript.js",
+            "readAccess": "public"
         }
     }
 }
