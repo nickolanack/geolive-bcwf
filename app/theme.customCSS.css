@@ -55,6 +55,9 @@ button.button-expand-left {
     transition: left .3s, width .3s;
     cursor: pointer;
 }
+
+
+
 button.button-expand-left:hover {
     left: -15px;
     width: 30px;
@@ -79,12 +82,18 @@ button.button-expand-left:before {
     width: 50px;
     height: 50px;
     background: #00bbde;
-    top: -5px;
+    top: 90px;
     border-radius: 2px;
     /* box-shadow: 0 0 5px rgb(0 0 0 / 20%); */
     background-image: url("https://bcwf.geoforms.ca/php-core-app/assets/Map%20Item%20Icons/sm_bargraph.png?tint=rgba(255,255,255,1)");
     background-position: center;
     background-repeat: no-repeat;
+    transition: top 0.2s;
+}
+
+.minimized button.button-expand-left:before {
+    top: -5px;
+    transition: top 0.2s;
 }
 
 .minimized button.button-expand-left:before {
