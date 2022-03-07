@@ -4192,7 +4192,7 @@
                                     "title": "IOS",
                                     "type": "metric",
                                     "height": "200",
-                                    "getDataScript": "callback({result:7900});"
+                                    "getDataScript": "quickStats.metadata.positions.content.modules.1.config.getDataScript.js"
                                 }
                             },
                             {
