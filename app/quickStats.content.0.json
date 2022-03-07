@@ -4,6 +4,6 @@
         "title": "Total Installs",
         "type": "metric",
         "height": "200",
-        "getDataScript": "\/\/callback({result:16100-5140});\n\n\n(new AjaxControlQuery(CoreAjaxUrlRoot, \"user_function\", {\n\t\t'widget': \"mobileStats\"\n\t})).addEvent('success',function(response){\n\t    callback({result:16100-5140+response.ios++response.android});\n\t}).cache({expire:3600}).execute(); "
+        "getDataScript": "\/\/callback({result:16100-5140});\n\n\n(new AjaxControlQuery(CoreAjaxUrlRoot, \"user_function\", {\n\t\t'widget': \"mobileStats\"\n\t})).addEvent('success',function(response){\n\t    callback({result:16100-5140+response.ios+response.android});\n\t}).cache({expire:3600}).execute(); "
     }
 }
