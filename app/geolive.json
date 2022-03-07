@@ -4835,5 +4835,14 @@
             "contentTemplate": "email-moderate-delete-onCreateMapItem-content.contentTemplate.html",
             "readAccess": "public"
         }
+    },
+    "widget.83": {
+        "name": "Ajax Method",
+        "instance": "AjaxMethod",
+        "parameters": {
+            "widgetTitle": "",
+            "target": "none",
+            "customScript": "return true;"
+        }
     }
 }
