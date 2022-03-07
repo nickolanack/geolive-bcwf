@@ -93,7 +93,6 @@ button.button-expand-left:before {
 
 .minimized button.button-expand-left:before {
     top: -5px;
-    transition: top 0.2s;
 }
 
 .minimized button.button-expand-left:before {
