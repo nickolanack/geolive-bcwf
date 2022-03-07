@@ -4201,7 +4201,7 @@
                                     "title": "Android",
                                     "type": "metric",
                                     "height": "200",
-                                    "getDataScript": "callback({result:3060});"
+                                    "getDataScript": "quickStats.metadata.positions.content.modules.2.config.getDataScript.js"
                                 }
                             },
                             {
