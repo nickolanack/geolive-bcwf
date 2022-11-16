@@ -206,6 +206,8 @@ li.layer.LegendLayer{
 li.layer.LegendLayer.active{
     padding-right:40px;
 }
-
+.geolive-top-bar {
+    z-index:1;
+}
 
 
