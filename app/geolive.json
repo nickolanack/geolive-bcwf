@@ -33,6 +33,7 @@
         "name": "Events",
         "instance": "Events",
         "parameters": {
+            "logEvents": true,
             "logPath": "{core}\/log"
         }
     },
@@ -50,7 +51,9 @@
                 "plugin.UserInterface.5.routes.0.json"
             ],
             "useRemoteServerUI": false,
-            "remoteServerUrl": ""
+            "remoteServerUrl": "",
+            "templateEditAuthScript": "XXXX-XXXX",
+            "configurationFieldEditAuthScript": "XXXX-XXXX"
         }
     },
     "plugin.6": {
@@ -87,16 +90,26 @@
             "phase": "production",
             "ForceHTTPS": false,
             "allowProxiesFrom": [
-                "*"
+                "*",
+                ""
             ],
-            "pluginPaths": [],
-            "widgetPaths": [],
-            "modulePaths": [],
+            "pluginPaths": [
+                ""
+            ],
+            "widgetPaths": [
+                ""
+            ],
+            "modulePaths": [
+                ""
+            ],
             "sandboxDomains": [
                 "*.z.geolive.ca",
                 "*.s22.ok.ubc.ca",
-                "localhost"
-            ]
+                "localhost",
+                ""
+            ],
+            "AjaxProfilingEnabled": false,
+            "CSRFEnabled": false
         }
     },
     "plugin.8": {
@@ -885,6 +898,7 @@
             "sassParamters": [],
             "formatSassParametersScript": "return $parameters;",
             "useRemote": "",
+            "saveAsData": false,
             "readAccess": "public"
         }
     },
@@ -953,6 +967,7 @@
             "sassParamters": [],
             "formatSassParametersScript": "return $parameters;",
             "useRemote": "",
+            "saveAsData": false,
             "readAccess": "public"
         }
     },
@@ -1092,6 +1107,7 @@
             "sassParamters": [],
             "formatSassParametersScript": "return $parameters;",
             "useRemote": "",
+            "saveAsData": false,
             "readAccess": "public"
         }
     },
@@ -1238,6 +1254,7 @@
             "sassParamters": [],
             "formatSassParametersScript": "return $parameters;",
             "useRemote": "",
+            "saveAsData": false,
             "readAccess": "public"
         }
     },
@@ -2736,6 +2753,7 @@
             "sassParamters": [],
             "formatSassParametersScript": "return $parameters;",
             "useRemote": "",
+            "saveAsData": false,
             "readAccess": "public"
         }
     },
@@ -4241,6 +4259,8 @@
             "target": "map.1",
             "position": "RIGHT_TOP",
             "className": "map-stats minimized",
+            "elementType": "div",
+            "elementOptions": [],
             "identifier": "",
             "viewType": "view",
             "namedView": "quickStats",
@@ -4274,6 +4294,7 @@
             "sassParamters": [],
             "formatSassParametersScript": "return $parameters;",
             "useRemote": "",
+            "saveAsData": false,
             "readAccess": "public"
         }
     },
@@ -4844,6 +4865,7 @@
             "widgetTitle": "",
             "target": "mobileStats",
             "customScript": "widget.AjaxMethod.83.customScript.js",
+            "requireCSRF": true,
             "readAccess": "public"
         }
     }
