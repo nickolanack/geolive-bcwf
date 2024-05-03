@@ -373,6 +373,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "Error"
         }
@@ -2901,6 +2902,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "module--text.contentTemplate.html"
         }
@@ -3043,6 +3045,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-onCreateMapItem-subject.contentTemplate.html",
             "readAccess": "public"
@@ -3058,6 +3061,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-onCreateMapItem-content.contentTemplate.html",
             "readAccess": "public"
@@ -4336,6 +4340,7 @@
             "formatVariablesScript": "Report.formatVariablesScript.js",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "Report.contentTemplate.html",
             "readAccess": "public"
@@ -4776,6 +4781,7 @@
             "formatVariablesScript": "email-DefaultMailerTemplate-subject.formatVariablesScript.js",
             "convertStylesToInline": true,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-DefaultMailerTemplate-subject.contentTemplate.html",
             "readAccess": "public"
@@ -4791,6 +4797,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-publish-onCreateMapItem-subject.contentTemplate.html",
             "readAccess": "public"
@@ -4806,6 +4813,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-publish-onCreateMapItem-content.contentTemplate.html",
             "readAccess": "public"
@@ -4821,6 +4829,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-unpublish-onCreateMapItem-subject.contentTemplate.html",
             "readAccess": "public"
@@ -4836,6 +4845,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-unpublish-onCreateMapItem-content.contentTemplate.html",
             "readAccess": "public"
@@ -4851,6 +4861,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-delete-onCreateMapItem-subject.contentTemplate.html",
             "readAccess": "public"
@@ -4866,6 +4877,7 @@
             "formatVariablesScript": "return $variables;",
             "convertStylesToInline": false,
             "parseMarkdown": false,
+            "allowHtmlInMarkdown": false,
             "saveTemplateAsData": false,
             "contentTemplate": "email-moderate-delete-onCreateMapItem-content.contentTemplate.html",
             "readAccess": "public"
