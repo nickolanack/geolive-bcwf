@@ -71,7 +71,7 @@ ClusterSymbol.IconStyle=function(name){
 			fillOpacity:0.7,
 			strokeWeight:1.5,
 			strokeColor:color,
-			labelOrigin:google.maps.Point(0, 0)
+			labelOrigin:new google.maps.Point(0, 0)
       };
 
 
